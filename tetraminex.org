@@ -1,0 +1,50 @@
+#+TITLE: Tetraminex
+#+TODO: LATER TODO | DONE
+
+* Level Editor 
+
+** For now, use DAME to edit my levels
+*** DONE copy the loading code over from SvA
+SCHEDULED: <2011-09-18 Sun>
+
+** LATER make my own format using yaml:
+https://github.com/lucasdupin/Simple-AS3-YAML/blob/master/source/classes/dupin/parsers/yaml/YAML.as
+
+
+* Grid Interactions
+** DONE divide x and y by kCellSize and add to grid
+SCHEDULED: <2011-09-18 Sun>
+** DONE get grabbers working
+** TODO extract walls and optiles from the FlxTilemaps
+SCHEDULED: <2011-09-19 Mon>
+
+
+* Basic Puzzles
+
+** DONE Opening Scene (move the player)
+** DONE Build a tetramino.
+** DONE Walls and pulling
+** DONE Restart Level
+** Paint Gray blocks
+** Paint as Obstacle
+** Coins
+** Blue Walls : "gravity"
+** Wrapping
+** Pushers
+
+
+
+** TODO Add text / dialog for each tutorial puzzle.
+
+* PlayTesting
+
+** FlxReplay
+http://flixel.org/docs/org/flixel/system/FlxReplay.html
+
+** Mechanical Turk
+https://requester.mturk.com/developer
+http://aws.amazon.com/code/446 # python example
+
+
+* Music and Artwork
+
