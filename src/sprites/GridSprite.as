@@ -23,6 +23,11 @@ package sprites
 		{		
 			return !(immovable || grid.neighbor(this, dir).solid);
 		}
+		
+		public function moved():void 
+		{
+			
+		}
 			
 	}
 

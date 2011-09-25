@@ -15,7 +15,7 @@ package sprites
 			super(x, y);
 			makeGraphic(Room.kCellH, Room.kCellW, 0x99666666);
 			solid = true;
-			visible = true;
+			visible = false;
 			immovable = true;
 			moves = false;
 		}

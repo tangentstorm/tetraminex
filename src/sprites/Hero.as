@@ -1,5 +1,6 @@
 package sprites 
 {
+	import flash.display.GradientType;
 	import org.flixel.*;
 	
 	/**
@@ -40,6 +41,23 @@ package sprites
 			}
 			return (neighbor.solid) ? neighbor.canMove(dir) : true;
 		}
+		
+		override public function moved():void 
+		{
+			super.moved();
+			// always follow the owner, possibly dragging something along:
+			grabberGroup.callAll("reposition");
+		}
+		
+		public function isHolding(n:GridSprite):Boolean
+		{
+			for (var i:int = 0; i < grabbers.length; ++i)
+			{
+				if (grabbers[i].content == n) return true; 
+			}
+			return false;
+		}
+		
 		
 	}
 

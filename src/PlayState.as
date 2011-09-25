@@ -42,7 +42,11 @@ package
 			
 			mRoom.addWalls(level['layerWalls']);
 			mRoom.addTiles(level['layerTiles']);
-			
+			mRoom.doneBuilding();			
+			mRoom.onHeroExit(function():void
+			{
+				loadLevel((levelNum + 1) % 10);
+			});
 		}
 		
 		
@@ -126,7 +130,6 @@ package
 			}
 			
 		}
-
 		
 		private function onAddObject(obj:Object, group:FlxGroup, 
 				level:BaseLevel, scrollX:Number, scrollY:Number, properties:Array):void
@@ -194,7 +197,6 @@ package
 					add(new sprites.Empty(x * kCellSize, y * kCellSize));
 				}
 			}
-		
 		}
 		
 		private function updateGrabbers():void 
@@ -210,8 +212,7 @@ package
             {
 				g = mHero.grabbers[dir];
 				
-				// always follow the owner, possibly dragging something along:
-				g.reposition();
+				// !! we don't reposition on every tick because it would retrigger GridTile.onPut()
 				
 				if (mGrabKeys[dir])
 				{

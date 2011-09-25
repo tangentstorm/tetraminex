@@ -18,7 +18,7 @@ package tiles
 			mColor = color;
 		}
 		
-		override public function onPut(sprite:GridSprite):void
+		override public function onPut(sprite:GridSprite, room:Room):void
 		{
 			if (sprite is Block)
 			{				
@@ -26,6 +26,7 @@ package tiles
 				if (block.getColor() == mColor)
 				{
 					block.lock();
+					room.cageFilled();
 				}
 			}
 		}

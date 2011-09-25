@@ -18,7 +18,7 @@ package tiles
 			mColor = color;
 		}
 		
-		override public function onPut(sprite:GridSprite):void
+		override public function onPut(sprite:GridSprite, room:Room):void
 		{
 			if (sprite is Block)
 			{				

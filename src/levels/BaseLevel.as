@@ -4,6 +4,8 @@ package levels
 {
 	import org.flixel.*;
 	import flash.utils.Dictionary;
+	// Custom imports:
+import sprites.*;
 	public class BaseLevel
 	{
 		// The masterLayer contains every single object in this group making it easy to empty the level.
@@ -11,6 +13,8 @@ package levels
 
 		// This group contains all the tilemaps specified to use collisions.
 		public var hitTilemaps:FlxGroup = new FlxGroup;
+		// This group contains all the tilemaps.
+		public var tilemaps:FlxGroup = new FlxGroup;
 
 		public static var boundsMinX:int;
 		public static var boundsMinY:int;
@@ -37,6 +41,7 @@ package levels
 			map.scrollFactor.y = scrollY;
 			if ( hits )
 				hitTilemaps.add(map);
+			tilemaps.add(map);
 			if(onAddCallback != null)
 				onAddCallback(map, null, this, scrollX, scrollY, properties);
 			return map;
@@ -120,6 +125,7 @@ package levels
 		{
 			masterLayer.destroy();
 			masterLayer = null;
+			tilemaps = null;
 			hitTilemaps = null;
 
 			var i:uint;

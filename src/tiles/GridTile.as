@@ -19,7 +19,11 @@ package tiles
 		
 		public static function fromMap(code:int):GridTile
 		{
-			if (code >= 8 && code < 16)
+			if (code > 0 && code < 5)
+			{
+				return new ExitTile();
+			}
+			else if (code >= 8 && code < 16)
 			{
 				return new PaintTile(code - 8);
 			}
@@ -29,14 +33,13 @@ package tiles
 			}
 			else switch (code)
 			{
-				case 0:
 				default:
 					return nullTile;
 			}
 			return nullTile; // not sure why the compiler complains here... ??
 		}
 		
-		public function onPut(sprite:GridSprite):void
+		public function onPut(sprite:GridSprite, room:Room):void
 		{
 			
 		}

@@ -19,6 +19,12 @@ package sprites
 			addAnimation('horizontal',  [3]);
 		}
 		
+		public function open():void 
+		{
+			exists = false;
+			solid = false;
+		}
+		
 	}
 
 }

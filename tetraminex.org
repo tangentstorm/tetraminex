@@ -1,43 +1,89 @@
+
 #+TITLE: Tetraminex
-#+TODO: LATER TODO | DONE
+#+TODO: LATER TODO | DONE IGNORE
 
-* Level Editor 
 
-** For now, use DAME to edit my levels
+* Tigsource Demo
+
+** DONE Use DAME for level editor (for now)
 *** DONE copy the loading code over from SvA
 SCHEDULED: <2011-09-18 Sun>
 
-** LATER make my own format using yaml:
-https://github.com/lucasdupin/Simple-AS3-YAML/blob/master/source/classes/dupin/parsers/yaml/YAML.as
-
-
-* Grid Interactions
-** DONE divide x and y by kCellSize and add to grid
+** DONE Grid Interactions
+*** DONE divide x and y by kCellSize and add to grid
 SCHEDULED: <2011-09-18 Sun>
-** DONE get grabbers working
-** TODO extract walls and optiles from the FlxTilemaps
+*** DONE get grabbers working
+*** DONE extract walls and optiles from the FlxTilemaps
 SCHEDULED: <2011-09-19 Mon>
 
+** TODO Tutorial Levels
+*** DONE 0. Opening Scene (move the player)
+*** DONE 1. Build a tetramino.
+*** DONE 2. Walls and pulling
+*** DONE 3. Restart Level
+*** DONE 4. Paint
+*** TODO redo level 5
+SCHEDULED: <2011-09-21 Wed>
 
-* Basic Puzzles
+** TODO Get the characters talking
+SCHEDULED: <2011-09-21 Wed>
+*** TODO dialog on start of puzzle
+SCHEDULED: <2011-09-21 Wed>
+*** TODO dialog on end of puzzle if locked out
+SCHEDULED: <2011-09-21 Wed>
+*** TODO dialog on end of puzzle normally
+SCHEDULED: <2011-09-21 Wed>
+*** TODO touch person to talk?
+SCHEDULED: <2011-09-21 Wed>
+*** TODO special case dialog after tutorial
+SCHEDULED: <2011-09-21 Wed>
+** TODO Make 5 real puzzles with basic elements
+SCHEDULED: <2011-09-21 Wed>
+*** TODO level: cage as obstacle
+*** TODO level: paint as obstacle
+*** TODO level: require the crowbar
+*** TODO level: maze (narrow spaces)
+*** TODO level: lock behind you
+** TODO Company store with known items
+*** TODO preliminary item list
+**** work saving items (optional)
+Crowbar
+Paintbrush
+Remote Control
+gun to shoot ghosts? 
+**** puzzle solving items (required)
+grappling hook
+lift-over-your-head thing
+saw to cut domino/trominos/pentominos
 
-** DONE Opening Scene (move the player)
-** DONE Build a tetramino.
-** DONE Walls and pulling
-** DONE Restart Level
-** Paint Gray blocks
-** Paint as Obstacle
-** Coins
-** Blue Walls : "gravity"
-** Wrapping
-** Pushers
+*** TODO draw preliminary items
+*** TODO show items and descriptions in store
+*** TODO grey out items player can't afford
+*** TODO track player bank balance
+*** TODO implement purchasing
+*** TODO grey out items player already owns
+*** TODO create a Mr S character (green) for the shop
+** TODO Level selection Screen
+*** TODO mock up level select screen in illustrator
+I'm thinking a 6 x 6 grid of levels + top row for tutorial.
+*** TODO generate map icons for each level
+*** TODO show map
+** TODO Marketing prep
+*** TODO create a website
+*** TODO create a twitter feed
+*** TODO facebook page
+*** TODO google+ page (?)
+*** TODO create mailing lists
+**** only the announcement
+**** send me dev updates
+*** TODO members area with beta access
+** TODO Cleanups / Polish for tigsource
+*** TODO get rid of the red lines
+*** TODO reduce busywork in level 4
+*** TODO limit grabbers to 1 direction
+SCHEDULED: <2011-09-21 Wed>
 
-
-
-** TODO Add text / dialog for each tutorial puzzle.
-
-* PlayTesting
-
+* 2: Playtesting
 ** FlxReplay
 http://flixel.org/docs/org/flixel/system/FlxReplay.html
 
@@ -46,5 +92,46 @@ https://requester.mturk.com/developer
 http://aws.amazon.com/code/446 # python example
 
 
+
+* 3: New mechanisms
+** conveyor belts
+*** automatically move boxes
+*** timing puzzle with lifts/pushers?
+** gravity
+*** falling
+*** jumping
+*** ladders
+*** Crane
+moves back and forth and lifts blocks from the top
+*** power lifts
+platforms that go up and down from the bottom
+*** wrapping (like wrecking crew)
+*** powerup: lift blocks overhead like smb 2?
+*** powerup: teleport to top/bottom of screen
+*** powerup: remote control
+press 0..9 to move corresponding lift
+....or other devices??? :)
+** grappling hook:
+*** suteF style
+*** hook passes through walls?
+** raw materials: dominos and trominos
+*** blobs
+Raw material for blocks. These would merge together on contact.
+*** rotation
+Once you have more than a block, it makes sense to rotate.
+*** cutting
+Powerup to separate blocks that get stuck together?
+** ghosts
+*** backstory for ghosts?
+*** ghost blocks
+** dispenser
+*** these could force you to solve the puzzle in a particular order
+
+
+
 * Music and Artwork
 
+
+* Maybe later
+** LATER make my own format using yaml:
+https://github.com/lucasdupin/Simple-AS3-YAML/blob/master/source/classes/dupin/parsers/yaml/YAML.as

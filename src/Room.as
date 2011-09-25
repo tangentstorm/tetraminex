@@ -29,7 +29,12 @@ package
 		private var nullSprite:NullSprite = new NullSprite(0, 0);
 		private var mTiles:Vector.<GridTile> = new Vector.<GridTile>(256, true);
 		private var mSprites:Vector.<GridSprite> = new Vector.<GridSprite>(256, true);
-			
+		
+		private var mCagesLeft:int = 0;
+		private var mExit:ExitTile = null;
+		private var mExitCallback:Function;
+		
+		
 		public function Room() 
 		{
 			for (var i:int = 0; i < kRoomW * kRoomH; ++i)
@@ -43,7 +48,7 @@ package
 			sprite.gx = sprite.x / kCellW;
 			sprite.gy = sprite.y / kCellH;
 			put(sprite, sprite.gx, sprite.gy);			
-			sprite.grid = this;
+			sprite.grid = this;			
 		}
 		
 		public static const kCollideIndex:int = 4;
@@ -69,26 +74,42 @@ package
 			{
 				for (var x:int = 0; x < kRoomW; ++x)
 				{
-					mTiles[y * kRoomW + x] = GridTile.fromMap(map.getTile(x, y));
+					var gt:GridTile = mTiles[y * kRoomW + x]
+						= GridTile.fromMap(map.getTile(x, y));
+					if (gt is ExitTile)
+					{
+						mExit = gt as ExitTile;
+						var gs:GridSprite = get(x, y);
+						if (gs is Door)
+						{
+							mExit.door = gs as Door;
+						}
+					}
+					else if (gt is CageTile)
+					{
+						mCagesLeft++;
+					}
 				}
 			}
 			
 		}
-		
-		
-		
 		
 		public function neighbor(sprite:GridSprite, dir:FlxPoint):GridSprite
 		{
 			return this.get(sprite.gx + dir.x, sprite.gy + dir.y);
 		}
 		
+		
 		public function nudge(sprite:GridSprite, dir:FlxPoint):void
 		{
 			if (sprite.canMove(dir))
 			{			
 				var n:GridSprite = this.neighbor(sprite, dir);
-				if (! (n is NullSprite))
+				if (n is NullSprite || (sprite is Hero && (sprite as Hero).isHolding(n)))
+				{
+					// nothing to do
+				}
+				else
 				{
 					nudge(n, dir);
 				}
@@ -105,7 +126,7 @@ package
 				else if (sprite.gy < 0) sprite.gy = kRoomH -1;
 				
 				put(sprite, sprite.gx, sprite.gy);
-				
+				sprite.moved();
 			}
 		}
 		
@@ -173,7 +194,7 @@ package
 				sprite.y = gy * kCellH;
 				sprite.grid = this;
 				
-				mTiles[index].onPut(sprite);
+				mTiles[index].onPut(sprite, this);
 			}
 		}
 		
@@ -207,6 +228,38 @@ package
 			
 		}
 		
+		public function cageFilled():void 
+		{
+			if (--mCagesLeft == 0)
+			{
+				roomSolved();
+			}
+		}
+		
+		private function roomSolved():void
+		{
+			mExit.open();
+		}
+		
+		public function onHeroExit(callback:Function):void
+		{
+			mExitCallback = callback;
+		}
+		
+		
+		public function heroExit():void
+		{
+			mExitCallback();
+		}
+		
+		public function doneBuilding():void
+		{
+			// no blocks in first room
+			if (mCagesLeft == 0 && mExit != null)
+			{
+				mExit.open();
+			}
+		}
 		
 	}
 
