@@ -21,7 +21,7 @@
         <type typeof="String" name="color" value="blue"/>
       </properties>
     </sprite>
-    <sprite name="Block: green" idx="5" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="3" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="3" selected="true">
+    <sprite name="Block: green" idx="5" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="3" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="3">
       <properties>
         <type typeof="String" name="color" value="green"/>
       </properties>
@@ -46,7 +46,7 @@
         <type typeof="String" name="color" value="gray"/>
       </properties>
     </sprite>
-    <sprite name="Door:V" idx="10" className="Door" image="src/assets/images/door.png" width="30" height="30" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1">
+    <sprite name="Door:V" idx="10" className="Door" image="src/assets/images/door.png" width="30" height="30" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1" selected="true">
       <properties>
         <type typeof="Boolean" name="isVertical" value="true"/>
       </properties>
@@ -141,11 +141,11 @@
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
       </maplayer>
     </group>
-    <group name="Room1" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+    <group name="Room1" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true" selected="true">
       <properties>
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>
-      <shapelayer name="Text" xScroll="1" yScroll="1" visible="false" locked="false" exports="true" aligned="false" sort="false">
+      <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <shape guid="D3C4C4E6-0507-D1D7-B561-A70BA9E0C119" x="30" y="390" Z="0" angle="0" width="30.00" height="30.00" text="T: Let's start with the basics. At Tetraminex, we manufacture tetraminos for falling block games all around the world.&#xD;&#xD;T: Your job is to assemble tetraminos from individual blocks. Give it a try! Push these blocks into their holders with your arrow keys." family="system" fontsize="8" align="center" color="16777215">
           <properties>
             <type typeof="String" name="speaker" value="MrT"/>
@@ -169,6 +169,9 @@
         </sprite>
         <sprite guid="47E0941C-47D9-E61D-0C14-239DCEFA0E71" x="420" y="150" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="13"/>
         <sprite guid="4D6B1E7B-BB45-D68C-B147-BE72C4B8EE75" x="450" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="10">
+          <properties/>
+        </sprite>
+        <sprite guid="2D09F801-4521-A135-648B-96E011B8E85D" x="0" y="390" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="10">
           <properties/>
         </sprite>
       </spritelayer>
@@ -209,7 +212,7 @@
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
       </maplayer>
     </group>
-    <group name="Room2" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+    <group name="Room2" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
       <properties>
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>
@@ -245,6 +248,9 @@
         <sprite guid="13CA8A8E-178C-8D54-1EDB-A112381B1F0B" x="210" y="420" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="13"/>
         <sprite guid="2488F7E5-744B-A9A6-16AB-EA3931DD8899" x="30" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
         <sprite guid="3F98F741-E39E-4863-A501-37D9F199E9AE" x="240" y="450" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="11">
+          <properties/>
+        </sprite>
+        <sprite guid="E504FFE5-DECD-A9F5-6333-4406A92AAF5A" x="0" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="10">
           <properties/>
         </sprite>
       </spritelayer>
@@ -288,7 +294,7 @@
         </tileProperties>
       </maplayer>
     </group>
-    <group name="Room3" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+    <group name="Room3" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
       <properties>
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>
@@ -327,9 +333,12 @@
         <sprite guid="1C158977-43BB-8B53-0F52-7AEF1F69D1FC" x="210" y="450" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="11">
           <properties/>
         </sprite>
+        <sprite guid="34293E2B-169E-2FE7-EF2D-A43AE3CB598F" x="240" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="11">
+          <properties/>
+        </sprite>
       </spritelayer>
       <maplayer name="Walls" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/fenceGray.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
-        <row>4,5,5,5,5,6,5,5,1,5,6,5,5,5,5,7</row>
+        <row>4,5,5,5,5,6,5,5,0,5,6,5,5,5,5,7</row>
         <row>8,0,0,0,0,8,0,0,0,0,8,0,0,0,0,8</row>
         <row>8,0,0,0,0,8,0,0,0,0,8,0,0,0,0,8</row>
         <row>8,0,0,0,0,13,0,0,0,0,13,0,0,0,0,8</row>
@@ -592,11 +601,11 @@
         </tileProperties>
       </maplayer>
     </group>
-    <group name="Room6" xScroll="1" yScroll="1" visible="true" open="true" locked="false" exports="true">
+    <group name="Room6" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
       <properties>
         <type typeof="Boolean" name="gravity" value="true"/>
       </properties>
-      <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false" selected="true"/>
+      <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false"/>
       <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <sprite guid="E47253E0-408A-887A-80FF-9C9882E819DA" x="150" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
         <sprite guid="74206C8C-CDE3-1763-94D6-F7A23A7BE996" x="150" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
@@ -606,7 +615,7 @@
           <properties/>
         </sprite>
         <sprite guid="7D3B87DC-C224-DAAB-FD9B-5C745D3C188A" x="420" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="13"/>
-        <sprite guid="2B59703F-5EA7-E979-DC81-621F6314C172" x="120" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
+        <sprite guid="2B59703F-5EA7-E979-DC81-621F6314C172" x="120" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
           <properties/>
         </sprite>
         <sprite guid="AAA4FD1C-C0E9-C1D7-054B-F1180AD4D265" x="270" y="390" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
