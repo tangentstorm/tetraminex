@@ -82,6 +82,7 @@ import sprites.*;
 			addSpriteToLayer(null, MrT, SpritesGroup , 210.000, 420.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"MrT"
 			addSpriteToLayer(null, Hero, SpritesGroup , 30.000, 180.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Hero"
 			addSpriteToLayer(null, Door, SpritesGroup , 240.000, 450.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"isVertical", value:false }, null ), onAddCallback );//"Door:H"
+			addSpriteToLayer(null, Door, SpritesGroup , 0.000, 180.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"isVertical", value:true }, null ), onAddCallback );//"Door:V"
 		}
 
 		public function generateObjectLinks(onAddCallback:Function = null):void

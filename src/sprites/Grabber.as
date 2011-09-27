@@ -8,20 +8,22 @@ package sprites
 	public class Grabber extends GridSprite 
 	{
 		public var  dir:FlxPoint;
-		public var owner:GridSprite;
+		public var owner:Hero;
 		public var content: GridSprite;
 		public var done:Boolean = false;
 		
-		public function Grabber(owner:GridSprite, dir:int)
+		public function Grabber(owner:Hero, dir:int)
 		{
 			super(0, 0);
-			this.owner = owner;
-			room = owner.room;
 			loadGraphic(Tetraminex.ImgHands, true, true, Room.kCellW, Room.kCellH);
+			
+			this.owner = owner;
+			this.room = owner.room;
 			this.frame = dir;
+			this.exists = false;
 		}
 		
-		public static function makeGrabbers(forWhom:GridSprite, group:FlxGroup=null):Array
+		public static function makeGrabbers(forWhom:Hero, group:FlxGroup=null):Array
 		{
 			var g:Grabber;
 			var res:Array = new Array();
@@ -57,8 +59,7 @@ package sprites
 			{
 				content.held = false;
 				// if (sling) { content.velocity.copyFrom(owner.velocity); }
-			}
-			
+			}			
 			content = null;
 		}
 		

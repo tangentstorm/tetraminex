@@ -135,8 +135,11 @@ package
 				if (sprite.gy >= kRoomH) sprite.gy = 0;
 				else if (sprite.gy < 0) sprite.gy = kRoomH -1;
 				
+				// call moved before put mostly so grabbers move first
+				// otherwise, the put(null...) above might overwrite the
+				// hero in the room.
+				sprite.moved();			
 				put(sprite, sprite.gx, sprite.gy);
-				sprite.moved();
 			}
 		}
 		
@@ -282,39 +285,39 @@ package
 					{
 						var gs:GridSprite = get(x, y);
 						var up:GridSprite = get(x, y - 1);
-						if (gs == nullSprite && up != nullSprite)						
+						if ((gs is NullSprite) && up != nullSprite)						
 						{
 							if (up.held)
 							{
 								// do nothing, let hero handle it
-								/*
-								if (neighbor(mHero, pointS).solid)
-								{
-									// do nothing, because hero is holding it over a pit
-								}
-								else
-								{
-									nudge(up, Room.pointS);
-									nudge(mHero, Room.pointS);
-								}
-								*/
 							}
 							else if (up is Hero)
 							{
-								// TODO: extract "isSupported"
-								var supported:Boolean = false;
-								for (var i:int = 0; i < mHero.grabbers.length; ++i)
+								// TODO: extract "Supported"
+								if (mHero.dgy > 0)
 								{
-									var c:GridSprite = mHero.grabbers[i].content;
-									if (c != null && c != nullSprite)
-									{
-										if (c.immovable || neighbor(c, pointS).solid)
-											supported = true;
-									}
+									mHero.dgy--;
 								}
-								if (! supported)
+								else
 								{
-									nudge(mHero, Room.pointS);
+									var supported:Boolean = false;
+									for (var i:int = 0; i < mHero.grabbers.length; ++i)
+									{
+										var g:Grabber = mHero.grabbers[i];
+										if (g.exists)
+										{
+											var c:GridSprite = g.content;
+											if (c != null && !(c is NullSprite))
+											{
+												if (c.immovable || neighbor(c, pointS).solid)
+													supported = true;
+											}
+										}
+									}
+									if (! supported)
+									{
+										nudge(mHero, Room.pointS);
+									}
 								}
 							}
 							else

@@ -23,14 +23,7 @@ package sprites
 		public function canMove(dir:FlxPoint):Boolean
 		{		
 			if (immovable) return false;
-			
 			if (room.neighbor(this, dir).solid) return false;
-			
-			if (room.gravity
-			&& dir != Room.pointS 
-			&& room.neighbor(this, Room.pointN).solid)
-				return false;
-				
 			return true;
 		}
 		

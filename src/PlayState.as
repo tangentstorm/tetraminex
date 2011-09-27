@@ -1,5 +1,6 @@
 package
 {
+	import flash.utils.getQualifiedClassName;
 	import levels.*;
 	import org.flixel.*;
 	import sprites.*;
@@ -62,7 +63,9 @@ package
 		private const kNumKeys:Array = [
 			"ZERO", "ONE", "TWO", "THREE", "FOUR", 
 			"FIVE", "SIX", "SEVEN", "EIGHT", "NINE"];
-		
+			
+		private var mJustJumped:Boolean = false;
+			
 		override public function update():void
 		{
 			super.update();
@@ -79,8 +82,6 @@ package
 					return;
 				}
 			}
-			
-			
 			
 			if (FlxG.keys.justPressed("RIGHT"))
 			{
@@ -103,12 +104,24 @@ package
 			{
 				FlxG.resetState();
 			}
-						
+			
+			else if (FlxG.keys.justPressed("F"))
+			{
+				FlxG.log('floor=' + getQualifiedClassName(mRoom.neighbor(mHero, Room.pointS)));			
+			}
+			else if (FlxG.keys.justPressed("H"))
+			{
+				FlxG.log('@hero=' + getQualifiedClassName(mRoom.get(mHero.gx, mHero.gy)));
+			}
+			
+			
+			if (! FlxG.keys.UP) { mJustJumped = false; }
+			
 			mTickCounter += FlxG.elapsed;
 			if (mTickCounter > 0.10)
 			{
 				mTickCounter = 0;
-									
+				
 				if (FlxG.keys.RIGHT)
 				{
 					mRoom.nudge(mHero, Room.pointE);					
@@ -120,7 +133,10 @@ package
 				else if (FlxG.keys.UP)
 				{
 					if (mRoom.gravity)
-						mHero.jump();
+					{
+						if (!mJustJumped) { mHero.jump(); }
+						mJustJumped = true;
+					}
 					else
 						mRoom.nudge(mHero, Room.pointN);
 				}
@@ -131,7 +147,6 @@ package
 					
 				mRoom.tick();
 			}
-			
 			
 			// update grabbers after mRoom.tick so we can't jump and grab 2 squares high
 			updateGrabbers();			
@@ -167,7 +182,6 @@ package
 					}
                 }
             }
-			
 			
 			
 			if (obj is Hero)
@@ -212,8 +226,8 @@ package
 			mGrabKeys[Room.N] = FlxG.keys.W || FlxG.keys.COMMA;
 			mGrabKeys[Room.W] = FlxG.keys.A;
 			mGrabKeys[Room.S] = FlxG.keys.S || FlxG.keys.O
-			mGrabKeys[Room.E] = FlxG.keys.D || FlxG.keys.E; // || screenshotcheat		
-		
+			mGrabKeys[Room.E] = FlxG.keys.D || FlxG.keys.E; // || screenshotcheat
+			
             var g:Grabber;
             for (var dir:int = 0; dir < 4; ++dir)
             {
@@ -221,21 +235,21 @@ package
 				
 				// !! we don't reposition on every tick because it would retrigger GridTile.onPut()
 				
-				if (mGrabKeys[dir])
+				if (mGrabKeys[dir] && ! mGrabLast[dir])
 				{
-					g.exists = true;
-					g.done = false;
-					
-					// grab something new:
-					if (! mGrabLast[dir])
+					if (mHero.grabCount < mHero.handCount)
 					{
+						g.exists = true;
+						g.done = false;
 						g.grab();
 					}
+					mHero.grabCount++;
 				}
-				else
+				else if (mGrabLast[dir] && ! mGrabKeys[dir])
 				{
 					g.exists = false;
 					g.release();
+					mHero.grabCount--;
 				}
 				mGrabLast[dir] = mGrabKeys[dir];
 			}

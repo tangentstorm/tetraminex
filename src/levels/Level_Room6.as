@@ -65,7 +65,6 @@ import sprites.*;
 		{
 			var obj:Object;
 
-			callbackNewData(new TextData(480.000, 30.000, 100.000, 50.000, 0.000, "T: Okay, Ernie. Time to see what you've learned.\r\rT: Remember, you can press R to start over if you get stuck.","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( null ), 1, 1 ) ;
 		}
 
 		public function addSpritesForLayerSprites(onAddCallback:Function = null):void
@@ -97,8 +96,7 @@ import sprites.*;
 			addSpriteToLayer(null, Block, SpritesGroup , 360.000, 240.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"blue" }, null ), onAddCallback );//"Block: blue"
 			addSpriteToLayer(null, Block, SpritesGroup , 300.000, 330.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"yellow" }, null ), onAddCallback );//"Block: yellow"
 			addSpriteToLayer(null, Block, SpritesGroup , 120.000, 150.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"gray" }, null ), onAddCallback );//"Block: gray"
-			addSpriteToLayer(null, Block, SpritesGroup , 60.000, 60.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"gray" }, null ), onAddCallback );//"Block: gray"
-			addSpriteToLayer(null, Block, SpritesGroup , 60.000, 270.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"gray" }, null ), onAddCallback );//"Block: gray"
+			addSpriteToLayer(null, Block, SpritesGroup , 30.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"gray" }, null ), onAddCallback );//"Block: gray"
 			addSpriteToLayer(null, Block, SpritesGroup , 60.000, 330.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"gray" }, null ), onAddCallback );//"Block: gray"
 			addSpriteToLayer(null, Block, SpritesGroup , 90.000, 360.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"gray" }, null ), onAddCallback );//"Block: gray"
 			addSpriteToLayer(null, Block, SpritesGroup , 30.000, 390.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"blue" }, null ), onAddCallback );//"Block: blue"

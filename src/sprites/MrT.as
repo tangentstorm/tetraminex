@@ -13,6 +13,7 @@ package sprites
 		{
 			super(x, y);
 			loadGraphic(Tetraminex.ImgMrT, true, false);
+			immovable = true;
 		}
 		
 	}
