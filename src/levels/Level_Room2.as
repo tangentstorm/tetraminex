@@ -24,6 +24,7 @@ import sprites.*;
 		public var TextGroup:FlxGroup = new FlxGroup;
 
 		//Properties
+		public var gravity:Boolean = false;
 
 
 		public function Level_Room2(addToStage:Boolean = true, onAddCallback:Function = null)
@@ -64,22 +65,22 @@ import sprites.*;
 		{
 			var obj:Object;
 
-			callbackNewData(new TextData(480.000, 30.000, 100.000, 50.000, 0.000, "T: Lots of companies push blocks around, Ernie, but at Tetraminex, we don't just push blocks...\r\rT: We pull them too! Use your [WASD] keys (or [,AOE] if you're a Dvorak man), and put these blocks into place.","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( null ), 1, 1 ) ;
-			callbackNewData(new TextData(480.000, 210.000, 100.000, 50.000, 0.000, "T: Ernie, you're a natural! Right this way for lesson three.","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( null ), 1, 1 ) ;
+			callbackNewData(new TextData(30.000, 180.000, 30.000, 50.000, 0.000, "T: Lots of companies push blocks around, Ernie, but at Tetraminex, we don't just push blocks...\r\rT: We pull them too! Use your [WASD] keys (or [,AOE] if you're a Dvorak man), and put these blocks into place.","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( null ), 1, 1 ) ;
+			callbackNewData(new TextData(240.000, 420.000, 30.000, 30.000, 0.000, "T: Ernie, you're a natural! Right this way for lesson three.","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( null ), 1, 1 ) ;
 		}
 
 		public function addSpritesForLayerSprites(onAddCallback:Function = null):void
 		{
-			addSpriteToLayer(null, Block, SpritesGroup , 30.000, 390.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 270.000, 240.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
 			addSpriteToLayer(null, Block, SpritesGroup , 420.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
 			addSpriteToLayer(null, Block, SpritesGroup , 30.000, 420.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
-			addSpriteToLayer(null, Block, SpritesGroup , 390.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
-			addSpriteToLayer(null, Block, SpritesGroup , 60.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"red" }, null ), onAddCallback );//"Block: red"
+			addSpriteToLayer(null, Block, SpritesGroup , 330.000, 210.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 120.000, 210.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"red" }, null ), onAddCallback );//"Block: red"
 			addSpriteToLayer(null, Block, SpritesGroup , 420.000, 420.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"red" }, null ), onAddCallback );//"Block: red"
-			addSpriteToLayer(null, Block, SpritesGroup , 420.000, 390.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"red" }, null ), onAddCallback );//"Block: red"
+			addSpriteToLayer(null, Block, SpritesGroup , 180.000, 240.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"red" }, null ), onAddCallback );//"Block: red"
 			addSpriteToLayer(null, Block, SpritesGroup , 30.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"red" }, null ), onAddCallback );//"Block: red"
-			addSpriteToLayer(null, MrT, SpritesGroup , 330.000, 390.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"MrT"
-			addSpriteToLayer(null, Hero, SpritesGroup , 150.000, 390.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Hero"
+			addSpriteToLayer(null, MrT, SpritesGroup , 210.000, 420.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"MrT"
+			addSpriteToLayer(null, Hero, SpritesGroup , 30.000, 180.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Hero"
 			addSpriteToLayer(null, Door, SpritesGroup , 240.000, 450.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"isVertical", value:false }, null ), onAddCallback );//"Door:H"
 		}
 

@@ -5,12 +5,12 @@ package levels
 	import org.flixel.*;
 	// Custom imports:
 import sprites.*;
-	public class Level_Room9 extends BaseLevel
+	public class Level_RoomX extends BaseLevel
 	{
 		//Embedded media...
-		[Embed(source="mapCSV_Room9_Tiles.csv", mimeType="application/octet-stream")] public var CSV_Tiles:Class;
+		[Embed(source="mapCSV_RoomX_Tiles.csv", mimeType="application/octet-stream")] public var CSV_Tiles:Class;
 		[Embed(source="../assets/images/tiles.png")] public var Img_Tiles:Class;
-		[Embed(source="mapCSV_Room9_Walls.csv", mimeType="application/octet-stream")] public var CSV_Walls:Class;
+		[Embed(source="mapCSV_RoomX_Walls.csv", mimeType="application/octet-stream")] public var CSV_Walls:Class;
 		[Embed(source="../assets/images/fenceGray.png")] public var Img_Walls:Class;
 
 		//Tilemaps
@@ -24,10 +24,9 @@ import sprites.*;
 		public var TextGroup:FlxGroup = new FlxGroup;
 
 		//Properties
-		public var gravity:Boolean = false;
 
 
-		public function Level_Room9(addToStage:Boolean = true, onAddCallback:Function = null)
+		public function Level_RoomX(addToStage:Boolean = true, onAddCallback:Function = null)
 		{
 			// Generate maps.
 			var properties:Array = [];

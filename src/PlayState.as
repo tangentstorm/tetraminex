@@ -40,9 +40,10 @@ package
 			
 			this.add(mHero.grabberGroup);
 			
+			mRoom.gravity = level['gravity'];
 			mRoom.addWalls(level['layerWalls']);
-			mRoom.addTiles(level['layerTiles']);
-			mRoom.doneBuilding();			
+			mRoom.addTiles(level['layerTiles']);			
+			mRoom.doneBuilding();		
 			mRoom.onHeroExit(function():void
 			{
 				loadLevel((levelNum + 1) % 10);
@@ -69,8 +70,6 @@ package
 			mHero.acceleration.y = 0;
 			
 			
-            updateGrabbers();
-			
 			// until we have a level select screen:
 			for (var n:int = 0; n < 10; ++n)
 			{
@@ -91,7 +90,7 @@ package
 			{
 				mHero.play('L');
 			}
-			else if (FlxG.keys.justPressed("UP"))
+			else if (FlxG.keys.justPressed("UP") && ! mRoom.gravity)
 			{
 				mHero.play('U');
 			}
@@ -104,16 +103,15 @@ package
 			{
 				FlxG.resetState();
 			}
-			
-			
+						
 			mTickCounter += FlxG.elapsed;
 			if (mTickCounter > 0.10)
 			{
 				mTickCounter = 0;
+									
 				if (FlxG.keys.RIGHT)
 				{
-					mRoom.nudge(mHero, Room.pointE);
-					
+					mRoom.nudge(mHero, Room.pointE);					
 				}
 				else if (FlxG.keys.LEFT)
 				{
@@ -121,13 +119,22 @@ package
 				}
 				else if (FlxG.keys.UP)
 				{
-					mRoom.nudge(mHero, Room.pointN);
+					if (mRoom.gravity)
+						mHero.jump();
+					else
+						mRoom.nudge(mHero, Room.pointN);
 				}
 				else if (FlxG.keys.DOWN)
 				{
 					mRoom.nudge(mHero, Room.pointS);
 				}
+					
+				mRoom.tick();
 			}
+			
+			
+			// update grabbers after mRoom.tick so we can't jump and grab 2 squares high
+			updateGrabbers();			
 			
 		}
 		

@@ -29,10 +29,15 @@ package
 		private var nullSprite:NullSprite = new NullSprite(0, 0);
 		private var mTiles:Vector.<GridTile> = new Vector.<GridTile>(256, true);
 		private var mSprites:Vector.<GridSprite> = new Vector.<GridSprite>(256, true);
+		private var mHero:Hero;
 		
 		private var mCagesLeft:int = 0;
 		private var mExit:ExitTile = null;
 		private var mExitCallback:Function;
+		
+		private var mInSetup:Boolean = true;
+		public static const kCollideIndex:int = 4;
+		public var gravity:Boolean;
 		
 		
 		public function Room() 
@@ -48,10 +53,11 @@ package
 			sprite.gx = sprite.x / kCellW;
 			sprite.gy = sprite.y / kCellH;
 			put(sprite, sprite.gx, sprite.gy);			
-			sprite.grid = this;			
+			sprite.room = this;
+			sprite.moved(); // mostly to reposition Hero.grabbers
+			if (sprite is Hero) mHero = sprite as Hero;
 		}
 		
-		public static const kCollideIndex:int = 4;
 		public function addWalls(walls:FlxTilemap):void
 		{
 			for (var y:int = 0; y < kRoomH; ++y)
@@ -76,19 +82,23 @@ package
 				{
 					var gt:GridTile = mTiles[y * kRoomW + x]
 						= GridTile.fromMap(map.getTile(x, y));
+						
+					var gs:GridSprite = get(x, y);
+					
 					if (gt is ExitTile)
 					{
-						mExit = gt as ExitTile;
-						var gs:GridSprite = get(x, y);
+						mExit = gt as ExitTile;						
 						if (gs is Door)
 						{
 							mExit.door = gs as Door;
 						}
 					}
 					else if (gt is CageTile)
-					{
+					{					
 						mCagesLeft++;
 					}
+					
+					gt.onPut(gs, this);
 				}
 			}
 			
@@ -105,7 +115,7 @@ package
 			if (sprite.canMove(dir))
 			{			
 				var n:GridSprite = this.neighbor(sprite, dir);
-				if (n is NullSprite || (sprite is Hero && (sprite as Hero).isHolding(n)))
+				if (n is NullSprite || (sprite is Hero && (sprite as Hero).holding(n)))
 				{
 					// nothing to do
 				}
@@ -192,7 +202,7 @@ package
 				sprite.gy = gy;
 				sprite.x = gx * kCellW;
 				sprite.y = gy * kCellH;
-				sprite.grid = this;
+				sprite.room = this;
 				
 				mTiles[index].onPut(sprite, this);
 			}
@@ -203,7 +213,7 @@ package
 			var gx:Number = relativeTo.gx;
 			var gy:Number = relativeTo.gy;
 			
-			if (what.grid == this)
+			if (what.room == this)
 			{
 				put(null, what.gx, what.gy);
 			}
@@ -230,7 +240,7 @@ package
 		
 		public function cageFilled():void 
 		{
-			if (--mCagesLeft == 0)
+			if (--mCagesLeft == 0 && ! mInSetup)
 			{
 				roomSolved();
 			}
@@ -258,6 +268,62 @@ package
 			if (mCagesLeft == 0 && mExit != null)
 			{
 				mExit.open();
+			}
+			mInSetup = false;
+		}
+		
+		public function tick():void 
+		{
+			if (gravity)
+			{
+				for (var y:int = kRoomH - 1; y > 0; --y)
+				{
+					for (var x:int = 0; x < kRoomW; ++x)
+					{
+						var gs:GridSprite = get(x, y);
+						var up:GridSprite = get(x, y - 1);
+						if (gs == nullSprite && up != nullSprite)						
+						{
+							if (up.held)
+							{
+								// do nothing, let hero handle it
+								/*
+								if (neighbor(mHero, pointS).solid)
+								{
+									// do nothing, because hero is holding it over a pit
+								}
+								else
+								{
+									nudge(up, Room.pointS);
+									nudge(mHero, Room.pointS);
+								}
+								*/
+							}
+							else if (up is Hero)
+							{
+								// TODO: extract "isSupported"
+								var supported:Boolean = false;
+								for (var i:int = 0; i < mHero.grabbers.length; ++i)
+								{
+									var c:GridSprite = mHero.grabbers[i].content;
+									if (c != null && c != nullSprite)
+									{
+										if (c.immovable || neighbor(c, pointS).solid)
+											supported = true;
+									}
+								}
+								if (! supported)
+								{
+									nudge(mHero, Room.pointS);
+								}
+							}
+							else
+							{
+								nudge(up, Room.pointS);
+							}
+						}
+					}
+				}
 			}
 		}
 		

@@ -24,6 +24,7 @@ import sprites.*;
 		public var TextGroup:FlxGroup = new FlxGroup;
 
 		//Properties
+		public var gravity:Boolean = false;
 
 
 		public function Level_Room1(addToStage:Boolean = true, onAddCallback:Function = null)
@@ -64,19 +65,19 @@ import sprites.*;
 		{
 			var obj:Object;
 
-			callbackNewData(new TextData(480.000, 30.000, 150.000, 120.000, 0.000, "T: Let's start with the basics. At Tetraminex, we manufacture tetraminos for falling block games all around the world.\r\rT: Your job is to assemble tetraminos from individual blocks. Give it a try! Push these blocks into their holders with your arrow keys.","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( { name:"speaker", value:"MrT" }, null ), 1, 1 ) ;
-			callbackNewData(new TextData(510.000, 210.000, 100.000, 50.000, 0.000, "T: Excellent work! I knew hiring you was a good choice.\r\rT: Right this way, and we'll move on to something more interesting.","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( null ), 1, 1 ) ;
+			callbackNewData(new TextData(30.000, 390.000, 30.000, 30.000, 0.000, "T: Let's start with the basics. At Tetraminex, we manufacture tetraminos for falling block games all around the world.\r\rT: Your job is to assemble tetraminos from individual blocks. Give it a try! Push these blocks into their holders with your arrow keys.","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( { name:"speaker", value:"MrT" }, null ), 1, 1 ) ;
+			callbackNewData(new TextData(420.000, 180.000, 30.000, 30.000, 0.000, "T: Excellent work! I knew hiring you was a good choice.\r\rT: Right this way, and we'll move on to something more interesting.","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( null ), 1, 1 ) ;
 		}
 
 		public function addSpritesForLayerSprites(onAddCallback:Function = null):void
 		{
-			addSpriteToLayer(null, Door, SpritesGroup , 360.000, 450.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"isVertical", value:false }, null ), onAddCallback );//"Door:H"
-			addSpriteToLayer(null, Hero, SpritesGroup , 90.000, 330.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Hero"
+			addSpriteToLayer(null, Hero, SpritesGroup , 30.000, 390.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Hero"
 			addSpriteToLayer(null, Block, SpritesGroup , 210.000, 270.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"purple" }, null ), onAddCallback );//"Block: purple"
 			addSpriteToLayer(null, Block, SpritesGroup , 210.000, 120.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"purple" }, null ), onAddCallback );//"Block: purple"
 			addSpriteToLayer(null, Block, SpritesGroup , 120.000, 180.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"purple" }, null ), onAddCallback );//"Block: purple"
 			addSpriteToLayer(null, Block, SpritesGroup , 300.000, 180.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"purple" }, null ), onAddCallback );//"Block: purple"
-			addSpriteToLayer(null, MrT, SpritesGroup , 330.000, 330.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"MrT"
+			addSpriteToLayer(null, MrT, SpritesGroup , 420.000, 150.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"MrT"
+			addSpriteToLayer(null, Door, SpritesGroup , 450.000, 180.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"isVertical", value:true }, null ), onAddCallback );//"Door:V"
 		}
 
 		public function generateObjectLinks(onAddCallback:Function = null):void

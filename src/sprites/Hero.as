@@ -1,6 +1,7 @@
 package sprites 
 {
 	import flash.display.GradientType;
+	import flash.text.GridFitType;
 	import org.flixel.*;
 	
 	/**
@@ -30,7 +31,7 @@ package sprites
 		
 		override public function canMove(dir:FlxPoint):Boolean 
 		{
-			var neighbor:GridSprite = grid.neighbor(this, dir);
+			var neighbor:GridSprite = room.neighbor(this, dir);
 			for (var i:int = 0; i < 4; ++i)
 			{
 				var g:Grabber = grabbers[i];
@@ -49,13 +50,25 @@ package sprites
 			grabberGroup.callAll("reposition");
 		}
 		
-		public function isHolding(n:GridSprite):Boolean
+		public function holding(gs:GridSprite):Boolean
 		{
 			for (var i:int = 0; i < grabbers.length; ++i)
 			{
-				if (grabbers[i].content == n) return true; 
+				if (grabbers[i].content == gs) return true; 
 			}
 			return false;
+		}
+		
+		public function jump():void 
+		{
+			var floor:GridSprite = room.get(gx, gy + 1);
+			var roof:GridSprite  = room.get(gx, gy - 1);
+			if (floor.solid && ! roof.solid && ! holding(floor))
+			{
+				// do it twice so we can jump onto platforms
+				room.nudge(this, Room.pointN);
+				room.nudge(this, Room.pointN);
+			}
 		}
 		
 		

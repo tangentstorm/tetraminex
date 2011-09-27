@@ -2,46 +2,46 @@
 <project>
   <version>2.1.1</version>
   <bgColor>0x000000</bgColor>
-  <viewPos x="44" y="10"/>
+  <viewPos x="44" y="16"/>
   <firstLayersTop>true</firstLayersTop>
   <spriteEntries currentId="15">
     <sprite name="Hero" idx="1" className="Hero" image="src/assets/images/hero.png" width="30" height="30" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="-1"/>
-    <sprite name="Block: red" idx="2" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="-1">
+    <sprite name="Block: red" idx="2" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="8">
       <properties>
         <type typeof="String" name="color" value="red"/>
       </properties>
     </sprite>
-    <sprite name="Block: purple" idx="3" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="1" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="-1">
+    <sprite name="Block: purple" idx="3" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="1" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="1">
       <properties>
         <type typeof="String" name="color" value="purple"/>
       </properties>
     </sprite>
-    <sprite name="Block: blue" idx="4" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="2" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="1">
+    <sprite name="Block: blue" idx="4" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="2" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="2">
       <properties>
         <type typeof="String" name="color" value="blue"/>
       </properties>
     </sprite>
-    <sprite name="Block: green" idx="5" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="3" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="-1">
+    <sprite name="Block: green" idx="5" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="3" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="3" selected="true">
       <properties>
         <type typeof="String" name="color" value="green"/>
       </properties>
     </sprite>
-    <sprite name="Block: yellow" idx="6" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="4" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="4">
+    <sprite name="Block: yellow" idx="6" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="4" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="12">
       <properties>
         <type typeof="String" name="color" value="yellow"/>
       </properties>
     </sprite>
-    <sprite name="Block: cyan" idx="7" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="5" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="-1">
+    <sprite name="Block: cyan" idx="7" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="5" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="5">
       <properties>
         <type typeof="String" name="color" value="cyan"/>
       </properties>
     </sprite>
-    <sprite name="Block: orange" idx="8" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="6" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="-1">
+    <sprite name="Block: orange" idx="8" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="6" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="14">
       <properties>
         <type typeof="String" name="color" value="orange"/>
       </properties>
     </sprite>
-    <sprite name="Block: gray" idx="9" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="7" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="7" selected="true">
+    <sprite name="Block: gray" idx="9" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="7" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="7">
       <properties>
         <type typeof="String" name="color" value="gray"/>
       </properties>
@@ -62,10 +62,13 @@
   </spriteEntries>
   <layers>
     <group name="Room0" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+      <properties>
+        <type typeof="Boolean" name="gravity" value="false"/>
+      </properties>
       <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <shape guid="A827695A-6F0E-FCDE-E2CC-4A0AF1C3122A" x="510" y="150" Z="0" angle="0" width="100.00" height="50.00" text="T: Ernie Goldsmile, recent high school graduate! Welcome to Tetraminex. &#xD;&#xD;T: I'm Teddy Tetraminus, and I run this place. You can call me Mr T. &#xD;&#xD;T: Use your arrow keys to step this way, and I'll show you what we do around here!" family="system" fontsize="8" align="center" color="16777215"/>
-        <shape guid="B8CC4D56-641A-6682-B8A3-AAD6D1D6FF7F" x="30" y="30" Z="0" angle="0" width="100.00" height="50.00" text="I: Goldsmile... Goldsmile... Nope. You're not on the list.&#xD;&#xD;I: Come back after you've been through training to choose an assignment.&#xD;" family="system" fontsize="8" align="center" color="16777215"/>
-        <shape guid="895B965C-2D1A-CB6B-D30A-13A91800229E" x="510" y="330" Z="0" angle="0" width="100.00" height="50.00" text="T: Good work. Now follow me!" family="system" fontsize="8" align="center" color="16777215"/>
+        <shape guid="A827695A-6F0E-FCDE-E2CC-4A0AF1C3122A" x="60" y="390" Z="0" angle="0" width="30.00" height="30.00" text="T: Ernie Goldsmile, recent high school graduate! Welcome to Tetraminex. &#xD;&#xD;T: I'm Teddy Tetraminus, and I run this place. You can call me Mr T. &#xD;&#xD;T: Use your arrow keys to step this way, and I'll show you what we do around here!" family="system" fontsize="8" align="center" color="16777215"/>
+        <shape guid="B8CC4D56-641A-6682-B8A3-AAD6D1D6FF7F" x="30" y="270" Z="0" angle="0" width="100.00" height="60.00" text="I: Goldsmile... Goldsmile... Nope. You're not on the list.&#xD;&#xD;I: Come back after you've been through training to choose an assignment.&#xD;" family="system" fontsize="8" align="center" color="16777215"/>
+        <shape guid="895B965C-2D1A-CB6B-D30A-13A91800229E" x="360" y="360" Z="0" angle="0" width="30.00" height="90.00" text="T: Good work. Now follow me!" family="system" fontsize="8" align="center" color="16777215"/>
         <shape guid="63351469-9E75-8A15-A450-3AD426D2E4EE" x="150" y="30" Z="0" angle="0" width="100.00" height="50.00" text="I: Welcome back, Ernie! Step in here to choose an assignment." family="system" fontsize="8" align="center" color="16777215"/>
       </shapelayer>
       <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
@@ -139,19 +142,19 @@
       </maplayer>
     </group>
     <group name="Room1" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
-      <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <shape guid="D3C4C4E6-0507-D1D7-B561-A70BA9E0C119" x="480" y="30" Z="0" angle="0" width="150.00" height="120.00" text="T: Let's start with the basics. At Tetraminex, we manufacture tetraminos for falling block games all around the world.&#xD;&#xD;T: Your job is to assemble tetraminos from individual blocks. Give it a try! Push these blocks into their holders with your arrow keys." family="system" fontsize="8" align="center" color="16777215">
+      <properties>
+        <type typeof="Boolean" name="gravity" value="false"/>
+      </properties>
+      <shapelayer name="Text" xScroll="1" yScroll="1" visible="false" locked="false" exports="true" aligned="false" sort="false">
+        <shape guid="D3C4C4E6-0507-D1D7-B561-A70BA9E0C119" x="30" y="390" Z="0" angle="0" width="30.00" height="30.00" text="T: Let's start with the basics. At Tetraminex, we manufacture tetraminos for falling block games all around the world.&#xD;&#xD;T: Your job is to assemble tetraminos from individual blocks. Give it a try! Push these blocks into their holders with your arrow keys." family="system" fontsize="8" align="center" color="16777215">
           <properties>
             <type typeof="String" name="speaker" value="MrT"/>
           </properties>
         </shape>
-        <shape guid="8399408F-FE6F-7E36-A1A4-38F901668E93" x="510" y="210" Z="0" angle="0" width="100.00" height="50.00" text="T: Excellent work! I knew hiring you was a good choice.&#xD;&#xD;T: Right this way, and we'll move on to something more interesting." family="system" fontsize="8" align="center" color="16777215"/>
+        <shape guid="8399408F-FE6F-7E36-A1A4-38F901668E93" x="420" y="180" Z="0" angle="0" width="30.00" height="30.00" text="T: Excellent work! I knew hiring you was a good choice.&#xD;&#xD;T: Right this way, and we'll move on to something more interesting." family="system" fontsize="8" align="center" color="16777215"/>
       </shapelayer>
       <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <sprite guid="F2E3F6AB-0F76-2170-ECA8-27986ED01B28" x="360" y="450" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="11">
-          <properties/>
-        </sprite>
-        <sprite guid="0CDE836A-6F93-2318-6D28-EF6CE115EB1A" x="90" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
+        <sprite guid="0CDE836A-6F93-2318-6D28-EF6CE115EB1A" x="30" y="390" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
         <sprite guid="0136FF16-6A8D-B8F4-AE64-EA0224D94248" x="210" y="270" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="3">
           <properties/>
         </sprite>
@@ -164,7 +167,10 @@
         <sprite guid="CC4907AC-A9C2-C399-301F-27FE470F5DB7" x="300" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="3">
           <properties/>
         </sprite>
-        <sprite guid="47E0941C-47D9-E61D-0C14-239DCEFA0E71" x="330" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="13"/>
+        <sprite guid="47E0941C-47D9-E61D-0C14-239DCEFA0E71" x="420" y="150" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="13"/>
+        <sprite guid="4D6B1E7B-BB45-D68C-B147-BE72C4B8EE75" x="450" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="10">
+          <properties/>
+        </sprite>
       </spritelayer>
       <maplayer name="Walls" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/fenceGray.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
         <row>4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,7</row>
@@ -172,17 +178,17 @@
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,9,0,9,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,8,0,8,0,0,0,0,0,0,8</row>
-        <row>8,0,0,10,5,5,19,0,16,5,5,11,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,10,5,5,7,0,4,5,5,11,0,0,0,8</row>
+        <row>8,0,0,20,5,5,19,0,16,5,5,21,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>8,0,0,20,5,5,7,0,4,5,5,21,0,0,0,8</row>
         <row>8,0,0,0,0,0,8,0,8,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,8,0,8,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,13,0,13,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>16,5,5,5,5,5,5,5,5,5,5,5,0,5,5,19</row>
+        <row>16,5,5,5,5,5,5,5,5,5,5,5,5,5,5,19</row>
       </maplayer>
       <maplayer name="Tiles" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/tiles.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
@@ -191,7 +197,7 @@
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,17,17,17,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,17,17,17,0,0,0,0,0,0,2</row>
         <row>0,0,0,0,0,0,0,17,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
@@ -200,16 +206,19 @@
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
       </maplayer>
     </group>
     <group name="Room2" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+      <properties>
+        <type typeof="Boolean" name="gravity" value="false"/>
+      </properties>
       <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <shape guid="2DA4481B-7826-5ECD-F1B4-9B5EBF2ABE4D" x="480" y="30" Z="0" angle="0" width="100.00" height="50.00" text="T: Lots of companies push blocks around, Ernie, but at Tetraminex, we don't just push blocks...&#xD;&#xD;T: We pull them too! Use your [WASD] keys (or [,AOE] if you're a Dvorak man), and put these blocks into place." family="system" fontsize="8" align="center" color="16777215"/>
-        <shape guid="1FE828CF-0A30-6B65-490D-6297FB9180C1" x="480" y="210" Z="0" angle="0" width="100.00" height="50.00" text="T: Ernie, you're a natural! Right this way for lesson three." family="system" fontsize="8" align="center" color="16777215"/>
+        <shape guid="2DA4481B-7826-5ECD-F1B4-9B5EBF2ABE4D" x="30" y="180" Z="0" angle="0" width="30.00" height="50.00" text="T: Lots of companies push blocks around, Ernie, but at Tetraminex, we don't just push blocks...&#xD;&#xD;T: We pull them too! Use your [WASD] keys (or [,AOE] if you're a Dvorak man), and put these blocks into place." family="system" fontsize="8" align="center" color="16777215"/>
+        <shape guid="1FE828CF-0A30-6B65-490D-6297FB9180C1" x="240" y="420" Z="0" angle="0" width="30.00" height="30.00" text="T: Ernie, you're a natural! Right this way for lesson three." family="system" fontsize="8" align="center" color="16777215"/>
       </shapelayer>
       <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <sprite guid="9F2B8930-884A-4DF7-DC33-92858B67DC96" x="30" y="390" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5">
+        <sprite guid="9F2B8930-884A-4DF7-DC33-92858B67DC96" x="270" y="240" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5">
           <properties/>
         </sprite>
         <sprite guid="2DF2F09D-2E70-4DBE-A624-84953AD08C6C" x="420" y="30" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5">
@@ -218,44 +227,44 @@
         <sprite guid="E64B68DF-5149-6906-0797-2A511427779D" x="30" y="420" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5">
           <properties/>
         </sprite>
-        <sprite guid="BB3D01B9-1D3F-3703-5230-D5062113CC21" x="390" y="30" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5">
+        <sprite guid="BB3D01B9-1D3F-3703-5230-D5062113CC21" x="330" y="210" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5">
           <properties/>
         </sprite>
-        <sprite guid="2ECDD011-0C50-5DF0-8D76-0D40714533E4" x="60" y="30" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
+        <sprite guid="2ECDD011-0C50-5DF0-8D76-0D40714533E4" x="120" y="210" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
           <properties/>
         </sprite>
         <sprite guid="20D44188-677E-ECA7-0153-8D7332D6C117" x="420" y="420" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
           <properties/>
         </sprite>
-        <sprite guid="28A48F90-2E01-E3B2-E36A-D6D8159B7BC3" x="420" y="390" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
+        <sprite guid="28A48F90-2E01-E3B2-E36A-D6D8159B7BC3" x="180" y="240" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
           <properties/>
         </sprite>
         <sprite guid="1B14B20D-56B1-F2CC-F1A2-CF1CB1A9163E" x="30" y="30" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
           <properties/>
         </sprite>
-        <sprite guid="13CA8A8E-178C-8D54-1EDB-A112381B1F0B" x="330" y="390" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="13"/>
-        <sprite guid="2488F7E5-744B-A9A6-16AB-EA3931DD8899" x="150" y="390" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
+        <sprite guid="13CA8A8E-178C-8D54-1EDB-A112381B1F0B" x="210" y="420" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="13"/>
+        <sprite guid="2488F7E5-744B-A9A6-16AB-EA3931DD8899" x="30" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
         <sprite guid="3F98F741-E39E-4863-A501-37D9F199E9AE" x="240" y="450" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="11">
           <properties/>
         </sprite>
       </spritelayer>
       <maplayer name="Walls" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/fenceGray.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
-        <row>4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,7</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>12,5,5,11,0,0,0,0,0,0,0,0,10,5,5,15</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>4,5,5,5,5,5,5,5,5,5,5,5,5,6,5,7</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,8,0,8</row>
+        <row>12,5,21,0,0,0,0,0,0,0,0,0,0,13,0,8</row>
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,9,0,0,0,0,0,0,0,0,0,0,9,0,8</row>
-        <row>8,0,8,0,0,0,0,0,0,0,0,0,0,8,0,8</row>
-        <row>8,0,8,0,0,0,0,0,0,0,0,0,0,8,0,8</row>
-        <row>16,5,18,5,5,5,5,5,1,5,5,5,5,18,5,19</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,9,0,0,0,0,0,0,0,0,0,0,20,5,15</row>
+        <row>8,0,8,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>16,5,18,5,5,5,5,5,1,5,5,5,5,5,5,19</row>
       </maplayer>
       <maplayer name="Tiles" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/tiles.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
@@ -280,45 +289,47 @@
       </maplayer>
     </group>
     <group name="Room3" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+      <properties>
+        <type typeof="Boolean" name="gravity" value="false"/>
+      </properties>
       <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <shape guid="EBEB9597-CDC2-ADDF-AB85-F1AABE3D3B03" x="480" y="60" Z="0" angle="0" width="100.00" height="50.00" text="T: You may have noticed that blocks lock in place when you move them over a holder.&#xD;&#xD;T: Be careful about the order you use. If you get stuck, press R to restart the assignment." family="system" fontsize="8" align="center" color="16777215"/>
+        <shape guid="EBEB9597-CDC2-ADDF-AB85-F1AABE3D3B03" x="180" y="30" Z="0" angle="0" width="100.00" height="50.00" text="T: You may have noticed that blocks lock in place when you move them over a holder.&#xD;&#xD;T: Be careful about the order you use. If you get stuck, press R to restart the assignment." family="system" fontsize="8" align="center" color="16777215"/>
         <shape guid="AD687FF6-E26A-5D07-EECE-15CBAFAC5079" x="480" y="210" Z="0" angle="0" width="100.00" height="50.00" text="T: I told you to be careful! Press R to try again." family="system" fontsize="8" align="center" color="16777215"/>
         <shape guid="37E329DD-553F-50EE-C521-76C57E311065" x="480" y="300" Z="0" angle="0" width="100.00" height="50.00" text="T: Excellent. Now let's move on to color." family="system" fontsize="8" align="center" color="16777215"/>
       </shapelayer>
       <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <sprite guid="566D4811-306A-D369-20A4-2053C2F3F74B" x="120" y="270" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
+        <sprite guid="566D4811-306A-D369-20A4-2053C2F3F74B" x="210" y="420" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
           <properties/>
         </sprite>
-        <sprite guid="6815AC2C-4E1F-BD9D-48A6-2F0873FDE500" x="90" y="270" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
+        <sprite guid="6815AC2C-4E1F-BD9D-48A6-2F0873FDE500" x="180" y="420" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
           <properties/>
         </sprite>
-        <sprite guid="42759BAC-AE00-BC74-3230-14A318AD9AC7" x="90" y="240" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
+        <sprite guid="42759BAC-AE00-BC74-3230-14A318AD9AC7" x="180" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
           <properties/>
         </sprite>
-        <sprite guid="CDA46D0E-2203-1C44-84E4-129CD54D71CA" x="120" y="240" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
+        <sprite guid="CDA46D0E-2203-1C44-84E4-129CD54D71CA" x="210" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
           <properties/>
         </sprite>
-        <sprite guid="12270B07-33DE-7383-8EA5-B9F2D553E0A3" x="180" y="120" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
+        <sprite guid="12270B07-33DE-7383-8EA5-B9F2D553E0A3" x="180" y="90" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
           <properties/>
         </sprite>
-        <sprite guid="3F8F6DFC-9E52-1351-26E6-45D7EDE2E6B7" x="210" y="120" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
+        <sprite guid="3F8F6DFC-9E52-1351-26E6-45D7EDE2E6B7" x="210" y="90" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
           <properties/>
         </sprite>
-        <sprite guid="40637904-E6E8-FC70-7842-0DBDC37DF140" x="240" y="120" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
+        <sprite guid="40637904-E6E8-FC70-7842-0DBDC37DF140" x="240" y="90" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
           <properties/>
         </sprite>
-        <sprite guid="874020AF-6BFA-B1E2-1925-ED40F131AAD4" x="270" y="120" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
+        <sprite guid="874020AF-6BFA-B1E2-1925-ED40F131AAD4" x="270" y="90" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
           <properties/>
         </sprite>
-        <sprite guid="3BAC0C04-0C6B-1F44-FECB-C62F27C13905" x="270" y="60" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="13"/>
-        <sprite guid="96A421E2-4288-A2B7-3043-8C9E102B03B9" x="180" y="60" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
-        <sprite guid="163F070C-55A6-E9B1-5F51-F4435D7A9999" x="240" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="11">
+        <sprite guid="3BAC0C04-0C6B-1F44-FECB-C62F27C13905" x="270" y="420" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="13"/>
+        <sprite guid="96A421E2-4288-A2B7-3043-8C9E102B03B9" x="240" y="30" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
+        <sprite guid="1C158977-43BB-8B53-0F52-7AEF1F69D1FC" x="210" y="450" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="11">
           <properties/>
         </sprite>
       </spritelayer>
       <maplayer name="Walls" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/fenceGray.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
-        <row>4,5,5,5,5,6,5,5,0,5,6,5,5,5,5,7</row>
-        <row>8,0,0,0,0,8,0,0,0,0,8,0,0,0,0,8</row>
+        <row>4,5,5,5,5,6,5,5,1,5,6,5,5,5,5,7</row>
         <row>8,0,0,0,0,8,0,0,0,0,8,0,0,0,0,8</row>
         <row>8,0,0,0,0,8,0,0,0,0,8,0,0,0,0,8</row>
         <row>8,0,0,0,0,13,0,0,0,0,13,0,0,0,0,8</row>
@@ -330,12 +341,12 @@
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>16,5,5,5,5,5,5,5,5,5,5,5,5,5,5,19</row>
+        <row>8,0,0,0,0,9,0,0,20,5,7,0,0,0,0,8</row>
+        <row>8,0,0,0,0,8,0,0,0,0,8,0,0,0,0,8</row>
+        <row>8,0,0,0,0,8,0,0,0,0,8,0,0,0,0,8</row>
+        <row>16,5,5,5,5,18,5,0,5,5,18,5,5,5,5,19</row>
       </maplayer>
       <maplayer name="Tiles" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/tiles.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
-        <row>0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
@@ -343,48 +354,55 @@
         <row>0,0,0,0,0,0,21,21,21,21,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,20,20,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,20,20,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,20,20,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,20,20,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0</row>
       </maplayer>
     </group>
     <group name="Room4" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+      <properties>
+        <type typeof="Boolean" name="gravity" value="false"/>
+      </properties>
       <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <shape guid="CBAE6A86-0253-B48E-4D8D-EF4582B57AF3" x="510" y="30" Z="0" angle="0" width="100.00" height="60.00" text="T: Move the gray blocks over the paint tiles to change their colors." family="system" fontsize="8" align="center" color="16777215"/>
+        <shape guid="CBAE6A86-0253-B48E-4D8D-EF4582B57AF3" x="150" y="30" Z="0" angle="0" width="100.00" height="60.00" text="T: Move the gray blocks over the paint tiles to change their colors." family="system" fontsize="8" align="center" color="16777215"/>
       </shapelayer>
       <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <sprite guid="3A4F9B4C-EF5C-2200-2A22-43DE91808733" x="60" y="150" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
+        <sprite guid="3A4F9B4C-EF5C-2200-2A22-43DE91808733" x="180" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
           <properties/>
         </sprite>
-        <sprite guid="07685855-165D-39D2-D666-7E5DAE516D0B" x="60" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
+        <sprite guid="5EC122FE-9F23-56DA-CD31-FC14CF988642" x="270" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
           <properties/>
         </sprite>
-        <sprite guid="1EE7992E-5BF5-B5D4-FF34-A68AF4BE1372" x="60" y="210" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
+        <sprite guid="FE122FA4-6BA3-CCD8-F1F0-59E12D235940" x="60" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="8">
           <properties/>
         </sprite>
-        <sprite guid="5EC122FE-9F23-56DA-CD31-FC14CF988642" x="390" y="150" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
+        <sprite guid="284351C9-92F9-9758-9405-10E9DE47CC8D" x="390" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="4">
           <properties/>
         </sprite>
-        <sprite guid="48998E56-E79C-E3F1-DEAB-218EAF8A55B3" x="390" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
-          <properties/>
-        </sprite>
-        <sprite guid="A262B239-B423-A9A1-5DF8-A068C2CDEB2C" x="390" y="210" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
-          <properties/>
-        </sprite>
-        <sprite guid="FE122FA4-6BA3-CCD8-F1F0-59E12D235940" x="390" y="120" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="8">
-          <properties/>
-        </sprite>
-        <sprite guid="284351C9-92F9-9758-9405-10E9DE47CC8D" x="60" y="120" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="4">
-          <properties/>
-        </sprite>
-        <sprite guid="B65A30C5-91B7-3C0D-6213-CDCDBC332735" x="270" y="90" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="13"/>
-        <sprite guid="866454E9-4566-B729-0465-BBF1FB315A5E" x="150" y="90" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
+        <sprite guid="B65A30C5-91B7-3C0D-6213-CDCDBC332735" x="270" y="420" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="13"/>
+        <sprite guid="866454E9-4566-B729-0465-BBF1FB315A5E" x="210" y="30" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
         <sprite guid="FCD879FE-49C0-508E-0736-188E0517BC2F" x="210" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="11">
+          <properties/>
+        </sprite>
+        <sprite guid="349137E1-6A86-A450-E77A-A16FCE2779BD" x="240" y="450" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="11">
+          <properties/>
+        </sprite>
+        <sprite guid="CCCA97F4-2A43-FEEB-707A-E32B7EC104CC" x="60" y="210" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
+          <properties/>
+        </sprite>
+        <sprite guid="14BB03A1-B228-278B-8D15-27630C8480B6" x="390" y="210" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
+          <properties/>
+        </sprite>
+        <sprite guid="F219E628-9B59-977C-54E3-997B2E167562" x="180" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="5EBA120C-7284-D27E-7E8E-75E059CEAE57" x="270" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
           <properties/>
         </sprite>
       </spritelayer>
@@ -404,7 +422,7 @@
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
         <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>16,5,5,5,5,5,5,5,5,5,5,5,5,5,5,19</row>
+        <row>16,5,5,5,5,5,5,5,0,5,5,5,5,5,5,19</row>
       </maplayer>
       <maplayer name="Tiles" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/tiles.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
         <row>0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0</row>
@@ -419,13 +437,463 @@
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,10,0,0,0,0,0,0,0,0,14,0,0,0</row>
+        <row>0,0,0,14,0,0,0,0,0,0,0,0,10,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0</row>
+      </maplayer>
+    </group>
+    <group name="Room5" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+      <properties>
+        <type typeof="Boolean" name="gravity" value="false"/>
+      </properties>
+      <shapelayer name="Layer4" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
+        <shape guid="DBD88914-3EC5-9188-49BA-0F8559562B53" x="480" y="30" Z="0" angle="0" width="100.00" height="50.00" text="T: Okay, Ernie. Time to see what you've learned.&#xD;&#xD;T: Remember, you can press R to start over if you get stuck." family="system" fontsize="8" align="center" color="16777215"/>
+      </shapelayer>
+      <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
+        <sprite guid="D56517CE-FD8C-1972-42CB-E5F9DEED22DD" x="240" y="30" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
+        <sprite guid="B3F2B2DB-2F02-5B9C-6182-188425F3D49E" x="270" y="90" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
+          <properties/>
+        </sprite>
+        <sprite guid="23F3A5D4-F6D0-392C-574E-E64BBE542905" x="300" y="90" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
+          <properties/>
+        </sprite>
+        <sprite guid="E004B2E8-2AE6-C201-A816-E2CFF91D4F45" x="270" y="150" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="3">
+          <properties/>
+        </sprite>
+        <sprite guid="1F6092AE-E212-A9C0-F26F-742A5B138C1A" x="330" y="150" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="3">
+          <properties/>
+        </sprite>
+        <sprite guid="A016593A-DF54-843A-7697-552F9771526C" x="270" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="3">
+          <properties/>
+        </sprite>
+        <sprite guid="7220BFD1-E878-B39A-3251-B6E9FB1FF3CD" x="300" y="150" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="3">
+          <properties/>
+        </sprite>
+        <sprite guid="9D2B56D3-4889-E40E-0D47-3CAE41BCDE39" x="330" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="4">
+          <properties/>
+        </sprite>
+        <sprite guid="B97C2797-A469-C7B9-0FC8-81D416E6F729" x="240" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="4">
+          <properties/>
+        </sprite>
+        <sprite guid="1C980CA5-FA40-AEA7-05D6-1DF727B32E14" x="240" y="150" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="4">
+          <properties/>
+        </sprite>
+        <sprite guid="DABF9AAF-3977-5425-C30B-CF6F4FE32C84" x="300" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="4">
+          <properties/>
+        </sprite>
+        <sprite guid="0125BE77-FF4B-40F9-1951-B3612B6313E0" x="180" y="60" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5">
+          <properties/>
+        </sprite>
+        <sprite guid="7BBAC179-029F-F355-0CFE-19A74ACDC32E" x="150" y="60" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5">
+          <properties/>
+        </sprite>
+        <sprite guid="19D0E328-FDF6-63E1-449C-AC5B921A2481" x="150" y="120" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5">
+          <properties/>
+        </sprite>
+        <sprite guid="D5749F7C-2953-AE31-C8B5-ABE3AAFBDDD5" x="150" y="90" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5">
+          <properties/>
+        </sprite>
+        <sprite guid="98B2E1C6-B42B-D987-F5BD-F4D7C4B79EB0" x="180" y="120" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
+          <properties/>
+        </sprite>
+        <sprite guid="F6BD0158-7427-7724-2CE8-95A3EAC67244" x="270" y="120" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
+          <properties/>
+        </sprite>
+        <sprite guid="D43C3DA6-F0E3-AF9A-7D30-6875B1C4672B" x="300" y="120" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
+          <properties/>
+        </sprite>
+        <sprite guid="219ABDBE-F5A2-8278-63C4-1674FDE17988" x="180" y="150" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
+          <properties/>
+        </sprite>
+        <sprite guid="4F6EE2D4-6572-006A-DBA8-7668F97C07AA" x="120" y="150" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
+          <properties/>
+        </sprite>
+        <sprite guid="92284A44-D2D2-C211-79D7-E2B8682E03A3" x="90" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
+          <properties/>
+        </sprite>
+        <sprite guid="4D2C15FB-EFA4-B66A-6BF8-FC80F2BE71D3" x="90" y="150" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
+          <properties/>
+        </sprite>
+        <sprite guid="75BD4FEC-0676-1177-5520-7D60828D3C9F" x="120" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
+          <properties/>
+        </sprite>
+        <sprite guid="7B1569EC-F09B-A594-CE6A-35D5C7F896B5" x="210" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="8">
+          <properties/>
+        </sprite>
+        <sprite guid="7587B879-2F7D-3142-5776-496F23514F30" x="180" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="8">
+          <properties/>
+        </sprite>
+        <sprite guid="CD11FD39-D36A-5B80-98B9-A50DC797405A" x="150" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="8">
+          <properties/>
+        </sprite>
+        <sprite guid="7919833E-B32B-654D-882D-DD434BE0E768" x="180" y="90" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="8">
+          <properties/>
+        </sprite>
+        <sprite guid="9088B6E1-37CB-4E77-B687-0113E94E11CC" x="420" y="60" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
+          <properties/>
+        </sprite>
+        <sprite guid="D8D57BD4-11B6-0DA9-5478-86A530BB2A23" x="420" y="30" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
+          <properties/>
+        </sprite>
+        <sprite guid="6756063A-31D6-9462-95DA-C9E392BD453F" x="240" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="11">
+          <properties/>
+        </sprite>
+        <sprite guid="EC2209E8-4197-4EC7-C36C-7C4651906879" x="450" y="270" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="10">
+          <properties/>
+        </sprite>
+        <sprite guid="56B9097F-0A7F-C584-8D55-733DE9F38433" x="420" y="300" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="13"/>
+      </spritelayer>
+      <maplayer name="Walls" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/fenceGray.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
+        <row>4,5,5,5,5,5,5,5,5,5,5,5,5,6,5,7</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,8,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,8,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,8,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,8,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,16,1,15</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>16,5,5,5,5,5,5,5,5,5,5,5,5,5,5,19</row>
+      </maplayer>
+      <maplayer name="Tiles" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/tiles.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,8,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,21,0,17,17,17,0,0,0,0,0,0,0,2</row>
+        <row>0,0,0,21,22,19,17,16,16,0,0,0,0,0,0,0</row>
+        <row>0,0,0,21,22,19,19,18,16,16,20,20,0,0,0,0</row>
+        <row>0,0,0,21,22,22,19,18,18,18,20,20,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <tileProperties>
+          <properties/>
+          <properties/>
+          <properties/>
+          <properties/>
+          <properties/>
+          <properties/>
+          <properties/>
+          <properties/>
+          <properties/>
+        </tileProperties>
+      </maplayer>
+    </group>
+    <group name="Room6" xScroll="1" yScroll="1" visible="true" open="true" locked="false" exports="true">
+      <properties>
+        <type typeof="Boolean" name="gravity" value="true"/>
+      </properties>
+      <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
+        <shape guid="DEADB385-03D2-A8D8-D699-B416D0973A17" x="480" y="30" Z="0" angle="0" width="100.00" height="50.00" text="T: Okay, Ernie. Time to see what you've learned.&#xD;&#xD;T: Remember, you can press R to start over if you get stuck." family="system" fontsize="8" align="center" color="16777215"/>
+      </shapelayer>
+      <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false" selected="true">
+        <sprite guid="E47253E0-408A-887A-80FF-9C9882E819DA" x="150" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
+        <sprite guid="74206C8C-CDE3-1763-94D6-F7A23A7BE996" x="150" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
+          <properties/>
+        </sprite>
+        <sprite guid="9735AE12-24D9-3C12-5588-9F76BD9A4CC3" x="150" y="150" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
+          <properties/>
+        </sprite>
+        <sprite guid="7D3B87DC-C224-DAAB-FD9B-5C745D3C188A" x="420" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="13"/>
+        <sprite guid="2B59703F-5EA7-E979-DC81-621F6314C172" x="120" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
+          <properties/>
+        </sprite>
+        <sprite guid="AAA4FD1C-C0E9-C1D7-054B-F1180AD4D265" x="270" y="390" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
+          <properties/>
+        </sprite>
+        <sprite guid="51586BC9-E582-3666-46DA-418E63F84339" x="300" y="420" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
+          <properties/>
+        </sprite>
+        <sprite guid="A60AFFDA-FDE3-9209-027B-7E6A584715F6" x="390" y="210" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
+          <properties/>
+        </sprite>
+        <sprite guid="8E8B2757-8B09-2953-749A-DB56513FEE63" x="360" y="390" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
+          <properties/>
+        </sprite>
+        <sprite guid="FAFF3F4E-794D-6BEC-F15B-8D9C688CD5FC" x="390" y="390" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
+          <properties/>
+        </sprite>
+        <sprite guid="A042CEE8-C081-34C7-3EB7-3B869520C75B" x="360" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
+          <properties/>
+        </sprite>
+        <sprite guid="24797E8D-382B-29D0-F5DB-2E5306AAF8B5" x="390" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6" frame="12">
+          <properties/>
+        </sprite>
+        <sprite guid="70649C0A-13C9-B834-D030-6421EE20EE54" x="420" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6" frame="12">
+          <properties/>
+        </sprite>
+        <sprite guid="90D1A967-668C-F513-0E1D-255546897725" x="330" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="8" frame="14">
+          <properties/>
+        </sprite>
+        <sprite guid="6B42CA0D-3368-093C-EE5C-023A21482D99" x="210" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="3" frame="9">
+          <properties/>
+        </sprite>
+        <sprite guid="9E02F663-4A26-E6C9-34E6-4A96DA6AD8EE" x="180" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="3" frame="9">
+          <properties/>
+        </sprite>
+        <sprite guid="043D633F-96FC-F6C6-FC2D-920337419BBF" x="150" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="3" frame="9">
+          <properties/>
+        </sprite>
+        <sprite guid="87C1A0E0-66D0-800C-A9D5-17C532D18B8D" x="270" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7" frame="13">
+          <properties/>
+        </sprite>
+        <sprite guid="6F8FBF79-24A5-4784-9338-5B36639578D5" x="270" y="300" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7" frame="13">
+          <properties/>
+        </sprite>
+        <sprite guid="8ED70091-EA51-A50E-A53C-112B6F748F9D" x="270" y="270" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7" frame="13">
+          <properties/>
+        </sprite>
+        <sprite guid="7F0A0D83-D472-A231-3FAF-89209B87A93F" x="240" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2" frame="8">
+          <properties/>
+        </sprite>
+        <sprite guid="51589840-2D85-0F13-5A71-11FF6DAB1BA8" x="210" y="210" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="8" frame="14">
+          <properties/>
+        </sprite>
+        <sprite guid="54DF5926-AD18-80F8-4C17-0BAA238E12D1" x="120" y="210" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="8" frame="14">
+          <properties/>
+        </sprite>
+        <sprite guid="43E55BF2-2A1F-8F5E-A539-D08547FD7915" x="120" y="300" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5" frame="11">
+          <properties/>
+        </sprite>
+        <sprite guid="EACC83E3-203D-E57A-5387-A4DB744AFBD0" x="360" y="240" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="4" frame="10">
+          <properties/>
+        </sprite>
+        <sprite guid="4F9EC0AB-6A2B-94FF-B0FD-F4C2E8ACEE19" x="300" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6" frame="12">
+          <properties/>
+        </sprite>
+        <sprite guid="CBCBC902-6121-3B55-0326-4249DC2CE9B5" x="120" y="150" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="3803BC16-C21B-69C1-0BF8-2337248A9778" x="60" y="60" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="10B817CD-924F-AE4F-7B47-120243429862" x="60" y="270" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="A34E149C-B276-22F1-DDA8-04D59A113F45" x="60" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="E58E79BE-E458-C95E-2775-BA917CC29032" x="90" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="BC4970F1-742A-216C-4575-2AC88EE977F1" x="30" y="390" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="4" frame="2">
+          <properties/>
+        </sprite>
+        <sprite guid="2490C439-0447-0F05-074C-C23163F6997E" x="90" y="390" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="AF191DAA-D13B-C611-CDA0-66993DA183C6" x="0" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="B169435B-FA64-A366-4F4C-455E7BA1BF77" x="240" y="450" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="3134EC51-F1BE-3DD3-42E5-DBC14E2AFD9D" x="270" y="120" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="7BAD597F-AD44-AE0A-BDB4-DA9527AB3EFC" x="90" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="B60B135D-1459-A74F-FC35-0A9D4CD66DFD" x="360" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="3582C010-A8E4-076E-9A20-10165616DB27" x="30" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="9634357F-63F5-ED29-D44D-F8A7D5209F00" x="60" y="30" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="14CC05CA-712A-0A06-AA05-700EA20D1730" x="150" y="120" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="8D5B117E-233B-3266-BC7E-AF70F0935193" x="180" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="D6AE7DD4-4170-36A1-022C-9E6146FF8A2E" x="240" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="B730BC64-D1C9-5D22-EF78-1F89B98F52F0" x="60" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="ED2AA946-9D2F-B07E-0C3B-1DD9FFDCCAF5" x="300" y="150" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="8282D791-D90B-CD25-FCC5-32E042FFBEF4" x="270" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="A7CC8297-4980-476A-97A7-7FEAE098A3A5" x="390" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="10753155-EA0E-5570-5E85-7B2390F115CE" x="420" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="928570B5-43C0-3F80-5777-D6111ABB582A" x="450" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="7">
+          <properties/>
+        </sprite>
+        <sprite guid="68681D02-ED62-F860-96C6-E7A9CF291A24" x="30" y="300" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="15">
+          <properties/>
+        </sprite>
+        <sprite guid="D8E59823-E7B2-79FB-1424-A48CD37657C1" x="60" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9" frame="15">
+          <properties/>
+        </sprite>
+        <sprite guid="9519BCF8-20E8-839C-5AA4-5688A2A2D4E3" x="300" y="270" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5" frame="11">
+          <properties/>
+        </sprite>
+        <sprite guid="D3BF93D1-DB91-044B-86C0-4087AA8BF432" x="270" y="240" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7" frame="13">
+          <properties/>
+        </sprite>
+        <sprite guid="9E202D7E-EC7F-3B88-59C2-3C8AFD748F58" x="330" y="300" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2" frame="8">
+          <properties/>
+        </sprite>
+        <sprite guid="3939C7F8-D558-A0C0-CF3B-E582BBCF5800" x="360" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2" frame="8">
+          <properties/>
+        </sprite>
+        <sprite guid="D6FF2093-3630-C7F0-2613-DD7B9A3C3AEE" x="240" y="120" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5" frame="3">
+          <properties/>
+        </sprite>
+      </spritelayer>
+      <maplayer name="Walls" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/fenceGray.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,6,0,0,0,0,0,16,19,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,12,0,0,0,0,0,0,0</row>
+        <row>0,0,0,20,14,0,0,0,0,0,5,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,15,0,0,5,0,0,0,16,0,0</row>
+        <row>0,0,0,5,5,18,0,7,0,0,20,8,5,0,6,0</row>
+        <row>0,8,0,0,0,0,14,0,0,0,0,21,20,0,6,0</row>
+        <row>0,20,18,0,15,0,15,0,0,0,0,0,0,14,0,8</row>
+        <row>0,0,0,0,0,0,19,0,0,0,0,0,0,6,6,8</row>
+        <row>0,0,8,21,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5</row>
+        <row>0,0,0,0,16,5,0,0,0,0,0,0,0,0,0,20</row>
+        <row>0,9,0,19,0,0,0,0,0,20,0,15,20,16,0,18</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+      </maplayer>
+      <maplayer name="Tiles" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/tiles.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,23,23</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,22,0,0,22,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,21,0,0,18,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,21,19,0,0,0,0,2</row>
+        <row>23,23,0,0,19,0,0,0,0,21,18,16,0,0,0,0</row>
+        <row>23,0,0,0,0,0,0,0,0,21,20,18,16,0,0,0</row>
+        <row>23,0,23,0,0,17,17,17,16,16,0,22,0,20,20,0</row>
+        <row>23,0,0,0,0,0,17,19,0,0,0,0,0,0,0,0</row>
+        <row>23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>23,23,23,23,23,23,23,23,0,23,23,23,23,23,23,23</row>
+      </maplayer>
+    </group>
+    <group name="Room7" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+      <properties>
+        <type typeof="Boolean" name="gravity" value="false"/>
+      </properties>
+      <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
+        <sprite guid="48B67B83-4DA3-A70F-202C-4B0CDCF78134" x="180" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
+      </spritelayer>
+      <maplayer name="Walls" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/fenceGray.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
+        <row>4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,7</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>16,5,5,5,5,5,5,5,5,5,5,5,5,5,5,19</row>
+      </maplayer>
+      <maplayer name="Tiles" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/tiles.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
       </maplayer>
     </group>
-    <group name="Room5" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+    <group name="Room8" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+      <properties>
+        <type typeof="Boolean" name="gravity" value="false"/>
+      </properties>
+      <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
+        <sprite guid="1082F264-EAEC-CD86-76F4-CC3D86AE159B" x="360" y="270" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
+      </spritelayer>
+      <maplayer name="Walls" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/fenceGray.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
+        <row>4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,7</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
+        <row>16,5,5,5,5,5,5,5,5,5,5,5,5,5,5,19</row>
+      </maplayer>
+      <maplayer name="Tiles" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/tiles.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
+      </maplayer>
+    </group>
+    <group name="Room9" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+      <properties>
+        <type typeof="Boolean" name="gravity" value="false"/>
+      </properties>
       <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <shape guid="E180ED4C-C0B5-187B-8CD9-14227DB3F25F" x="510" y="30" Z="0" angle="0" width="100.00" height="50.00" text="T: Okay, Ernie. Time to see what you've learned.&#xD;&#xD;T: Remember, you can press R to start over if you get stuck." family="system" fontsize="8" align="center" color="16777215"/>
         <shape guid="F3DFEDF6-C6E4-9745-0E91-875D4A133287" x="510" y="210" Z="0" angle="0" width="100.00" height="50.00" text="T: Congratulations, Ernie. You've completed your training.&#xD;&#xD;T: Now let's go see Ivan and find you an assignment." family="system" fontsize="8" align="center" color="16777215"/>
@@ -532,268 +1000,6 @@
         <row>0,0,0,0,0,0,0,0,0,0,0,16,16,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-      </maplayer>
-    </group>
-    <group name="Room6" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
-      <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <sprite guid="63842CE9-D91A-20E4-E5B9-E67B25FCDCA0" x="180" y="210" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
-      </spritelayer>
-      <maplayer name="Walls" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/fenceGray.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
-        <row>4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,7</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>16,5,5,5,5,5,5,5,5,5,5,5,5,5,5,19</row>
-      </maplayer>
-      <maplayer name="Tiles" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/tiles.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-      </maplayer>
-    </group>
-    <group name="Room7" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
-      <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <sprite guid="48B67B83-4DA3-A70F-202C-4B0CDCF78134" x="180" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
-      </spritelayer>
-      <maplayer name="Walls" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/fenceGray.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
-        <row>4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,7</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>16,5,5,5,5,5,5,5,5,5,5,5,5,5,5,19</row>
-      </maplayer>
-      <maplayer name="Tiles" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/tiles.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-      </maplayer>
-    </group>
-    <group name="Room8" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
-      <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <sprite guid="1082F264-EAEC-CD86-76F4-CC3D86AE159B" x="360" y="270" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
-      </spritelayer>
-      <maplayer name="Walls" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/fenceGray.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
-        <row>4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,7</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>16,5,5,5,5,5,5,5,5,5,5,5,5,5,5,19</row>
-      </maplayer>
-      <maplayer name="Tiles" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/tiles.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-      </maplayer>
-    </group>
-    <group name="Room9" xScroll="1" yScroll="1" visible="true" open="true" locked="false" exports="true">
-      <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <sprite guid="D56517CE-FD8C-1972-42CB-E5F9DEED22DD" x="270" y="240" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
-        <sprite guid="B3F2B2DB-2F02-5B9C-6182-188425F3D49E" x="240" y="270" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
-          <properties/>
-        </sprite>
-        <sprite guid="23F3A5D4-F6D0-392C-574E-E64BBE542905" x="270" y="270" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
-          <properties/>
-        </sprite>
-        <sprite guid="E004B2E8-2AE6-C201-A816-E2CFF91D4F45" x="240" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="3">
-          <properties/>
-        </sprite>
-        <sprite guid="1F6092AE-E212-A9C0-F26F-742A5B138C1A" x="300" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="3">
-          <properties/>
-        </sprite>
-        <sprite guid="A016593A-DF54-843A-7697-552F9771526C" x="240" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="3">
-          <properties/>
-        </sprite>
-        <sprite guid="7220BFD1-E878-B39A-3251-B6E9FB1FF3CD" x="270" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="3">
-          <properties/>
-        </sprite>
-        <sprite guid="9D2B56D3-4889-E40E-0D47-3CAE41BCDE39" x="300" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="4">
-          <properties/>
-        </sprite>
-        <sprite guid="B97C2797-A469-C7B9-0FC8-81D416E6F729" x="210" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="4">
-          <properties/>
-        </sprite>
-        <sprite guid="1C980CA5-FA40-AEA7-05D6-1DF727B32E14" x="210" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="4">
-          <properties/>
-        </sprite>
-        <sprite guid="DABF9AAF-3977-5425-C30B-CF6F4FE32C84" x="270" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="4">
-          <properties/>
-        </sprite>
-        <sprite guid="0125BE77-FF4B-40F9-1951-B3612B6313E0" x="180" y="240" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5">
-          <properties/>
-        </sprite>
-        <sprite guid="7BBAC179-029F-F355-0CFE-19A74ACDC32E" x="150" y="240" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5">
-          <properties/>
-        </sprite>
-        <sprite guid="19D0E328-FDF6-63E1-449C-AC5B921A2481" x="120" y="300" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5">
-          <properties/>
-        </sprite>
-        <sprite guid="D5749F7C-2953-AE31-C8B5-ABE3AAFBDDD5" x="120" y="270" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5">
-          <properties/>
-        </sprite>
-        <sprite guid="98B2E1C6-B42B-D987-F5BD-F4D7C4B79EB0" x="150" y="300" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
-          <properties/>
-        </sprite>
-        <sprite guid="F6BD0158-7427-7724-2CE8-95A3EAC67244" x="240" y="300" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
-          <properties/>
-        </sprite>
-        <sprite guid="D43C3DA6-F0E3-AF9A-7D30-6875B1C4672B" x="270" y="300" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
-          <properties/>
-        </sprite>
-        <sprite guid="219ABDBE-F5A2-8278-63C4-1674FDE17988" x="150" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
-          <properties/>
-        </sprite>
-        <sprite guid="4F6EE2D4-6572-006A-DBA8-7668F97C07AA" x="90" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
-          <properties/>
-        </sprite>
-        <sprite guid="92284A44-D2D2-C211-79D7-E2B8682E03A3" x="60" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
-          <properties/>
-        </sprite>
-        <sprite guid="4D2C15FB-EFA4-B66A-6BF8-FC80F2BE71D3" x="60" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
-          <properties/>
-        </sprite>
-        <sprite guid="75BD4FEC-0676-1177-5520-7D60828D3C9F" x="90" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="7">
-          <properties/>
-        </sprite>
-        <sprite guid="7B1569EC-F09B-A594-CE6A-35D5C7F896B5" x="180" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="8">
-          <properties/>
-        </sprite>
-        <sprite guid="7587B879-2F7D-3142-5776-496F23514F30" x="150" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="8">
-          <properties/>
-        </sprite>
-        <sprite guid="CD11FD39-D36A-5B80-98B9-A50DC797405A" x="120" y="360" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="8">
-          <properties/>
-        </sprite>
-        <sprite guid="7919833E-B32B-654D-882D-DD434BE0E768" x="150" y="270" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="8">
-          <properties/>
-        </sprite>
-        <sprite guid="9088B6E1-37CB-4E77-B687-0113E94E11CC" x="420" y="60" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
-          <properties/>
-        </sprite>
-        <sprite guid="D8D57BD4-11B6-0DA9-5478-86A530BB2A23" x="420" y="30" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
-          <properties/>
-        </sprite>
-        <sprite guid="6756063A-31D6-9462-95DA-C9E392BD453F" x="360" y="450" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="11">
-          <properties/>
-        </sprite>
-      </spritelayer>
-      <maplayer name="Walls" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/fenceGray.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
-        <row>4,5,5,5,5,5,5,5,5,5,5,5,5,6,5,7</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,8,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,8,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,8,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,8,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,16,1,15</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>8,0,0,0,0,0,0,0,0,0,0,0,0,0,0,8</row>
-        <row>16,5,5,5,5,5,5,5,5,5,5,5,0,5,5,19</row>
-      </maplayer>
-      <maplayer name="Tiles" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/tiles.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false" selected="true">
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,21,0,17,17,17,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,21,22,19,17,16,16,0,0,0,0,0,0,0,0</row>
-        <row>0,0,21,22,19,19,18,16,16,20,20,0,0,0,8,0</row>
-        <row>0,0,21,22,22,19,18,18,18,20,20,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
-        <row>0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0</row>
-        <tileProperties>
-          <properties/>
-          <properties/>
-          <properties/>
-          <properties/>
-          <properties/>
-          <properties/>
-          <properties/>
-          <properties/>
-          <properties/>
-        </tileProperties>
       </maplayer>
     </group>
   </layers>

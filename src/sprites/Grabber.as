@@ -16,7 +16,7 @@ package sprites
 		{
 			super(0, 0);
 			this.owner = owner;
-			grid = owner.grid;
+			room = owner.room;
 			loadGraphic(Tetraminex.ImgHands, true, true, Room.kCellW, Room.kCellH);
 			this.frame = dir;
 		}
@@ -44,7 +44,7 @@ package sprites
 			// content may be null OR it may have disappeared (ex: a key into a lock)
 			if (content && content.exists)
 			{
-				owner.grid.putRelative(content, this.frame, this.owner);
+				owner.room.putRelative(content, this.frame, this.owner);
 			}
 		}
 
@@ -53,13 +53,19 @@ package sprites
 		
 		public function release():void
 		{
-			if (sling && (content != null)) { content.velocity.copyFrom(owner.velocity); }
+			if (content != null)
+			{
+				content.held = false;
+				// if (sling) { content.velocity.copyFrom(owner.velocity); }
+			}
+			
 			content = null;
 		}
 		
 		public function grab():void
 		{
-			content = owner.grid.get(gx, gy);
+			content = owner.room.get(gx, gy);
+			content.held = true;
 		}
 		
 		
@@ -71,7 +77,7 @@ package sprites
 				return true;
 			}
 			// we can always move into the square the owner is about to leave
-			else if (owner.grid.neighbor(content, dir) == owner)
+			else if (owner.room.neighbor(content, dir) == owner)
 			{
 				return ! content.immovable;
 			}

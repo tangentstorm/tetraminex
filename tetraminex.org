@@ -23,10 +23,15 @@ SCHEDULED: <2011-09-19 Mon>
 *** DONE 3. Restart Level
 *** DONE 4. Paint
 *** TODO redo level 5
-SCHEDULED: <2011-09-21 Wed>
+SCHEDULED: <2011-09-26 Mon>
+
+It's meant to be a simple puzzle, but instead, Teddy gets crushed!
+
+
+
 
 ** TODO Get the characters talking
-SCHEDULED: <2011-09-21 Wed>
+SCHEDULED: <2011-09-26 Mon>
 *** TODO dialog on start of puzzle
 SCHEDULED: <2011-09-21 Wed>
 *** TODO dialog on end of puzzle if locked out

@@ -21,6 +21,7 @@ import sprites.*;
 		public var SpritesGroup:FlxGroup = new FlxGroup;
 
 		//Properties
+		public var gravity:Boolean = false;
 
 
 		public function Level_Room8(addToStage:Boolean = true, onAddCallback:Function = null)
