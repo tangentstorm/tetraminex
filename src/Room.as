@@ -1,6 +1,7 @@
 package  
 {
 	import org.flixel.*;
+	import scripts.RoomScript;
 	import sprites.*;
 	import tiles.*;
 	
@@ -30,6 +31,7 @@ package
 		private var mTiles:Vector.<GridTile> = new Vector.<GridTile>(256, true);
 		private var mSprites:Vector.<GridSprite> = new Vector.<GridSprite>(256, true);
 		private var mHero:Hero;
+		public var teddy:MrT;
 		
 		private var mCagesLeft:int = 0;
 		private var mExit:ExitTile = null;
@@ -38,6 +40,8 @@ package
 		private var mInSetup:Boolean = true;
 		public static const kCollideIndex:int = 4;
 		public var gravity:Boolean;
+		public var script:RoomScript;
+		public var talkWindow:TalkWindow;
 		
 		
 		public function Room() 
@@ -56,6 +60,7 @@ package
 			sprite.room = this;
 			sprite.moved(); // mostly to reposition Hero.grabbers
 			if (sprite is Hero) mHero = sprite as Hero;
+			if (sprite is MrT) teddy = sprite as MrT;
 		}
 		
 		public function addWalls(walls:FlxTilemap):void
@@ -243,9 +248,15 @@ package
 		
 		public function cageFilled():void 
 		{
-			if (--mCagesLeft == 0 && ! mInSetup)
+			--mCagesLeft;
+			
+			if (! mInSetup)
 			{
-				roomSolved();
+				script.cageSolved(this, mCagesLeft);
+				if (mCagesLeft == 0)
+				{
+					roomSolved();
+				}
 			}
 		}
 		
@@ -273,6 +284,7 @@ package
 				mExit.open();
 			}
 			mInSetup = false;
+			script.roomStarted(this);
 		}
 		
 		public function tick():void 

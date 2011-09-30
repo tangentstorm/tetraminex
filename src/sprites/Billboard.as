@@ -12,7 +12,7 @@ package sprites
 		
 		public function Billboard(x:Number, y:Number) 
 		{
-			super(x, y, Tetraminex.ImgBillboard);
+			super(x, y, Assets.ImgBillboard);
 		}
 		
 	}

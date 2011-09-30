@@ -15,7 +15,7 @@ package sprites
 		public function Grabber(owner:Hero, dir:int)
 		{
 			super(0, 0);
-			loadGraphic(Tetraminex.ImgHands, true, true, Room.kCellW, Room.kCellH);
+			loadGraphic(Assets.ImgHands, true, true, Room.kCellW, Room.kCellH);
 			
 			this.owner = owner;
 			this.room = owner.room;

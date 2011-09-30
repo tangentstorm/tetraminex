@@ -3,6 +3,7 @@ package
 	import flash.utils.getQualifiedClassName;
 	import levels.*;
 	import org.flixel.*;
+	import scripts.RoomScript;
 	import sprites.*;
 
 	public class PlayState extends FlxState
@@ -13,6 +14,9 @@ package
 		private var mBlocks:FlxGroup = new FlxGroup();
 		private var mRoom:Room = new Room();
 		
+		private var mTalkWindow:TalkWindow = new TalkWindow();
+		
+		
         private var mGrabKeys:Array = [false, false, false, false];
         private var mGrabLast:Array = [false, false, false, false];
 		
@@ -21,7 +25,6 @@ package
 		
 		override public function create():void
 		{
-			
 			var level:BaseLevel;
 			switch (levelNum)
 			{
@@ -43,12 +46,16 @@ package
 			
 			mRoom.gravity = level['gravity'];
 			mRoom.addWalls(level['layerWalls']);
-			mRoom.addTiles(level['layerTiles']);			
-			mRoom.doneBuilding();		
+			mRoom.addTiles(level['layerTiles']);
+			mRoom.script = RoomScript.forLevel(levelNum);
+			mRoom.talkWindow = mTalkWindow;
+			mRoom.doneBuilding();
 			mRoom.onHeroExit(function():void
 			{
 				loadLevel((levelNum + 1) % 10);
 			});
+			
+			this.add(mTalkWindow);
 		}
 		
 		
@@ -72,15 +79,29 @@ package
 			mHero.acceleration.x = 0;
 			mHero.acceleration.y = 0;
 			
-			
-			// until we have a level select screen:
-			for (var n:int = 0; n < 10; ++n)
+			if (mTalkWindow.visible)
 			{
-				if (FlxG.keys.justPressed(kNumKeys[n]))
+				return;
+			}
+			
+			
+			CONFIG::debug
+			{
+				// until we have a level select screen:
+				for (var n:int = 0; n < 10; ++n)
 				{
-					loadLevel(n);
-					return;
+					if (FlxG.keys.justPressed(kNumKeys[n]))
+					{
+						loadLevel(n);
+						return;
+					}
 				}
+				
+				if (FlxG.keys.justPressed("C"))
+				{
+					mRoom.cageFilled();
+				}
+				
 			}
 			
 			if (FlxG.keys.justPressed("RIGHT"))
@@ -205,18 +226,6 @@ package
 			else if (obj is GridSprite)
 			{
 				mRoom.addSprite(obj as GridSprite);
-			}
-		}
-		
-		private function drawGrid():void 
-		{
-			// draw the grid
-			for (var x:int = 0; x < 16; ++x)
-			{
-				for (var y:int = 0; y < 16; ++y)
-				{
-					add(new sprites.Empty(x * kCellSize, y * kCellSize));
-				}
 			}
 		}
 		

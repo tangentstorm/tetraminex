@@ -12,7 +12,7 @@ package sprites
 		public function Ivan(x:Number, y:Number) 
 		{
 			super(x, y);
-			loadGraphic(Tetraminex.ImgIvan, true, false);
+			loadGraphic(Assets.ImgIvan, true, false);
 			immovable = true;
 		}
 		

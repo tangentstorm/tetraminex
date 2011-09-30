@@ -19,7 +19,7 @@ package sprites
 		public function Hero(x:Number=0, y:Number=0) 
 		{
 			super(x, y);
-			loadGraphic(Tetraminex.ImgHero, true);
+			loadGraphic(Assets.ImgHero, true);
 			
 			grabbers = Grabber.makeGrabbers(this, grabberGroup);
 			

@@ -15,7 +15,7 @@ package sprites
 		public function Block(x:Number, y:Number)
 		{
 			super(x, y);
-			loadGraphic(Tetraminex.ImgBlock, true, false, Room.kCellW, Room.kCellH);
+			loadGraphic(Assets.ImgBlock, true, false, Room.kCellW, Room.kCellH);
 			
 			solid = true;
 			immovable = false;

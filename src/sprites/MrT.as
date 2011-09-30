@@ -12,7 +12,7 @@ package sprites
 		public function MrT(x:Number=0, y:Number=0) 
 		{
 			super(x, y);
-			loadGraphic(Tetraminex.ImgMrT, true, false);
+			loadGraphic(Assets.ImgTeddy, true, false);
 			immovable = true;
 		}
 		

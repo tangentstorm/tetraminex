@@ -3,7 +3,7 @@
 #+TODO: LATER TODO | DONE IGNORE
 
 
-* Tigsource Demo
+* Episode 1 / Tigsource Demo
 
 ** DONE Use DAME for level editor (for now)
 *** DONE copy the loading code over from SvA
@@ -16,40 +16,32 @@ SCHEDULED: <2011-09-18 Sun>
 *** DONE extract walls and optiles from the FlxTilemaps
 SCHEDULED: <2011-09-19 Mon>
 
-** TODO Tutorial Levels
+** DONE Tutorial Levels
 *** DONE 0. Opening Scene (move the player)
 *** DONE 1. Build a tetramino.
 *** DONE 2. Walls and pulling
 *** DONE 3. Restart Level
 *** DONE 4. Paint
-*** TODO redo level 5
+*** DONE redo level 5
 SCHEDULED: <2011-09-26 Mon>
 
 It's meant to be a simple puzzle, but instead, Teddy gets crushed!
 
-
-
-
-** TODO Get the characters talking
-SCHEDULED: <2011-09-26 Mon>
-*** TODO dialog on start of puzzle
-SCHEDULED: <2011-09-21 Wed>
-*** TODO dialog on end of puzzle if locked out
-SCHEDULED: <2011-09-21 Wed>
-*** TODO dialog on end of puzzle normally
-SCHEDULED: <2011-09-21 Wed>
-*** TODO touch person to talk?
-SCHEDULED: <2011-09-21 Wed>
+** TODO Talking characters and scripted events
+*** TODO script on start of puzzle
+SCHEDULED: <2011-09-28 Wed>
+*** TODO script on end of puzzle if locked out
+SCHEDULED: <2011-09-28 Wed>
+*** TODO script on end of puzzle normally
+SCHEDULED: <2011-09-28 Wed>
 *** TODO special case dialog after tutorial
-SCHEDULED: <2011-09-21 Wed>
-** TODO Make 5 real puzzles with basic elements
-SCHEDULED: <2011-09-21 Wed>
-*** TODO level: cage as obstacle
-*** TODO level: paint as obstacle
-*** TODO level: require the crowbar
-*** TODO level: maze (narrow spaces)
-*** TODO level: lock behind you
-** TODO Company store with known items
+SCHEDULED: <2011-09-28 Wed>
+*** TODO script on cagecompleted
+
+** TODO teleporter animation and end scene
+
+
+* TODO Company store with known items
 *** TODO preliminary item list
 **** work saving items (optional)
 Crowbar
@@ -85,8 +77,11 @@ I'm thinking a 6 x 6 grid of levels + top row for tutorial.
 ** TODO Cleanups / Polish for tigsource
 *** TODO get rid of the red lines
 *** TODO reduce busywork in level 4
-*** TODO limit grabbers to 1 direction
+*** DONE limit grabbers to 2 hands
 SCHEDULED: <2011-09-21 Wed>
+
+
+
 
 * 2: Playtesting
 ** FlxReplay
@@ -98,7 +93,20 @@ http://aws.amazon.com/code/446 # python example
 
 
 
-* 3: New mechanisms
+
+
+
+* episode 2
+** TODO Make 5 "real" puzzles with basic elements
+*** TODO level: cage as obstacle
+*** TODO level: paint as obstacle
+*** TODO level: require the crowbar
+*** TODO level: maze (narrow spaces)
+*** TODO level: lock behind you
+
+
+
+* future mechanisms
 ** conveyor belts
 *** automatically move boxes
 *** timing puzzle with lifts/pushers?

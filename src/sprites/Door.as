@@ -11,7 +11,7 @@ package sprites
 		public function Door(x:Number, y:Number)
 		{
 			super(x, y);
-			loadGraphic(Tetraminex.ImgDoor, true, false, 30, 30);
+			loadGraphic(Assets.ImgDoor, true, false, 30, 30);
 			solid = true;
 			immovable = true;
 			

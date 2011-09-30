@@ -66,7 +66,6 @@
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>
       <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <shape guid="A827695A-6F0E-FCDE-E2CC-4A0AF1C3122A" x="60" y="390" Z="0" angle="0" width="30.00" height="30.00" text="T: Ernie Goldsmile, recent high school graduate! Welcome to Tetraminex. &#xD;&#xD;T: I'm Teddy Tetraminus, and I run this place. You can call me Mr T. &#xD;&#xD;T: Use your arrow keys to step this way, and I'll show you what we do around here!" family="system" fontsize="8" align="center" color="16777215"/>
         <shape guid="B8CC4D56-641A-6682-B8A3-AAD6D1D6FF7F" x="30" y="270" Z="0" angle="0" width="100.00" height="60.00" text="I: Goldsmile... Goldsmile... Nope. You're not on the list.&#xD;&#xD;I: Come back after you've been through training to choose an assignment.&#xD;" family="system" fontsize="8" align="center" color="16777215"/>
         <shape guid="895B965C-2D1A-CB6B-D30A-13A91800229E" x="360" y="360" Z="0" angle="0" width="30.00" height="90.00" text="T: Good work. Now follow me!" family="system" fontsize="8" align="center" color="16777215"/>
         <shape guid="63351469-9E75-8A15-A450-3AD426D2E4EE" x="150" y="30" Z="0" angle="0" width="100.00" height="50.00" text="I: Welcome back, Ernie! Step in here to choose an assignment." family="system" fontsize="8" align="center" color="16777215"/>
@@ -141,16 +140,11 @@
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
       </maplayer>
     </group>
-    <group name="Room1" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true" selected="true">
+    <group name="Room1" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
       <properties>
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>
       <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <shape guid="D3C4C4E6-0507-D1D7-B561-A70BA9E0C119" x="30" y="390" Z="0" angle="0" width="30.00" height="30.00" text="T: Let's start with the basics. At Tetraminex, we manufacture tetraminos for falling block games all around the world.&#xD;&#xD;T: Your job is to assemble tetraminos from individual blocks. Give it a try! Push these blocks into their holders with your arrow keys." family="system" fontsize="8" align="center" color="16777215">
-          <properties>
-            <type typeof="String" name="speaker" value="MrT"/>
-          </properties>
-        </shape>
         <shape guid="8399408F-FE6F-7E36-A1A4-38F901668E93" x="420" y="180" Z="0" angle="0" width="30.00" height="30.00" text="T: Excellent work! I knew hiring you was a good choice.&#xD;&#xD;T: Right this way, and we'll move on to something more interesting." family="system" fontsize="8" align="center" color="16777215"/>
       </shapelayer>
       <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
@@ -212,12 +206,11 @@
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
       </maplayer>
     </group>
-    <group name="Room2" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
+    <group name="Room2" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
       <properties>
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>
       <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <shape guid="2DA4481B-7826-5ECD-F1B4-9B5EBF2ABE4D" x="30" y="180" Z="0" angle="0" width="30.00" height="50.00" text="T: Lots of companies push blocks around, Ernie, but at Tetraminex, we don't just push blocks...&#xD;&#xD;T: We pull them too! Use your [WASD] keys (or [,AOE] if you're a Dvorak man), and put these blocks into place." family="system" fontsize="8" align="center" color="16777215"/>
         <shape guid="1FE828CF-0A30-6B65-490D-6297FB9180C1" x="240" y="420" Z="0" angle="0" width="30.00" height="30.00" text="T: Ernie, you're a natural! Right this way for lesson three." family="system" fontsize="8" align="center" color="16777215"/>
       </shapelayer>
       <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
@@ -294,12 +287,11 @@
         </tileProperties>
       </maplayer>
     </group>
-    <group name="Room3" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
+    <group name="Room3" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
       <properties>
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>
       <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <shape guid="EBEB9597-CDC2-ADDF-AB85-F1AABE3D3B03" x="180" y="30" Z="0" angle="0" width="100.00" height="50.00" text="T: You may have noticed that blocks lock in place when you move them over a holder.&#xD;&#xD;T: Be careful about the order you use. If you get stuck, press R to restart the assignment." family="system" fontsize="8" align="center" color="16777215"/>
         <shape guid="AD687FF6-E26A-5D07-EECE-15CBAFAC5079" x="480" y="210" Z="0" angle="0" width="100.00" height="50.00" text="T: I told you to be careful! Press R to try again." family="system" fontsize="8" align="center" color="16777215"/>
         <shape guid="37E329DD-553F-50EE-C521-76C57E311065" x="480" y="300" Z="0" angle="0" width="100.00" height="50.00" text="T: Excellent. Now let's move on to color." family="system" fontsize="8" align="center" color="16777215"/>
       </shapelayer>
@@ -378,9 +370,7 @@
       <properties>
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>
-      <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <shape guid="CBAE6A86-0253-B48E-4D8D-EF4582B57AF3" x="150" y="30" Z="0" angle="0" width="100.00" height="60.00" text="T: Move the gray blocks over the paint tiles to change their colors." family="system" fontsize="8" align="center" color="16777215"/>
-      </shapelayer>
+      <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false"/>
       <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <sprite guid="3A4F9B4C-EF5C-2200-2A22-43DE91808733" x="180" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
           <properties/>
@@ -452,13 +442,11 @@
         <row>0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0</row>
       </maplayer>
     </group>
-    <group name="Room5" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+    <group name="Room5" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
       <properties>
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>
-      <shapelayer name="Layer4" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <shape guid="DBD88914-3EC5-9188-49BA-0F8559562B53" x="480" y="30" Z="0" angle="0" width="100.00" height="50.00" text="T: Okay, Ernie. Time to see what you've learned.&#xD;&#xD;T: Remember, you can press R to start over if you get stuck." family="system" fontsize="8" align="center" color="16777215"/>
-      </shapelayer>
+      <shapelayer name="Layer4" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false"/>
       <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <sprite guid="D56517CE-FD8C-1972-42CB-E5F9DEED22DD" x="240" y="30" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
         <sprite guid="B3F2B2DB-2F02-5B9C-6182-188425F3D49E" x="270" y="90" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
@@ -894,7 +882,7 @@
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
       </maplayer>
     </group>
-    <group name="Room9" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+    <group name="Room9" xScroll="1" yScroll="1" visible="true" open="true" locked="false" exports="true" selected="true">
       <properties>
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>
