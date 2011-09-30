@@ -21,7 +21,7 @@ import sprites.*;
 		public var SpritesGroup:FlxGroup = new FlxGroup;
 
 		//Shapes
-		public var TextGroup:FlxGroup = new FlxGroup;
+		public var ShapesGroup:FlxGroup = new FlxGroup;
 
 		//Properties
 		public var gravity:Boolean = true;
@@ -41,7 +41,7 @@ import sprites.*;
 			masterLayer.add(layerTiles);
 			masterLayer.add(layerWalls);
 			masterLayer.add(SpritesGroup);
-			masterLayer.add(TextGroup);
+			masterLayer.add(ShapesGroup);
 
 			if ( addToStage )
 				createObjects(onAddCallback);
@@ -55,13 +55,13 @@ import sprites.*;
 
 		override public function createObjects(onAddCallback:Function = null):void
 		{
-			addShapesForLayerText(onAddCallback);
+			addShapesForLayerShapes(onAddCallback);
 			addSpritesForLayerSprites(onAddCallback);
 			generateObjectLinks(onAddCallback);
 			FlxG.state.add(masterLayer);
 		}
 
-		public function addShapesForLayerText(onAddCallback:Function = null):void
+		public function addShapesForLayerShapes(onAddCallback:Function = null):void
 		{
 			var obj:Object;
 

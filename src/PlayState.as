@@ -5,21 +5,19 @@ package
 	import org.flixel.*;
 	import rooms.*;
 	import sprites.*;
+	import scripts.*;
 
 	public class PlayState extends FlxState
 	{
 		private const kCellSize:int = 30;
-		private var mTickCounter:Number = 0;
 		private var mHero:Hero;
 		private var mBlocks:FlxGroup = new FlxGroup();
 		private var mRoom:Room = new Room();
 		
-		private var mTalkWindow:TalkWindow = new TalkWindow();
-		
+		private var mScriptManager:ScriptManager = ScriptManager.instance;
 		
         private var mGrabKeys:Array = [false, false, false, false];
         private var mGrabLast:Array = [false, false, false, false];
-		
 		
 		public static var levelNum:int = 0;
 		
@@ -48,7 +46,6 @@ package
 			mRoom.addWalls(level['layerWalls']);
 			mRoom.addTiles(level['layerTiles']);
 			mRoom.script = RoomScript.forLevel(levelNum);
-			mRoom.talkWindow = mTalkWindow;
 			mRoom.doneBuilding();
 			mRoom.onHeroExit(function():void
 			{
@@ -58,9 +55,9 @@ package
 			// gui stuff:
 			
 			var hud:FlxSprite = this.add(new FlxSprite(480, 0)) as FlxSprite;
-			hud.makeGraphic(640 - 480, 480, 0xff999999);
+			hud.makeGraphic(640 - 480, 480, 0xff666666);
 			var shadow:FlxSprite = this.add(new FlxSprite(480, 0)) as FlxSprite;
-			shadow.makeGraphic(15, 480, 0xff666666);
+			shadow.makeGraphic(15, 480, 0xff444444);
 			
 			var txt:FlxText = this.add(new FlxText(510, 30, 640 - 480, 
 				"TETRAMINEX:\nEpisode 00\n\n" +
@@ -75,7 +72,7 @@ package
 			txt.font = Assets.talkFont;
 			txt.size = 14;
 			
-			this.add(mTalkWindow);
+			this.add(TalkWindow.instance);
 			
 		}
 		
@@ -83,6 +80,7 @@ package
 		public function loadLevel(num:int):void
 		{
 			levelNum = num;
+			this.remove(TalkWindow.instance);
 			FlxG.resetState();
 		}
 		
@@ -100,7 +98,9 @@ package
 			mHero.acceleration.x = 0;
 			mHero.acceleration.y = 0;
 			
-			if (mTalkWindow.visible)
+			mScriptManager.update();
+			
+			if (mScriptManager.isModal())
 			{
 				return;
 			}
@@ -162,12 +162,9 @@ package
 			
 			
 			if (! FlxG.keys.UP) { mJustJumped = false; }
-			
-			mTickCounter += FlxG.elapsed;
-			if (mTickCounter > 0.10)
+						
+			if (mScriptManager.atTick)
 			{
-				mTickCounter = 0;
-				
 				if (FlxG.keys.RIGHT)
 				{
 					mRoom.nudge(mHero, Room.pointE);					
@@ -202,7 +199,6 @@ package
 		private function onAddObject(obj:Object, group:FlxGroup, 
 				level:BaseLevel, scrollX:Number, scrollY:Number, properties:Array):void
 		{
-			
 			
             var color:String = null;
 			var isVertical:Boolean = false;

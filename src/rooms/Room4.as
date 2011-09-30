@@ -1,12 +1,13 @@
 package rooms 
 {
+	import scripts.*;
 
 	public class Room4 extends RoomScript 
 	{
 		override public function roomStarted(room:Room):void 
 		{
-			super.roomStarted(room);
-			room.talkWindow.teddy
+			Script.begin
+			.teddy
 			(
 				"Color is a very important part of this business.\n\n" +
 				
@@ -20,7 +21,8 @@ package rooms
 		
 		override public function roomSolved(room:Room):void 
 		{
-			room.talkWindow.teddy
+			Script.begin
+			.teddy
 			(
 				"Perfect!\n\n" +
 				

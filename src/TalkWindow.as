@@ -19,6 +19,8 @@ package
 		protected var mTeletype:TeleType       = new TeleType (kX + 110, kY +  50, 400);
 		protected var mNextText:FlxText        = new FlxText  (kX + 315, kY + 195, 150, "[press enter]");
 		
+		public static const instance:TalkWindow = new TalkWindow();
+		
 		public function TalkWindow() 
 		{
 			super();
@@ -63,15 +65,29 @@ package
 			}
 		}
 		
+		public function talk(ImgClass:Class, name:String, color:uint, text:String, angle:Number = 0):void
+		{
+			this.visible = true;
+			mSpeakerSprite.loadGraphic(ImgClass, true);
+			mNameText.text = name;
+			mTeletype.color = color;
+			mTeletype.fullText = text;			
+			mSpeakerSprite.angle = angle;
+		}
 		
 		public function teddy(text:String, angle:int = 0 ):void
 		{
-			this.visible = true;			
-			mSpeakerSprite.loadGraphic(Assets.ImgTeddy, true);
-			mSpeakerSprite.angle = angle;
-			mNameText.text = "Teddy";
-			mTeletype.color = 0xffff66ff;
-			mTeletype.fullText = text;
+			this.talk(Assets.ImgTeddy, "Teddy", 0xffff66ff, text, angle);
+		}
+
+		public function ernie(text:String, angle:int = 0 ):void
+		{
+			this.talk(Assets.ImgHero, "Ernie", 0xffffff66, text, angle);
+		}
+		
+		public function ivan(text:String, angle:int = 0 ):void
+		{
+			this.talk(Assets.ImgIvan, "Ivan", 0xff66ffff, text, angle);
 		}
 		
 		

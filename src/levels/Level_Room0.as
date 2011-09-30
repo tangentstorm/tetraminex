@@ -21,7 +21,7 @@ import sprites.*;
 		public var SpritesGroup:FlxGroup = new FlxGroup;
 
 		//Shapes
-		public var TextGroup:FlxGroup = new FlxGroup;
+		public var ShapesGroup:FlxGroup = new FlxGroup;
 
 		//Properties
 		public var gravity:Boolean = false;
@@ -41,7 +41,7 @@ import sprites.*;
 			masterLayer.add(layerTiles);
 			masterLayer.add(layerWalls);
 			masterLayer.add(SpritesGroup);
-			masterLayer.add(TextGroup);
+			masterLayer.add(ShapesGroup);
 
 			if ( addToStage )
 				createObjects(onAddCallback);
@@ -55,20 +55,16 @@ import sprites.*;
 
 		override public function createObjects(onAddCallback:Function = null):void
 		{
-			addShapesForLayerText(onAddCallback);
+			addShapesForLayerShapes(onAddCallback);
 			addSpritesForLayerSprites(onAddCallback);
 			generateObjectLinks(onAddCallback);
 			FlxG.state.add(masterLayer);
 		}
 
-		public function addShapesForLayerText(onAddCallback:Function = null):void
+		public function addShapesForLayerShapes(onAddCallback:Function = null):void
 		{
 			var obj:Object;
 
-			callbackNewData(new TextData(60.000, 390.000, 30.000, 30.000, 0.000, "T: Ernie Goldsmile, recent high school graduate! Welcome to Tetraminex. \r\rT: I'm Teddy Tetraminus, and I run this place. You can call me Mr T. \r\rT: Use your arrow keys to step this way, and I'll show you what we do around here!","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( null ), 1, 1 ) ;
-			callbackNewData(new TextData(30.000, 270.000, 100.000, 60.000, 0.000, "I: Goldsmile... Goldsmile... Nope. You're not on the list.\r\rI: Come back after you've been through training to choose an assignment.\r","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( null ), 1, 1 ) ;
-			callbackNewData(new TextData(360.000, 360.000, 30.000, 90.000, 0.000, "T: Good work. Now follow me!","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( null ), 1, 1 ) ;
-			callbackNewData(new TextData(150.000, 30.000, 100.000, 50.000, 0.000, "I: Welcome back, Ernie! Step in here to choose an assignment.","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( null ), 1, 1 ) ;
 		}
 
 		public function addSpritesForLayerSprites(onAddCallback:Function = null):void
@@ -82,10 +78,64 @@ import sprites.*;
 			addSpriteToLayer(null, Block, SpritesGroup , 330.000, 300.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
 			addSpriteToLayer(null, Block, SpritesGroup , 360.000, 300.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
 			addSpriteToLayer(null, Block, SpritesGroup , 420.000, 300.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
-			addSpriteToLayer(null, MrT, SpritesGroup , 420.000, 360.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"MrT"
-			addSpriteToLayer(null, Ivan, SpritesGroup , 90.000, 270.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Ivan"
+			addSpriteToLayer(null, MrT, SpritesGroup , 450.000, 390.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"MrT"
+			addSpriteToLayer(null, Ivan, SpritesGroup , 90.000, 210.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Ivan"
 			addSpriteToLayer(null, Hero, SpritesGroup , 60.000, 390.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Hero"
-			addSpriteToLayer(null, Door, SpritesGroup , 60.000, 240.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"isVertical", value:false }, null ), onAddCallback );//"Door:H"
+			addSpriteToLayer(null, Door, SpritesGroup , 60.000, 180.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"isVertical", value:false }, null ), onAddCallback );//"Door:H"
+			addSpriteToLayer(null, Block, SpritesGroup , 150.000, 90.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 180.000, 90.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 210.000, 90.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 450.000, 90.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 420.000, 90.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 390.000, 90.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 360.000, 90.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 330.000, 90.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 300.000, 90.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 270.000, 90.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 240.000, 90.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 240.000, 60.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 270.000, 60.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 300.000, 60.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 330.000, 60.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 360.000, 60.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 390.000, 60.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 420.000, 60.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 450.000, 60.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 210.000, 60.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 180.000, 60.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 150.000, 60.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 240.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 270.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 300.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 330.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 360.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 390.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 420.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 450.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 210.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 180.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 150.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 120.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 90.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 60.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 30.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 0.000, 30.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 240.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 270.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 300.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 330.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 360.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 390.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 420.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 450.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 210.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 180.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 150.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 120.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 90.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 60.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 30.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Block, SpritesGroup , 0.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
 		}
 
 		public function generateObjectLinks(onAddCallback:Function = null):void

@@ -21,7 +21,7 @@ import sprites.*;
 		public var SpritesGroup:FlxGroup = new FlxGroup;
 
 		//Shapes
-		public var Layer4Group:FlxGroup = new FlxGroup;
+		public var ShapesGroup:FlxGroup = new FlxGroup;
 
 		//Properties
 		public var gravity:Boolean = false;
@@ -41,7 +41,7 @@ import sprites.*;
 			masterLayer.add(layerTiles);
 			masterLayer.add(layerWalls);
 			masterLayer.add(SpritesGroup);
-			masterLayer.add(Layer4Group);
+			masterLayer.add(ShapesGroup);
 
 			if ( addToStage )
 				createObjects(onAddCallback);
@@ -55,17 +55,16 @@ import sprites.*;
 
 		override public function createObjects(onAddCallback:Function = null):void
 		{
-			addShapesForLayerLayer4(onAddCallback);
+			addShapesForLayerShapes(onAddCallback);
 			addSpritesForLayerSprites(onAddCallback);
 			generateObjectLinks(onAddCallback);
 			FlxG.state.add(masterLayer);
 		}
 
-		public function addShapesForLayerLayer4(onAddCallback:Function = null):void
+		public function addShapesForLayerShapes(onAddCallback:Function = null):void
 		{
 			var obj:Object;
 
-			callbackNewData(new TextData(480.000, 30.000, 100.000, 50.000, 0.000, "T: Okay, Ernie. Time to see what you've learned.\r\rT: Remember, you can press R to start over if you get stuck.","system", 8, 0xffffff, "center"), onAddCallback, Layer4Group, generateProperties( null ), 1, 1 ) ;
 		}
 
 		public function addSpritesForLayerSprites(onAddCallback:Function = null):void

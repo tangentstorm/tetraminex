@@ -40,6 +40,12 @@ SCHEDULED: <2011-09-28 Wed>
 
 ** TODO teleporter animation and end scene
 
+** TODO ScriptManager (animations, etc)
+SCHEDULED: <2011-09-30 Fri>
+*** DONE encapsulate the tick event
+*** TODO 
+
+
 
 * TODO Company store with known items
 *** TODO preliminary item list
@@ -163,9 +169,6 @@ https://github.com/lucasdupin/Simple-AS3-YAML/blob/master/source/classes/dupin/p
 
 
 * scripts
-class ScriptRunner
-{
-   queue = [Script];
    update()
    {
      if (current)
@@ -177,16 +180,3 @@ class ScriptRunner
                current.begin;
         }
    }
-   isBlocking() { return current.isBlocking(); }
-   atTick():boolean;
-}
-
-class Script 
-{
-    begin():void;
-    update():void;
-    tick():void;
-    isFinished():Boolean;
-    isBlocking():Boolean;
-}
-

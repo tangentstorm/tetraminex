@@ -21,7 +21,7 @@ import sprites.*;
 		public var SpritesGroup:FlxGroup = new FlxGroup;
 
 		//Shapes
-		public var TextGroup:FlxGroup = new FlxGroup;
+		public var ShapesGroup:FlxGroup = new FlxGroup;
 
 		//Properties
 		public var gravity:Boolean = false;
@@ -41,7 +41,7 @@ import sprites.*;
 			masterLayer.add(layerTiles);
 			masterLayer.add(layerWalls);
 			masterLayer.add(SpritesGroup);
-			masterLayer.add(TextGroup);
+			masterLayer.add(ShapesGroup);
 
 			if ( addToStage )
 				createObjects(onAddCallback);
@@ -55,19 +55,17 @@ import sprites.*;
 
 		override public function createObjects(onAddCallback:Function = null):void
 		{
-			addShapesForLayerText(onAddCallback);
+			addShapesForLayerShapes(onAddCallback);
 			addSpritesForLayerSprites(onAddCallback);
 			generateObjectLinks(onAddCallback);
 			FlxG.state.add(masterLayer);
 		}
 
-		public function addShapesForLayerText(onAddCallback:Function = null):void
+		public function addShapesForLayerShapes(onAddCallback:Function = null):void
 		{
 			var obj:Object;
 
-			callbackNewData(new TextData(180.000, 30.000, 100.000, 50.000, 0.000, "T: You may have noticed that blocks lock in place when you move them over a holder.\r\rT: Be careful about the order you use. If you get stuck, press R to restart the assignment.","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( null ), 1, 1 ) ;
-			callbackNewData(new TextData(480.000, 210.000, 100.000, 50.000, 0.000, "T: I told you to be careful! Press R to try again.","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( null ), 1, 1 ) ;
-			callbackNewData(new TextData(480.000, 300.000, 100.000, 50.000, 0.000, "T: Excellent. Now let's move on to color.","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( null ), 1, 1 ) ;
+			callbackNewData(new TextData(480.000, 210.000, 100.000, 50.000, 0.000, "T: I told you to be careful! Press R to try again.","system", 8, 0xffffff, "center"), onAddCallback, ShapesGroup, generateProperties( null ), 1, 1 ) ;
 		}
 
 		public function addSpritesForLayerSprites(onAddCallback:Function = null):void

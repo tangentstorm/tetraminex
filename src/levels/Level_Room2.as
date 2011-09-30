@@ -21,7 +21,7 @@ import sprites.*;
 		public var SpritesGroup:FlxGroup = new FlxGroup;
 
 		//Shapes
-		public var TextGroup:FlxGroup = new FlxGroup;
+		public var ShapesGroup:FlxGroup = new FlxGroup;
 
 		//Properties
 		public var gravity:Boolean = false;
@@ -41,7 +41,7 @@ import sprites.*;
 			masterLayer.add(layerTiles);
 			masterLayer.add(layerWalls);
 			masterLayer.add(SpritesGroup);
-			masterLayer.add(TextGroup);
+			masterLayer.add(ShapesGroup);
 
 			if ( addToStage )
 				createObjects(onAddCallback);
@@ -55,18 +55,16 @@ import sprites.*;
 
 		override public function createObjects(onAddCallback:Function = null):void
 		{
-			addShapesForLayerText(onAddCallback);
+			addShapesForLayerShapes(onAddCallback);
 			addSpritesForLayerSprites(onAddCallback);
 			generateObjectLinks(onAddCallback);
 			FlxG.state.add(masterLayer);
 		}
 
-		public function addShapesForLayerText(onAddCallback:Function = null):void
+		public function addShapesForLayerShapes(onAddCallback:Function = null):void
 		{
 			var obj:Object;
 
-			callbackNewData(new TextData(30.000, 180.000, 30.000, 50.000, 0.000, "T: Lots of companies push blocks around, Ernie, but at Tetraminex, we don't just push blocks...\r\rT: We pull them too! Use your [WASD] keys (or [,AOE] if you're a Dvorak man), and put these blocks into place.","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( null ), 1, 1 ) ;
-			callbackNewData(new TextData(240.000, 420.000, 30.000, 30.000, 0.000, "T: Ernie, you're a natural! Right this way for lesson three.","system", 8, 0xffffff, "center"), onAddCallback, TextGroup, generateProperties( null ), 1, 1 ) ;
 		}
 
 		public function addSpritesForLayerSprites(onAddCallback:Function = null):void
