@@ -144,9 +144,7 @@
       <properties>
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>
-      <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <shape guid="8399408F-FE6F-7E36-A1A4-38F901668E93" x="420" y="180" Z="0" angle="0" width="30.00" height="30.00" text="T: Excellent work! I knew hiring you was a good choice.&#xD;&#xD;T: Right this way, and we'll move on to something more interesting." family="system" fontsize="8" align="center" color="16777215"/>
-      </shapelayer>
+      <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false"/>
       <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <sprite guid="0CDE836A-6F93-2318-6D28-EF6CE115EB1A" x="30" y="390" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
         <sprite guid="0136FF16-6A8D-B8F4-AE64-EA0224D94248" x="210" y="270" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="3">
@@ -210,9 +208,7 @@
       <properties>
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>
-      <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <shape guid="1FE828CF-0A30-6B65-490D-6297FB9180C1" x="240" y="420" Z="0" angle="0" width="30.00" height="30.00" text="T: Ernie, you're a natural! Right this way for lesson three." family="system" fontsize="8" align="center" color="16777215"/>
-      </shapelayer>
+      <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false"/>
       <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <sprite guid="9F2B8930-884A-4DF7-DC33-92858B67DC96" x="270" y="240" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5">
           <properties/>
@@ -287,13 +283,12 @@
         </tileProperties>
       </maplayer>
     </group>
-    <group name="Room3" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+    <group name="Room3" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
       <properties>
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>
       <shapelayer name="Text" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <shape guid="AD687FF6-E26A-5D07-EECE-15CBAFAC5079" x="480" y="210" Z="0" angle="0" width="100.00" height="50.00" text="T: I told you to be careful! Press R to try again." family="system" fontsize="8" align="center" color="16777215"/>
-        <shape guid="37E329DD-553F-50EE-C521-76C57E311065" x="480" y="300" Z="0" angle="0" width="100.00" height="50.00" text="T: Excellent. Now let's move on to color." family="system" fontsize="8" align="center" color="16777215"/>
       </shapelayer>
       <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <sprite guid="566D4811-306A-D369-20A4-2053C2F3F74B" x="210" y="420" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="6">
@@ -366,7 +361,7 @@
         <row>0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0</row>
       </maplayer>
     </group>
-    <group name="Room4" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+    <group name="Room4" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true" selected="true">
       <properties>
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>
@@ -442,7 +437,7 @@
         <row>0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0</row>
       </maplayer>
     </group>
-    <group name="Room5" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
+    <group name="Room5" xScroll="1" yScroll="1" visible="true" open="true" locked="false" exports="true">
       <properties>
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>
@@ -882,7 +877,7 @@
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
       </maplayer>
     </group>
-    <group name="Room9" xScroll="1" yScroll="1" visible="true" open="true" locked="false" exports="true" selected="true">
+    <group name="Room9" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
       <properties>
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>

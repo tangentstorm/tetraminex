@@ -17,5 +17,14 @@ package scripts
 			);
 		}
 		
+		override public function roomSolved(room:Room):void 
+		{
+			room.talkWindow.teddy
+			(
+				"Excellent.\n\n" +
+				"Now let's move on to color."
+			);
+		}
+		
 	}
 }

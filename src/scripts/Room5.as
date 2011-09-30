@@ -32,7 +32,7 @@ package scripts
 				switch (phase)
 				{
 					case 3: room.talkWindow.teddy("Did you feel that?!"); break;
-					case 2: room.talkWindow.teddy("Uh-oh."); break;
+					case 2: room.talkWindow.teddy("Uh oh.\n\nWe might have a problem.\n\nYou'd better work fast."); break;
 					case 1: room.talkWindow.teddy("Hurry, Ernie!\n\n We have to get out of here!"); break;
 					case 0: (FlxG.state as PlayState).loadLevel(6);
 					default:

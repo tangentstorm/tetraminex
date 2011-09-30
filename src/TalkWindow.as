@@ -9,12 +9,15 @@ package
 	 */
 	public class TalkWindow extends FlxGroup
 	{
-		protected var mBackground:FlxSprite    = new FlxSprite(  0,   0);
-		protected var mWindow:FlxSprite        = new FlxSprite( 45,  90, Assets.ImgTalkWindow);
-		protected var mSpeakerSprite:FlxSprite = new FlxSprite( 85, 140);
-		protected var mNameText:FlxText        = new FlxText  ( 70, 185, 60, "Speaker");
-		protected var mTeletype:TeleType       = new TeleType (155, 140, 400);
-		protected var mNextText:FlxText        = new FlxText  (360, 285, 150, "[press enter]");
+		protected const kX:int = 15;
+		protected const kY:int = 90;
+		
+		protected var mBackground:FlxSprite    = new FlxSprite( 0,   0);
+		protected var mWindow:FlxSprite        = new FlxSprite(kX,       kY, Assets.ImgTalkWindow);
+		protected var mSpeakerSprite:FlxSprite = new FlxSprite(kX +  40, kY +  50);
+		protected var mNameText:FlxText        = new FlxText  (kX +  25, kY +  95, 60, "Speaker");
+		protected var mTeletype:TeleType       = new TeleType (kX + 110, kY +  50, 400);
+		protected var mNextText:FlxText        = new FlxText  (kX + 315, kY + 195, 150, "[press enter]");
 		
 		public function TalkWindow() 
 		{

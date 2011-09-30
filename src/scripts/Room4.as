@@ -17,5 +17,19 @@ package scripts
 				"change their colors.\n\n"
 			);
 		}
+		
+		override public function roomSolved(room:Room):void 
+		{
+			room.talkWindow.teddy
+			(
+				"Perfect!\n\n" +
+				
+				"That's pretty much all there is to it.\n\n" +
+				
+				"Let's get the final exam out of the way so\n" +
+				"you can start your new career!\n"
+			);
+		}
+
 	}
 }

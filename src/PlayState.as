@@ -55,7 +55,28 @@ package
 				loadLevel((levelNum + 1) % 10);
 			});
 			
+			// gui stuff:
+			
+			var hud:FlxSprite = this.add(new FlxSprite(480, 0)) as FlxSprite;
+			hud.makeGraphic(640 - 480, 480, 0xff999999);
+			var shadow:FlxSprite = this.add(new FlxSprite(480, 0)) as FlxSprite;
+			shadow.makeGraphic(15, 480, 0xff666666);
+			
+			var txt:FlxText = this.add(new FlxText(510, 30, 640 - 480, 
+				"TETRAMINEX:\nEpisode 00\n\n" +
+				"BY:\nMichal J Wallace\n\n" + 
+				"STARRING:\n" + 
+				"Ernie Goldsmile\n" + 
+				"Teddy Tetraminus\n\n" + 
+				"AND INTRODUCING:\n" +
+				"Oscar Cyanovich\n" + 
+				"as Ivan Barr\n"
+			)) as FlxText;
+			txt.font = Assets.talkFont;
+			txt.size = 14;
+			
 			this.add(mTalkWindow);
+			
 		}
 		
 		
@@ -102,6 +123,10 @@ package
 					mRoom.cageFilled();
 				}
 				
+				if (FlxG.keys.justPressed("X"))
+				{
+					mRoom.roomSolved();
+				}				
 			}
 			
 			if (FlxG.keys.justPressed("RIGHT"))

@@ -260,8 +260,9 @@ package
 			}
 		}
 		
-		private function roomSolved():void
+		public function roomSolved():void
 		{
+			script.roomSolved(this);
 			mExit.open();
 		}
 		

@@ -18,6 +18,15 @@ package scripts
 				"blocks and drag them into place."
 			);
 		}
-		
+
+		override public function roomSolved(room:Room):void 
+		{
+			room.talkWindow.teddy
+			(
+				"Ernie, you're a natural!\n\n" +
+				"Right this way for lesson three."
+			);
+		}
+
 	}
 }

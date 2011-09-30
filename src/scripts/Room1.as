@@ -17,5 +17,17 @@ package scripts
 				"your arrow keys."
 			);
 		}
+		
+		override public function roomSolved(room:Room):void 
+		{
+			room.talkWindow.teddy
+			(
+				"Excellent work! I knew hiring you was a smart\n" +
+				"choice.\n\n" +
+				"Right this way, and we'll move on to something\n" +
+				"more interesting."
+			);
+		}
+		
 	}
 }

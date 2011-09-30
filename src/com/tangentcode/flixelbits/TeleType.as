@@ -1,6 +1,6 @@
 package com.tangentcode.flixelbits 
 {
-	import org.flixel.FlxText;
+	import org.flixel.*;
 
 	public class TeleType extends FlxText 
 	{
@@ -8,6 +8,9 @@ package com.tangentcode.flixelbits
 		private var mFullText:String;
 		private var mCounter:int = 0;
 		private var mFinished:Boolean = false;
+		
+		private var mNextChar:Number = 0;
+		private var mTicker:Number = 0;
 		
 		public function TeleType(X:Number, Y:Number, Width:uint, Text:String=null, EmbeddedFont:Boolean=true) 
 		{
@@ -20,8 +23,14 @@ package com.tangentcode.flixelbits
 			super.update();
 			if (!mFinished)
 			{
-				this.text = mFullText.substr(0, mCounter++);
-				mFinished = mCounter > mFullText.length;
+				mTicker += FlxG.elapsed;
+				if (mTicker > mNextChar)
+				{
+					mTicker = 0;
+					mNextChar = Math.random() * 0.025;
+					this.text = mFullText.substr(0, mCounter++);
+					mFinished = mCounter > mFullText.length;
+				}
 			}
 		}
 		
@@ -29,6 +38,8 @@ package com.tangentcode.flixelbits
 		{
 			this.text = "";
 			mCounter = 0;
+			mTicker = 0;
+			mNextChar = 0;
 			mFullText = newText;
 			mFinished = (newText == null) || (newText.length == 0);
 		}

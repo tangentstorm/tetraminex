@@ -7,6 +7,7 @@ package
 		public function Preloader()
 		{
 			className = "Tetraminex";
+			myURL = "http://tetraminex.com/episode/00";
 			super();
 		}
 	}
