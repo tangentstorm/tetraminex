@@ -3,7 +3,7 @@ package
 	import flash.utils.getQualifiedClassName;
 	import levels.*;
 	import org.flixel.*;
-	import scripts.RoomScript;
+	import rooms.*;
 	import sprites.*;
 
 	public class PlayState extends FlxState

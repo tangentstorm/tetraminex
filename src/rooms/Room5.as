@@ -1,4 +1,4 @@
-package scripts 
+package rooms 
 {
 	import org.flixel.*;
 	

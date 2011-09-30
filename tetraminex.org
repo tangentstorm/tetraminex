@@ -28,7 +28,7 @@ SCHEDULED: <2011-09-26 Mon>
 It's meant to be a simple puzzle, but instead, Teddy gets crushed!
 
 ** TODO Talking characters and scripted events
-*** TODO script on start of puzzle
+*** DONE script on start of puzzle
 SCHEDULED: <2011-09-28 Wed>
 *** TODO script on end of puzzle if locked out
 SCHEDULED: <2011-09-28 Wed>
@@ -148,3 +148,45 @@ Powerup to separate blocks that get stuck together?
 * Maybe later
 ** LATER make my own format using yaml:
 https://github.com/lucasdupin/Simple-AS3-YAML/blob/master/source/classes/dupin/parsers/yaml/YAML.as
+
+
+
+
+* game tropes
+** pipes [smb]
+** portals / moon dust
+** radio [metal gear]
+** ladders
+** breakable "back" walls [wrecking crew] (implies 2.5d)
+** boxing gloves [punch out]
+
+
+
+* scripts
+class ScriptRunner
+{
+   queue = [Script];
+   update()
+   {
+     if (current)
+        current.update()
+        if (current.finished)
+        {
+           current = queue.pop;
+           if (current != null)
+               current.begin;
+        }
+   }
+   isBlocking() { return current.isBlocking(); }
+   atTick():boolean;
+}
+
+class Script 
+{
+    begin():void;
+    update():void;
+    tick():void;
+    isFinished():Boolean;
+    isBlocking():Boolean;
+}
+

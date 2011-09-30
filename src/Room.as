@@ -1,7 +1,7 @@
 package  
 {
 	import org.flixel.*;
-	import scripts.RoomScript;
+	import rooms.*;
 	import sprites.*;
 	import tiles.*;
 	

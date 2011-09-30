@@ -1,4 +1,4 @@
-package scripts 
+package rooms 
 {
 
 	public class Room4 extends RoomScript 
