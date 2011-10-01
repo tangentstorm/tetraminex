@@ -6,7 +6,7 @@ package sprites
 	 * ...
 	 * @author Michal J Wallace
 	 */
-	public class Ivan extends GridSprite 
+	public class Ivan extends Avatar 
 	{
 		
 		public function Ivan(x:Number, y:Number) 

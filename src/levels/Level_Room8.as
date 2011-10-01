@@ -59,6 +59,7 @@ import sprites.*;
 		public function addSpritesForLayerSprites(onAddCallback:Function = null):void
 		{
 			addSpriteToLayer(null, Hero, SpritesGroup , 360.000, 270.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Hero"
+			addSpriteToLayer(null, Teleporter, SpritesGroup , 210.000, 240.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Teleporter"
 		}
 
 		public function generateObjectLinks(onAddCallback:Function = null):void

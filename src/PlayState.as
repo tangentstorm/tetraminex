@@ -102,6 +102,8 @@ package
 			
 			if (mScriptManager.isModal())
 			{
+				if (mScriptManager.atTick)
+					mRoom.tick();
 				return;
 			}
 			
@@ -148,7 +150,7 @@ package
 			
 			else if (FlxG.keys.justPressed("R"))
 			{
-				FlxG.resetState();
+				this.loadLevel(levelNum);
 			}
 			
 			else if (FlxG.keys.justPressed("F"))

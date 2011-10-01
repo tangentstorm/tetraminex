@@ -2,7 +2,6 @@ package
 {
 	import com.tangentcode.flixelbits.TeleType;
 	import org.flixel.*;
-	import sprites.MrT;
 
 	/**
 	 * This is the window that pops up when people are talking.
@@ -68,6 +67,7 @@ package
 		public function talk(ImgClass:Class, name:String, color:uint, text:String, angle:Number = 0):void
 		{
 			this.visible = true;
+			mNextText.visible = false;
 			mSpeakerSprite.loadGraphic(ImgClass, true);
 			mNameText.text = name;
 			mTeletype.color = color;

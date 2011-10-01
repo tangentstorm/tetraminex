@@ -7,6 +7,7 @@ package rooms
 		override public function roomStarted(room:Room):void 
 		{
 			Script.begin
+			
 			.teddy
 			(
 				"Color is a very important part of this business.\n\n" +
@@ -22,6 +23,8 @@ package rooms
 		override public function roomSolved(room:Room):void 
 		{
 			Script.begin
+			.beat()
+			
 			.teddy
 			(
 				"Perfect!\n\n" +

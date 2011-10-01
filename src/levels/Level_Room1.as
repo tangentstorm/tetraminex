@@ -74,7 +74,7 @@ import sprites.*;
 			addSpriteToLayer(null, Block, SpritesGroup , 210.000, 120.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"purple" }, null ), onAddCallback );//"Block: purple"
 			addSpriteToLayer(null, Block, SpritesGroup , 120.000, 180.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"purple" }, null ), onAddCallback );//"Block: purple"
 			addSpriteToLayer(null, Block, SpritesGroup , 300.000, 180.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"purple" }, null ), onAddCallback );//"Block: purple"
-			addSpriteToLayer(null, MrT, SpritesGroup , 420.000, 150.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"MrT"
+			addSpriteToLayer(null, Teddy, SpritesGroup , 420.000, 150.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Teddy"
 			addSpriteToLayer(null, Door, SpritesGroup , 450.000, 180.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"isVertical", value:true }, null ), onAddCallback );//"Door:V"
 			addSpriteToLayer(null, Door, SpritesGroup , 0.000, 390.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"isVertical", value:true }, null ), onAddCallback );//"Door:V"
 		}

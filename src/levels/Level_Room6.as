@@ -72,7 +72,7 @@ import sprites.*;
 			addSpriteToLayer(null, Hero, SpritesGroup , 150.000, 330.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Hero"
 			addSpriteToLayer(null, Block, SpritesGroup , 150.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"gray" }, null ), onAddCallback );//"Block: gray"
 			addSpriteToLayer(null, Block, SpritesGroup , 150.000, 150.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"gray" }, null ), onAddCallback );//"Block: gray"
-			addSpriteToLayer(null, MrT, SpritesGroup , 420.000, 330.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"MrT"
+			addSpriteToLayer(null, Teddy, SpritesGroup , 450.000, 330.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Teddy"
 			addSpriteToLayer(null, Block, SpritesGroup , 120.000, 330.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"red" }, null ), onAddCallback );//"Block: red"
 			addSpriteToLayer(null, Block, SpritesGroup , 270.000, 390.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"red" }, null ), onAddCallback );//"Block: red"
 			addSpriteToLayer(null, Block, SpritesGroup , 300.000, 420.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"red" }, null ), onAddCallback );//"Block: red"

@@ -30,8 +30,8 @@ package
 		private var nullSprite:NullSprite = new NullSprite(0, 0);
 		private var mTiles:Vector.<GridTile> = new Vector.<GridTile>(256, true);
 		private var mSprites:Vector.<GridSprite> = new Vector.<GridSprite>(256, true);
-		private var mHero:Hero;
-		public var teddy:MrT;
+		public var ernie:Hero;
+		public var teddy:Teddy;
 		
 		private var mCagesLeft:int = 0;
 		private var mExit:ExitTile = null;
@@ -59,8 +59,8 @@ package
 			put(sprite, sprite.gx, sprite.gy);			
 			sprite.room = this;
 			sprite.moved(); // mostly to reposition Hero.grabbers
-			if (sprite is Hero) mHero = sprite as Hero;
-			if (sprite is MrT) teddy = sprite as MrT;
+			if (sprite is Hero) ernie = sprite as Hero;
+			if (sprite is Teddy) teddy = sprite as Teddy;
 		}
 		
 		public function addWalls(walls:FlxTilemap):void
@@ -307,16 +307,16 @@ package
 							else if (up is Hero)
 							{
 								// TODO: extract "Supported"
-								if (mHero.dgy > 0)
+								if (ernie.dgy > 0)
 								{
-									mHero.dgy--;
+									ernie.dgy--;
 								}
 								else
 								{
 									var supported:Boolean = false;
-									for (var i:int = 0; i < mHero.grabbers.length; ++i)
+									for (var i:int = 0; i < ernie.grabbers.length; ++i)
 									{
-										var g:Grabber = mHero.grabbers[i];
+										var g:Grabber = ernie.grabbers[i];
 										if (g.exists)
 										{
 											var c:GridSprite = g.content;
@@ -329,7 +329,7 @@ package
 									}
 									if (! supported)
 									{
-										nudge(mHero, Room.pointS);
+										nudge(ernie, Room.pointS);
 									}
 								}
 							}

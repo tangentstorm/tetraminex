@@ -22,6 +22,7 @@ package rooms
 		override public function roomSolved(room:Room):void 
 		{
 			Script.begin
+			.beat()	
 			
 			.teddy
 			(

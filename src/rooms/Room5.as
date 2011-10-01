@@ -1,5 +1,6 @@
 package rooms 
 {
+	import flash.errors.ScriptTimeoutError;
 	import scripts.*;
 	import org.flixel.*;
 	
@@ -24,30 +25,33 @@ package rooms
 		{
 			super.cageSolved(room, numLeft);
 			
+			var script:Script = Script.begin;
+			
 			if (numLeft % 7 == 0)
 			{
 				var phase:int = Math.floor(numLeft / 7);
 				var scale:Number = (4 - phase) / 4;
+				var duration:Number = phase == 0 ? 5 : scale;
 				
-				FlxG.shake(0.05 * scale, scale);
+				script.thunk(function():void
+				{
+					FlxG.shake(0.05 * scale, duration);
+				})
+				.beat()				
+				.beat();
 				
 				switch (phase)
 				{
-					case 3: Script.begin.teddy("Did you feel that?!"); break;
-					case 2: Script.begin.teddy("Uh oh.\n\nWe might have a problem.\n\nYou'd better work fast."); break;
-					case 1: Script.begin.teddy("Hurry, Ernie!\n\n We have to get out of here!"); break;
-					case 0: (FlxG.state as PlayState).loadLevel(6);
+					case 3: script.teddy("Did you feel that?!"); break;
+					case 2: script.teddy("Uh oh.\n\nWe might have a problem.\n\nYou'd better work fast."); break;
+					case 1: script.teddy("Hurry, Ernie!\n\n We have to get out of here!"); break;
+					case 0: 
+						script
+						.fadeOut()
+						.thunk(function():void { (FlxG.state as PlayState).loadLevel(6); } )
 					default:
 				}			
-			}
-			
+			}	
 		}
-		
-		
-		override public function roomSolved(room:Room):void 
-		{
-			super.roomSolved(room);
-		}
-		
 	}
 }

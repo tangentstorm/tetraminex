@@ -8,7 +8,7 @@ package sprites
 	 * ...
 	 * @author Michal J Wallace
 	 */
-	public class Hero extends GridSprite
+	public class Hero extends Avatar
 	{	
 		public var grabbers:Array;
 		public var grabberGroup:FlxGroup = new FlxGroup();

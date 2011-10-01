@@ -7,22 +7,33 @@ package rooms
 		override public function roomStarted(room:Room):void 
 		{
 			Script.begin
-			
 			.teddy
 			(
 				"Let's start with the basics. Tetraminex makes\n" +
 				"tetraminos for video games around the world.\n\n" +
 				
-				"Your job is to put them together. So try it!\n\n" +
+				"Your job will be to assemble them. Let's try it!\n\n" +
 				
-				"Push these blocks into the matching cages with\n" +
-				"your arrow keys."
+				"Use your arrow keys to push these blocks into\n" +
+				"the matching cages.\n\n"
 			);
+		}
+		
+		
+		override public function cageSolved(room:Room, numLeft:int):void 
+		{
+			if (numLeft == 3)
+			{
+				Script.begin
+				.beat()
+				.teddy("Exactly!\n\nGo ahead and do the others.");
+			}
 		}
 		
 		override public function roomSolved(room:Room):void 
 		{
 			Script.begin
+			.beat()
 			
 			.teddy
 			(
