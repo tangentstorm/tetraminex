@@ -14,7 +14,7 @@ package
 			}
 			CONFIG::debug
 			{
-				PlayState.levelNum = 1;
+				PlayState.levelNum = 6;
 				super(640, 480, PlayState, 1);
 			}
 		}

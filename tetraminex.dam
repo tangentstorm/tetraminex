@@ -58,7 +58,7 @@
     </sprite>
     <sprite name="Billboard" idx="12" className="Billboard" image="src/assets/images/billboard.png" width="270" height="120" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="120" boundsHeight="120" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1"/>
     <sprite name="Teddy" idx="13" className="Teddy" image="src/assets/images/MrT.png" width="30" height="30" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1"/>
-    <sprite name="Ivan" idx="14" className="Ivan" image="src/assets/images/MrI.png" width="30" height="30" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1" selected="true"/>
+    <sprite name="Ivan" idx="14" className="Ivan" image="src/assets/images/Ivan.png" width="30" height="30" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1" selected="true"/>
     <sprite name="Teleporter" idx="15" className="Teleporter" image="src/assets/images/Teleporter.png" width="30" height="30" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1"/>
   </spriteEntries>
   <layers>
@@ -105,9 +105,6 @@
           <properties/>
         </sprite>
         <sprite guid="66DE4F65-7680-37CE-7A7A-E371EE8F3F40" x="210" y="90" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5" frame="3">
-          <properties/>
-        </sprite>
-        <sprite guid="DAF8570C-73C1-3906-262F-6A682B1FE011" x="450" y="90" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5" frame="3">
           <properties/>
         </sprite>
         <sprite guid="7BC7774F-D276-C355-CE22-2BF3F3392177" x="420" y="90" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5" frame="3">
@@ -233,9 +230,6 @@
         <sprite guid="E8374F5F-4EFA-848C-B75D-7FF0E2B8E2F9" x="420" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5" frame="3">
           <properties/>
         </sprite>
-        <sprite guid="CD13D417-E365-627D-36A6-1620C70F29D9" x="450" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5" frame="3">
-          <properties/>
-        </sprite>
         <sprite guid="5A95CDE4-4054-D598-A069-5283F7503639" x="210" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5" frame="3">
           <properties/>
         </sprite>
@@ -255,9 +249,6 @@
           <properties/>
         </sprite>
         <sprite guid="872D7D50-744A-7A74-4520-03137F4DA82D" x="30" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5" frame="3">
-          <properties/>
-        </sprite>
-        <sprite guid="BDBB3207-1BF4-AF43-101A-8B69C3BB8D15" x="0" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5" frame="3">
           <properties/>
         </sprite>
         <sprite guid="2AC42815-2F82-A9E6-09CB-044DF56074E9" x="60" y="240" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="14"/>

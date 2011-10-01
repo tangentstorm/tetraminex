@@ -93,12 +93,12 @@ package rooms
 			.teddy
 			(
 				"We're a pretty big company, but not so big\n" +
-				"that I don't know everybody's name.\n\n" +
+				"that I don't know everybody by name.\n\n" +
 				
-				"I like to train the summer hires personally.\n\n" +
+				"I still like to train the summer hires myself.\n\n" +
 				
-				"Step over here through this doorway and I'll\n" +
-				"show you what it is we do around here!\n"
+				"So... If you'll just step through this door,\n" +
+				"I'll show you what it is we do around here!\n"
 			)
 			
 			.ivan

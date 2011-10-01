@@ -7,13 +7,13 @@ package rooms
 		override public function roomStarted(room:Room):void 
 		{
 			Script.begin
-			.wait(2.0)
 			.teddy
 			(
-				"Color is a very important part of this business.\n\n" +
+				"Color plays a very important role in the\n" +
+				"tetramino industry.\n\n" +
 				
-				"Sometimes the blocks we start with aren't the\n" +
-				"right color, but that's easy enough to fix.\n\n" +
+				"Sometimes blocks are the wrong color, but it's\n" +
+				"nothing a little paint can't fix.\n\n" +
 				
 				"Drag these blocks through the paint squares to\n" +
 				"change their colors.\n\n"

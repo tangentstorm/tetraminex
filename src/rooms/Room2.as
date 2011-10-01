@@ -8,13 +8,12 @@ package rooms
 		override public function roomStarted(room:Room):void 
 		{
 			Script.begin
-			.wait(2.0)
 			.teddy
 			(
-				"Anyone can push a block, but at Tetraminex,\n" +
-				"we do so much more...\n\n" +
+				"Anyone can push blocks around, Ernie, but\n" +
+				"at Tetraminex, we do more than push blocks!\n\n" +
 				
-				"You see, Ernie... We PULL blocks, too!\n\n" +
+				"That's right! We PULL them too!\n\n" +
 				
 				"Use your [WASD] or [,AOE] keys to grab these\n" +
 				"blocks and drag them into place."

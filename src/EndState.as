@@ -42,7 +42,7 @@ package
 				if (FlxG.keys.justPressed("ENTER"))
 				{
 					PlayState.levelNum = 0;
-					FlxG.switchState(new PlayState());
+					FlxG.switchState(new MenuState());
 				}
 			}
 		}

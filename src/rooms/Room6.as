@@ -132,12 +132,13 @@ package rooms
 			
 			.teddy
 			(
-				"Ernie, that wasn't an earthquake.\n\n" +
+				"Ernie... That wasn't an earthquake.\n\n" +
 				
-				"I'm afraid I've placed you in terrible danger.\n\n" + 
+				"I'm afraid I've placed you, me, and everyone\n" +
+				"we know in terrible, terrible danger.\n\n" + 
 				
-				"You have to get back outside and tell Ivan\n" +
-				"what just happened.\n\n"
+				"I need you to get back outside at once, and\n" +
+				"let Ivan know what happened!\n\n"
 			)
 			
 			.ernie
@@ -156,11 +157,11 @@ package rooms
 			
 			.teddy
 			(
-				"Tell Ivan it was the Gravitron Device.\n" +
-				"He'll know what to do.\n\n" +
+				"Tell Ivan it was the Gravitron Generator.\n" +
+				"He'll know what has to be done.\n\n" +
 				
-				"Now grab hold of this, and don't let go!\n" +
-				"You may need to jump to reach it.\n\n" +
+				"Now be quick! Grab hold of this device,\n" +
+				"and DO NOT let go!\n\n" +
 				
 				"Hurry, Ernie! The entire town may be at stake!"
 			)
