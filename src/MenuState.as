@@ -14,9 +14,10 @@ package
 			t.alignment = "center";
 			add(t);
 			
-			t = new FlxText(FlxG.width/2-50,FlxG.height-32,100,"[ press enter ]");
+			t = new FlxText(0, FlxG.height-32, FlxG.width, "[ press enter ]");
 			t.alignment = "center";
 			t.size = 17;
+			t.color = 0xff999999;
 			t.font = Assets.talkFont;
 			add(t);
 		}

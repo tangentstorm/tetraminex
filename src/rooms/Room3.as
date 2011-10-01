@@ -7,7 +7,7 @@ package rooms
 		override public function roomStarted(room:Room):void 
 		{
 			Script.begin
-			
+			.wait(2.0)
 			.teddy
 			(
 				"You may have noticed that blocks lock in place\n" +

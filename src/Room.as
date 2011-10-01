@@ -145,6 +145,11 @@ package
 				// hero in the room.
 				sprite.moved();			
 				put(sprite, sprite.gx, sprite.gy);
+				
+				if (sprite is Hero)
+				{
+					script.stepTaken(this);
+				}
 			}
 		}
 		
@@ -304,33 +309,30 @@ package
 							{
 								// do nothing, let hero handle it
 							}
+							else if (up is Avatar && (up as Avatar).dgy > 0)
+							{
+								(up as Avatar).dgy--;
+							}
 							else if (up is Hero)
 							{
 								// TODO: extract "Supported"
-								if (ernie.dgy > 0)
+								var supported:Boolean = false;
+								for (var i:int = 0; i < ernie.grabbers.length; ++i)
 								{
-									ernie.dgy--;
-								}
-								else
-								{
-									var supported:Boolean = false;
-									for (var i:int = 0; i < ernie.grabbers.length; ++i)
+									var g:Grabber = ernie.grabbers[i];
+									if (g.exists)
 									{
-										var g:Grabber = ernie.grabbers[i];
-										if (g.exists)
+										var c:GridSprite = g.content;
+										if (c != null && !(c is NullSprite))
 										{
-											var c:GridSprite = g.content;
-											if (c != null && !(c is NullSprite))
-											{
-												if (c.immovable || neighbor(c, pointS).solid)
-													supported = true;
-											}
+											if (c.immovable || neighbor(c, pointS).solid)
+												supported = true;
 										}
 									}
-									if (! supported)
-									{
-										nudge(ernie, Room.pointS);
-									}
+								}
+								if (! supported)
+								{
+									nudge(ernie, Room.pointS);
 								}
 							}
 							else

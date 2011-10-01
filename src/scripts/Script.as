@@ -72,6 +72,20 @@ package scripts
 			return this.setattr(ScriptManager.instance, "locked", false);
 		}
 		
+		public function toBeContinued():Script
+		{
+			return Script.begin
+			.fadeOut()
+			.beat()
+			.beat()
+			.thunk(function():void 
+			{ 
+				// TODO: Talkwindow should clean itself up so this isn't required:
+				(FlxG.state as PlayState).remove(TalkWindow.instance);
+				FlxG.switchState(new EndState()); 
+			});
+		}
+		
 	}
 
 }

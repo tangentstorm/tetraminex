@@ -9,7 +9,7 @@ package rooms
 		override public function roomStarted(room:Room):void 
 		{
 			Script.begin
-			
+			.wait(2.0)
 			.teddy
 			(
 				"Okay, Ernie! Time to see what you've learned.\n\n" +

@@ -4,7 +4,7 @@
   <bgColor>0x000000</bgColor>
   <viewPos x="44" y="16"/>
   <firstLayersTop>true</firstLayersTop>
-  <spriteEntries currentId="15">
+  <spriteEntries currentId="16">
     <sprite name="Hero" idx="1" className="Hero" image="src/assets/images/hero.png" width="30" height="30" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="-1"/>
     <sprite name="Block: red" idx="2" className="Block" image="src/assets/images/blocks.png" width="30" height="30" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="8">
       <properties>
@@ -57,16 +57,17 @@
       </properties>
     </sprite>
     <sprite name="Billboard" idx="12" className="Billboard" image="src/assets/images/billboard.png" width="270" height="120" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="120" boundsHeight="120" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1"/>
-    <sprite name="Teddy" idx="13" className="Teddy" image="src/assets/images/MrT.png" width="30" height="30" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1" selected="true"/>
-    <sprite name="Ivan" idx="14" className="Ivan" image="src/assets/images/MrI.png" width="30" height="30" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1"/>
+    <sprite name="Teddy" idx="13" className="Teddy" image="src/assets/images/MrT.png" width="30" height="30" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1"/>
+    <sprite name="Ivan" idx="14" className="Ivan" image="src/assets/images/MrI.png" width="30" height="30" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1" selected="true"/>
+    <sprite name="Teleporter" idx="15" className="Teleporter" image="src/assets/images/Teleporter.png" width="30" height="30" preview="0" anchorX="0" anchorY="0" boundsX="0" boundsY="0" boundsWidth="30" boundsHeight="30" constructor="" creation="" exports="true" canScale="true" canRotate="true" surfaceObject="false" tileIndex="-1"/>
   </spriteEntries>
   <layers>
-    <group name="Room0" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+    <group name="Room0" xScroll="1" yScroll="1" visible="true" open="true" locked="false" exports="true">
       <properties>
         <type typeof="Boolean" name="gravity" value="false"/>
       </properties>
       <shapelayer name="Shapes" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false"/>
-      <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
+      <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false" selected="true">
         <sprite guid="15C02FE6-BBFE-4856-5F22-82D0B790A8A3" x="180" y="150" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="12"/>
         <sprite guid="1E5D96D0-019B-9DC5-671A-0B323792E16B" x="150" y="300" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5">
           <properties/>
@@ -93,7 +94,6 @@
           <properties/>
         </sprite>
         <sprite guid="DBC15DE6-4C3A-91B6-2094-274616E53953" x="450" y="390" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="13"/>
-        <sprite guid="5D71D9C2-151A-E352-DC2D-0856D124E1A2" x="90" y="210" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="14"/>
         <sprite guid="A95BC44D-9AF9-1BD6-F71F-6388E5BE6989" x="60" y="390" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
         <sprite guid="B1185BFB-BA0B-835C-FF78-96F34CE89078" x="60" y="180" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="11">
           <properties/>
@@ -260,6 +260,7 @@
         <sprite guid="BDBB3207-1BF4-AF43-101A-8B69C3BB8D15" x="0" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="5" frame="3">
           <properties/>
         </sprite>
+        <sprite guid="2AC42815-2F82-A9E6-09CB-044DF56074E9" x="60" y="240" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="14"/>
       </spritelayer>
       <maplayer name="Walls" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/fenceGray.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
@@ -742,12 +743,12 @@
         </tileProperties>
       </maplayer>
     </group>
-    <group name="Room6" xScroll="1" yScroll="1" visible="true" open="true" locked="false" exports="true">
+    <group name="Room6" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
       <properties>
         <type typeof="Boolean" name="gravity" value="true"/>
       </properties>
       <shapelayer name="Shapes" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false"/>
-      <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false" selected="true">
+      <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <sprite guid="E47253E0-408A-887A-80FF-9C9882E819DA" x="150" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
         <sprite guid="74206C8C-CDE3-1763-94D6-F7A23A7BE996" x="150" y="0" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
           <properties/>
@@ -755,7 +756,7 @@
         <sprite guid="9735AE12-24D9-3C12-5588-9F76BD9A4CC3" x="150" y="150" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="9">
           <properties/>
         </sprite>
-        <sprite guid="7D3B87DC-C224-DAAB-FD9B-5C745D3C188A" x="450" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="13"/>
+        <sprite guid="7D3B87DC-C224-DAAB-FD9B-5C745D3C188A" x="420" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="13"/>
         <sprite guid="2B59703F-5EA7-E979-DC81-621F6314C172" x="120" y="330" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="2">
           <properties/>
         </sprite>
@@ -991,12 +992,13 @@
         <row>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</row>
       </maplayer>
     </group>
-    <group name="Room8" xScroll="1" yScroll="1" visible="false" open="false" locked="false" exports="true">
+    <group name="Room8" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
       <properties>
-        <type typeof="Boolean" name="gravity" value="false"/>
+        <type typeof="Boolean" name="gravity" value="true"/>
       </properties>
       <spritelayer name="Sprites" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <sprite guid="1082F264-EAEC-CD86-76F4-CC3D86AE159B" x="360" y="270" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1"/>
+        <sprite guid="DB99C0FE-100C-1909-37B6-1C73591F759D" x="210" y="240" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="15"/>
       </spritelayer>
       <maplayer name="Walls" xScroll="1" yScroll="1" x="0" y="0" width="16" height="16" tileset="src/assets/images/fenceGray.png" tileWidth="30" tileHeight="30" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="30" tileSpacingY="30" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
         <row>4,5,5,5,5,5,5,5,5,5,5,5,5,5,5,7</row>

@@ -14,7 +14,6 @@ package sprites
 		public var grabberGroup:FlxGroup = new FlxGroup();
 		public var grabCount:int = 0;
 		public var handCount:int = 2;
-		public var dgy:int = 0;
 		
 		public function Hero(x:Number=0, y:Number=0) 
 		{
@@ -76,8 +75,9 @@ package sprites
 			return false;
 		}
 		
-		public function jump():void 
+		override public function jump():void 
 		{
+			// TODO: move grabber stuff and full jump logic into Avatar
 			var floor:GridSprite = room.get(gx, gy + 1);
 			var roof:GridSprite  = room.get(gx, gy - 1);
 			if (floor.solid && ! roof.solid && ! holding(floor))

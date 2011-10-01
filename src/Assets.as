@@ -37,6 +37,13 @@ package
 		[Embed("assets/images/MrT.png")]
 		public static var ImgTeddy:Class;
 		
+		[Embed("assets/images/Teleporter.png")]
+		public static var ImgTeleporter:Class;
+
+		[Embed("assets/images/TeleporterStar.png")]
+		public static var ImgTeleporterStar:Class;
+
+		
 	}
 
 }

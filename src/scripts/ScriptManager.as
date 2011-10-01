@@ -32,6 +32,14 @@ package scripts
 			instance.mQueue.push(script);
 		}
 		
+		public function abort():void
+		{
+			mCurrentScript = NullScript.instance;
+			mQueue = [];
+		}
+		
+		
+		
 		public function update():void
 		{			
 			mTimeSinceTick += FlxG.elapsed;

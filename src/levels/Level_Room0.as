@@ -79,7 +79,6 @@ import sprites.*;
 			addSpriteToLayer(null, Block, SpritesGroup , 360.000, 300.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
 			addSpriteToLayer(null, Block, SpritesGroup , 420.000, 300.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
 			addSpriteToLayer(null, Teddy, SpritesGroup , 450.000, 390.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Teddy"
-			addSpriteToLayer(null, Ivan, SpritesGroup , 90.000, 210.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Ivan"
 			addSpriteToLayer(null, Hero, SpritesGroup , 60.000, 390.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Hero"
 			addSpriteToLayer(null, Door, SpritesGroup , 60.000, 180.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"isVertical", value:false }, null ), onAddCallback );//"Door:H"
 			addSpriteToLayer(null, Block, SpritesGroup , 150.000, 90.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
@@ -136,6 +135,7 @@ import sprites.*;
 			addSpriteToLayer(null, Block, SpritesGroup , 60.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
 			addSpriteToLayer(null, Block, SpritesGroup , 30.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
 			addSpriteToLayer(null, Block, SpritesGroup , 0.000, 0.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"color", value:"green" }, null ), onAddCallback );//"Block: green"
+			addSpriteToLayer(null, Ivan, SpritesGroup , 60.000, 240.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( null ), onAddCallback );//"Ivan"
 		}
 
 		public function generateObjectLinks(onAddCallback:Function = null):void

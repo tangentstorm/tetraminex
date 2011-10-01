@@ -5,21 +5,52 @@ package rooms
 	public class Room0 extends RoomScript 
 	{	
 		
+		private var mStepCount:int = 0;
+		
 		override public function roomStarted(room:Room):void 
 		{
 			room.teddy.visible = false;
 			room.teddy.faceDir = Room.W;
 			
 			Script.begin
+			.wait(5)
+			.thunk(function():void {
+				if (mStepCount == 0)
+				{
+					Script.begin
+					.ernie
+					(
+						"What a beautiful day to start my new job!\n\n" +
+						
+						"I should put my arrow keys to use and go inside.\n"
+					);
+				}
+			});
+			
+		}
+		
+		
+		override public function stepTaken(room:Room):void 
+		{
+			if (++mStepCount != 3)
+			{
+				return;
+			}
+			
+			ScriptManager.instance.abort();
+			
+			Script.begin
 			.ivan
 			(
-				"Hold it right there, fellow. This is a secure area.\n\n" +
+				"Hold it right there, buddy.\n\n" +
+				"This is a secure area.\n\n" +
 				"Do you have an appointment?\n\n"
 			)
 			
 			.ernie
 			(
-				"Oh, hi there. I'm Ernie Goldsmile.\n\n" +
+				"Oh, hello!\n\n" +
+				"I'm Ernie Goldsmile.\n\n" +
 				"I'm starting my summer job here today.\n\n"
 			)
 			
@@ -53,18 +84,21 @@ package rooms
 			(
 				"Ernie Goldsmile! Welcome to Tetraminex!\n\n" +
 				
-				"Don't mind Ivan. It's his job to keep things\n" +
-				"orderly around here.\n\n" +
+				"Don't mind Ivan. It's his job to impose a\n" +
+				"little order on this place. The poor guy!\n\n" +
 				
-				"I'm Teddy Tetraminus, CEO of Tetraminex."
+				"I'm Teddy Tetraminus, CEO."
 			)
 			
 			.teddy
 			(
-				"I like to train the summer hires myself.\n\n" +
+				"We're a pretty big company, but not so big\n" +
+				"that I don't know everybody's name.\n\n" +
 				
-				"Step over here with your your arrow keys \n" +
-				"and I'll show you what we do around here!\n"
+				"I like to train the summer hires personally.\n\n" +
+				
+				"Step over here through this doorway and I'll\n" +
+				"show you what it is we do around here!\n"
 			)
 			
 			.ivan

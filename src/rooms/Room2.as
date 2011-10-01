@@ -8,7 +8,7 @@ package rooms
 		override public function roomStarted(room:Room):void 
 		{
 			Script.begin
-			
+			.wait(2.0)
 			.teddy
 			(
 				"Anyone can push a block, but at Tetraminex,\n" +

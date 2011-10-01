@@ -7,15 +7,16 @@ package rooms
 		override public function roomStarted(room:Room):void 
 		{
 			Script.begin
+			.wait(2.0)
 			.teddy
 			(
-				"Let's start with the basics. Tetraminex makes\n" +
-				"tetraminos for video games around the world.\n\n" +
+				"Okay Ernie. Let's start with the basics:\n\n" +
 				
-				"Your job will be to assemble them. Let's try it!\n\n" +
+				"At Tetraminex, we makes tetraminos.\n" +				
+				"Your job is to assemble them.\n\n" +
 				
-				"Use your arrow keys to push these blocks into\n" +
-				"the matching cages.\n\n"
+				"Try it now! Use your arrow keys to push these\n" +
+				"blocks into their matching cages.\n\n"
 			);
 		}
 		

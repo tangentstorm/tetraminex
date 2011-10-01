@@ -2,6 +2,7 @@ package rooms
 {
 	import scripts.*;
 	import org.flixel.*;
+	import sprites.Teleporter;
 
 	public class Room6 extends RoomScript 
 	{
@@ -17,19 +18,26 @@ package rooms
 			{
 				return function():void
 				{
-					room.nudge(room.teddy, dir);
+					if (dir == Room.pointN)
+					{
+						room.teddy.jump();
+					}
+					else
+					{
+						room.nudge(room.teddy, dir);
+					}
 				};
 			}
-			
-			
+				
 			Script.begin
 			.lock()
 			.shake(0.05, 2)
-			.fadeIn()
+			.fadeIn()			
 			
 			.shake(0.04, 0.5)
-			.wait(2)
+			.beat()
 			.setattr(room, "gravity", true)
+			.wait(2)
 			.shake(0.03, 0.2)
 			
 			.wait(1)
@@ -60,6 +68,8 @@ package rooms
 			.beat()
 			.beat()
 			.setattr(room.teddy, "faceDir", Room.W)
+			.beat()
+			.beat()
 			.thunk(makeNudgeTeddy(Room.pointW))
 			.beat()
 			
@@ -73,7 +83,12 @@ package rooms
 			.beat()
 			.ernie
 			(
-				"I... Uh... I think so.\n",
+				"...   ...   ...   ...   ...   ...\n\n" +
+				"Unnnnnhhhh.... Was that an earthquake?\n" + 
+				"                     \n" +
+				"I... Uh...\n" +
+				"                     \n" +
+				"Yeah... Yeah, I think I can move now.",
 				room.ernie.angle
 			)
 			.beat()
@@ -88,27 +103,81 @@ package rooms
 			// give player a few seconds to mess around:
 			
 			.wait(15)
+			// .beat().beat()
 			
 			// climb the stairs
 			
 			.setattr(room.teddy, "faceDir", Room.W)
+			.beat()
 			.thunk(makeNudgeTeddy(Room.pointW))
+			.beat()
+			.thunk(makeNudgeTeddy(Room.pointW))
+			.beat()
 			
 			.thunk(makeNudgeTeddy(Room.pointN))
 			.thunk(makeNudgeTeddy(Room.pointW))
-			.wait(0.35)
+			.wait(0.75)
 			
 			.thunk(makeNudgeTeddy(Room.pointN))
 			.thunk(makeNudgeTeddy(Room.pointW))
-			.wait(0.35)
+			.wait(0.75)
 			
 			.thunk(makeNudgeTeddy(Room.pointN))
 			.thunk(makeNudgeTeddy(Room.pointW))
-			.wait(0.35)
+			.wait(0.75)
 			
 			.thunk(makeNudgeTeddy(Room.pointN))
 			.thunk(makeNudgeTeddy(Room.pointW))
-			.wait(0.35)
+			.wait(0.75)
+			
+			.teddy
+			(
+				"Ernie, that wasn't an earthquake.\n\n" +
+				
+				"I'm afraid I've placed you in terrible danger.\n\n" + 
+				
+				"You have to get back outside and tell Ivan\n" +
+				"what just happened.\n\n"
+			)
+			
+			.ernie
+			(
+				"But... I don't know what happened.\n" +
+				"                           \n" +
+				
+				"Plus...\n" +
+				"                           \n" +
+				
+				"Well...\n" +
+				"                           \n" +
+				
+				"I think I'm stuck in this hole."
+			)
+			
+			.teddy
+			(
+				"Tell Ivan it was the Gravitron Device.\n" +
+				"He'll know what to do.\n\n" +
+				
+				"Now grab hold of this, and don't let go!\n" +
+				"You may need to jump to reach it.\n\n" +
+				
+				"Hurry, Ernie! The entire town may be at stake!"
+			)
+			
+			.beat()
+			.beat()
+			
+			.thunk(function():void
+			{
+				var t:Teleporter = new Teleporter(room.teddy.x - Room.kCellW, room.teddy.y);
+				var ps:PlayState = FlxG.state as PlayState;
+				ps.overlayGroup.add(t.shadow);
+				ps.overlayGroup.add(t);
+				ps.overlayGroup.add(t.star);
+				room.addSprite(t);
+			});
+			
 		}
 	}
 }

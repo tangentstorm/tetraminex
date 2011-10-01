@@ -7,7 +7,7 @@ package rooms
 		override public function roomStarted(room:Room):void 
 		{
 			Script.begin
-			
+			.wait(2.0)
 			.teddy
 			(
 				"Color is a very important part of this business.\n\n" +

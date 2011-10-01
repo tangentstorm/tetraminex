@@ -24,6 +24,11 @@ package rooms
 			
 		}
 		
+		public function stepTaken(room:Room):void
+		{
+			
+		}
+		
 		public function roomSolved(room:Room):void
 		{
 			

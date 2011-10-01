@@ -1,5 +1,6 @@
 package
 {
+	import com.tangentcode.flixelbits.TeleType;
 	import flash.utils.getQualifiedClassName;
 	import levels.*;
 	import org.flixel.*;
@@ -13,6 +14,8 @@ package
 		private var mHero:Hero;
 		private var mBlocks:FlxGroup = new FlxGroup();
 		private var mRoom:Room = new Room();
+		
+		public var overlayGroup:FlxGroup = new FlxGroup();
 		
 		private var mScriptManager:ScriptManager = ScriptManager.instance;
 		
@@ -72,6 +75,8 @@ package
 			txt.font = Assets.talkFont;
 			txt.size = 14;
 			
+			
+			this.add(overlayGroup);
 			this.add(TalkWindow.instance);
 			
 		}
@@ -245,6 +250,15 @@ package
 				var door:Door = obj as Door;
 				door.play(isVertical ? 'vertical' : 'horizontal');
 				mRoom.addSprite(door);
+			}
+			else if (obj is Teleporter)
+			{
+				var tel:Teleporter = obj as Teleporter;
+				mRoom.addSprite(tel);
+				this.remove(tel);
+				this.overlayGroup.add(tel.shadow);
+				this.overlayGroup.add(tel);
+				this.overlayGroup.add(tel.star);
 			}
 			else if (obj is GridSprite)
 			{
