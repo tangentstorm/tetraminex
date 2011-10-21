@@ -1,21 +1,14 @@
-
 #+TITLE: Tetraminex
-#+TODO: LATER TODO | DONE IGNORE
+#+TODO: GOAL TODO | DONE
 
 
-* Episode 1 / Tigsource Demo
-
+* DONE Playable Demo (TIGSource)
 ** DONE Use DAME for level editor (for now)
 *** DONE copy the loading code over from SvA
-SCHEDULED: <2011-09-18 Sun>
-
 ** DONE Grid Interactions
 *** DONE divide x and y by kCellSize and add to grid
-SCHEDULED: <2011-09-18 Sun>
 *** DONE get grabbers working
 *** DONE extract walls and optiles from the FlxTilemaps
-SCHEDULED: <2011-09-19 Mon>
-
 ** DONE Tutorial Levels
 *** DONE 0. Opening Scene (move the player)
 *** DONE 1. Build a tetramino.
@@ -23,142 +16,140 @@ SCHEDULED: <2011-09-19 Mon>
 *** DONE 3. Restart Level
 *** DONE 4. Paint
 *** DONE redo level 5
-SCHEDULED: <2011-09-26 Mon>
-
 It's meant to be a simple puzzle, but instead, Teddy gets crushed!
 
-** TODO Talking characters and scripted events
+** DONE Talking characters and scripted events
 *** DONE script on start of puzzle
 SCHEDULED: <2011-09-28 Wed>
-*** TODO script on end of puzzle if locked out
-SCHEDULED: <2011-09-28 Wed>
-*** TODO script on end of puzzle normally
-SCHEDULED: <2011-09-28 Wed>
-*** TODO special case dialog after tutorial
-SCHEDULED: <2011-09-28 Wed>
-*** TODO script on cagecompleted
+*** DONE script on end of puzzle
+*** DONE special case dialog after tutorial
+*** DONE script on cagecompleted
 
-** TODO teleporter animation and end scene
+** DONE teleporter animation and end scene
+** DONE ScriptManager (animations, etc)
 
-** TODO ScriptManager (animations, etc)
-SCHEDULED: <2011-09-30 Fri>
-*** DONE encapsulate the tick event
-*** TODO 
-
-
-
-* TODO Company store with known items
-*** TODO preliminary item list
-**** work saving items (optional)
-Crowbar
-Paintbrush
-Remote Control
-gun to shoot ghosts? 
-**** puzzle solving items (required)
-grappling hook
-lift-over-your-head thing
-saw to cut domino/trominos/pentominos
-
-*** TODO draw preliminary items
-*** TODO show items and descriptions in store
-*** TODO grey out items player can't afford
-*** TODO track player bank balance
-*** TODO implement purchasing
-*** TODO grey out items player already owns
-*** TODO create a Mr S character (green) for the shop
-** TODO Level selection Screen
-*** TODO mock up level select screen in illustrator
-I'm thinking a 6 x 6 grid of levels + top row for tutorial.
-*** TODO generate map icons for each level
-*** TODO show map
-** TODO Marketing prep
-*** TODO create a website
-*** TODO create a twitter feed
-*** TODO facebook page
-*** TODO google+ page (?)
-*** TODO create mailing lists
-**** only the announcement
-**** send me dev updates
-*** TODO members area with beta access
-** TODO Cleanups / Polish for tigsource
-*** TODO get rid of the red lines
-*** TODO reduce busywork in level 4
-*** DONE limit grabbers to 2 hands
-SCHEDULED: <2011-09-21 Wed>
-
-
-
-
-* 2: Playtesting
-** FlxReplay
+* GOAL SpriteMapper Analytics and PlayTesting
+** TODO Record with FlxReplay
 http://flixel.org/docs/org/flixel/system/FlxReplay.html
-
-** Mechanical Turk
+** TODO Post raw data to Google
+** TODO Replay Viewer
+** TODO Mechanical Turk PlayTest
 https://requester.mturk.com/developer
 http://aws.amazon.com/code/446 # python example
+ 
+
+* GOAL Kong Episode 1 (Training Day)
+** DONE Create GsLevelLocker Class
+** TODO GsLevelLocker UI
+** TODO Change to Episode 1
+** TODO SvA style walls, at least for outside.
+I need to hide a portal in Ivan's area.
+** TODO Add Color-Cross Puzzle
+This is to demonstrate that the color matters.
+** TODO Add Work from the Middle Puzzle
+This should teach the "work from the middle" concept.
+** TODO Add "Color as Obstacle" Puzzle
+** TODO Subtle <-- Door marker on front screen.
+** TODO Subtle Arrow Key Markers
+** TODO Walking Sound
+** TODO Grabbing Sound
+** TODO Talking Sound
+** TODO Dragging Sound
+** TODO Locking Sound
+** TODO Set up Mochi Update System
+** TODO Implement Kong API: Level Progress Only
+** TODO SecureSWF Thing
+** TODO Google ad campaign for "tetramino", "tetromino", etc.
+
+* GOAL Marketing prep For Episode 2
+** DONE create a simple website
+** DONE create a twitter feed
+** TODO start a facebook page
+** TODO install either wordpress or drupal
+** TODO start a google+ page
+** TODO set up at aweber list for announcements
+** TODO set up a membership area for beta / level testing
+Make it really abstract so you can't tell what it is.
 
 
-
-
-
-
-* episode 2
-** TODO Make 5 "real" puzzles with basic elements
-*** TODO level: cage as obstacle
-*** TODO level: paint as obstacle
-*** TODO level: require the crowbar
-*** TODO level: maze (narrow spaces)
-*** TODO level: lock behind you
-
-
-
-* future mechanisms
-** conveyor belts
-*** automatically move boxes
-*** timing puzzle with lifts/pushers?
-** gravity
-*** falling
-*** jumping
-*** ladders
-*** Crane
-moves back and forth and lifts blocks from the top
-*** power lifts
-platforms that go up and down from the bottom
-*** wrapping (like wrecking crew)
-*** powerup: lift blocks overhead like smb 2?
-*** powerup: teleport to top/bottom of screen
-*** powerup: remote control
-press 0..9 to move corresponding lift
-....or other devices??? :)
-** grappling hook:
-*** suteF style
-*** hook passes through walls?
-** raw materials: dominos and trominos
-*** blobs
-Raw material for blocks. These would merge together on contact.
-*** rotation
-Once you have more than a block, it makes sense to rotate.
-*** cutting
-Powerup to separate blocks that get stuck together?
-** ghosts
-*** backstory for ghosts?
-*** ghost blocks
-** dispenser
-*** these could force you to solve the puzzle in a particular order
-
-
-
-* Music and Artwork
-
-
-* Maybe later
-** LATER make my own format using yaml:
+* GOAL Episode 2 (Fix the Teleporter)
+** TODO Ernie becomes the Narrator
+** TODO Convey that he's a young who dreams of being a lawyer
+** TODO Map out the whole complex
+** TODO General Story Arc for the Series
+** TODO Implement the Crowbar
+We'll need it to break Ivan out.
+** TODO Implement Coin Bank
+Give the coins numbers to make it harder to hack/screw up.
+** TODO Implement Locks and Keys
+** TODO Crowbar Puzzle (Dig out Ivan?)
+** TODO Maze level (narrow spaces)
+** TODO Zelda-Style Scrolling
+** TODO YAML Levels via SpriteMapper
 https://github.com/lucasdupin/Simple-AS3-YAML/blob/master/source/classes/dupin/parsers/yaml/YAML.as
 
 
 
 
-* game tropes
+
+
+* GOAL Implement a store with a tough old lady character?
+** TODO work saving items (optional)
+Crowbar
+Paintbrush
+Remote Control
+gun to shoot ghosts? 
+** TODO puzzle solving items (required)
+grappling hook
+lift-over-your-head thing
+saw to cut domino/trominos/pentominos
+** TODO show items and descriptions in store
+** TODO grey out items player can't afford
+** TODO track player bank balance
+** TODO implement purchasing
+** TODO grey out items player already owns
+** TODO level selection Screen
+** TODO mock up level select screen in illustrator
+I'm thinking a 6 x 6 grid of levels + top row for tutorial.
+** TODO generate map icons for each level
+** TODO show map
+
+
+* game tropes / future mechanisms
+** conveyor belts that automatically move boxes
+** conveyor belt timing puzzle with lifts/pushers?
+** falling
+** jumping
+** ladders
+** Crane
+ moves back and forth and lifts blocks from the top
+** power lifts
+platforms that go up and down from the bottom
+** wrapping (like wrecking crew/pac man)
+** powerup: lift blocks overhead like smb 2?
+** powerup: teleport to top/bottom of screen
+** powerup: remote control
+the wasd keys move a device
+** grappling hook
+- suteF style
+- hook passes through (some) walls?
+** raw material blobs
+can make dominos and trominos, and more
+Raw material for blocks. These would merge together on contact.
+** rotation puzzles with uncut blocks
+Once you have more than a block, it makes sense to rotate.
+** mobile cutting tool
+Powerup to separate blocks that get stuck together?
+** stationary cutting tool
+like a saw or something
+
+** ghosts
+** ghost blocks?
+** blue walls?
+** power pill to kill ghosts
+** ghost panting
+** duplicator / dispenser
+these could force you to solve the puzzle in a particular order
 ** pipes [smb]
 ** portals / moon dust
 ** radio [metal gear]
@@ -167,16 +158,315 @@ https://github.com/lucasdupin/Simple-AS3-YAML/blob/master/source/classes/dupin/p
 ** boxing gloves [punch out]
 
 
+* Story Points
+** DONE What happens to Ivan that he can't help?
+His "leg" is broken by the falling rubble.
+** DONE Where are the other employees?
+Ivan had them evacuated.
+** DONE Why doesn't the teleporter work?
+It's unstable, and Ivan can only power it. 
+Only Teddy can fix it, and he's missing.
+** DONE Why can't Ernie go for help?
+Everyone left inside is trapped by the Gravitron Device.
+** DONE Why do you need coins to buy the items?
+Because Griselda won't leave her post.
+** DONE Why didn't Selda get evacuated?
+She's super tough, kind of nuts, and refuses to leave her post.
+** DONE Why does Griselda not help?
+She misunderstands Teddy's business advice.
+** DONE What triggered the Gravitron?
+Lucy did, when she went inside.
+** DONE Why hasn't Teddy destroyed the Gravitron?
+Because Lucy is trapped inside
+** DONE What exactly is the Gravitron Device?
+It's an invention Lucy created.
+** DONE Where did the ghosts come from?
+They were released by Lucy's Gravitron Device.
+** DONE Where did the teleporter come from?
+Lucy invented it.
+** DONE Why doesn't Teddy fire Selda?
+She's practically raised him, and her son / his friend Joe died.
+** DONE How did Joe die?
+He sacrificed himself to save Lucy and Selda from the Dentists.
+** TODO Why should 
+** TODO How did Teddy start making Tetraminos?
+** TODO How do the ghosts become mimeogeists?
+** TODO Did Teddy make the robots?
 
-* scripts
-   update()
-   {
-     if (current)
-        current.update()
-        if (current.finished)
-        {
-           current = queue.pop;
-           if (current != null)
-               current.begin;
-        }
-   }
+
+* Characters - background, personality, what drives them...?
+| Tet. | color   | character | personality/drive                    |
+|------+---------+-----------+--------------------------------------|
+| 1. O | yellow  | Ernie     | law school                           |
+| 2. T | magenta | Teddy     | work, employees, save Lucy           |
+| 3. I | cyan    | Ivan      | tough, paranoid, intensely loyal     |
+| 4. L | orange  | Lucy      | brilliant but nuts. abductee.        |
+| 5. J | blue    | Joe       | (dead)                               |
+| 6. S | green   | Selda     | batty alien abductee                 |
+| 7. N | red     | Nathan    | Cruel/Drunk father of Teddy and Lucy |
+
+** Ernie Goldsmile
+** Teddy Tetraminus
+** Lucy Tetraminus
+** Ivan Cyanovich Punchko
+** Griselda Krelborn
+** Ernie Goldsmile
+** Offscreen Love Interest for Ernie
+
+
+* Structure of the Series
+** Sixteen regular episodes. Ten 16x16 rooms each.
+** Four "special" episodes with completely different gameplay.
+
+* Series Scope: 16 Tetraminex Episodes + 4 Special Episodes
+** E01 "Training Day"
+** E02 <go to the store to get power pack for the teleporter>
+*** Goal: Fetch something so Ivan can fix Teleporter.
+*** Introduce: Crowbar, Topology, Ghosts
+*** Cliffhanger: Caught in a Trap!
+** E03 <gather coins for griselda, avoid then teleport back to ivan>
+*** Goal: gather coins to buy the power pack
+*** Introduce: Coins, teleporter
+*** Story Points
+Griselda revealed.
+She's hyper paranoid.
+Even though she knows about the aliens, she's suspicious about Ivan's family.
+She feels bad enough to buy a pair of radios.
+*** Cliffhanger: Why don't you just use the one over there?
+** E04 <get the teleporters back online>
+*** Introduce: 
+*** Story points: teddy is in the R&D lab
+*** Cliffhanger: Teddy in Danger (video of Playing as Teddy)
+There is a purple JellInvader closing in.
+Final scene: a room full of Jellys, camera fritzes out.
+Ernie: Did you SEE THOSE things?
+Selda: He's lost.
+Ivan: Bosh! Is only twelve monsters. You are forgetting!
+I taught him to fight myself.
+[to be continued]
+** E05 (SPECIAL #1) "Tetraminex: Son of Cyan"
+play as: Young Teddy (18 or so) Cyan Cyanovich Punchko (flashbacks)
+Ivan grew bitter and cynical thinking his father really was a murderer.
+Boxing Game like punch-out maybe a little bit of top-down beat-em-up.
+A young Teddy's life completely sucks after the death of Joe.
+He's got his own restaraunt. Joe and Teddy's.
+He starts getting into fights, and there's no help at home.
+Open with Teddy getting his butt kicked.
+Ivan takes him in, teaches him to fight.
+Teddy hates his father (Nathan)
+Ivan tells the story of his father's disappearance.
+Teddy imagines himself in the role of Cyan Punchko.
+Flashbacks tell the story of the town "serial killer".
+Cyan is the suspect, and everyone wanted him out of town.
+He tells the story with Cyan as like a vigilante, killing all these people.
+The people you fight are the victims. 
+They're all nasty people...
+But then then there's a little girl.
+Last fight, Ivan steps in to save the girl and take down his father.
+Cyan ran away, never to be seen again.
+
+** E06 <materials: untreated blocks>
+** E07 <warehouse: robots/ladders (wrecking crew)>
+** E08 <r and d: grappling hook, gravity switch (sutef)>
+** E09 <r and d: last tech> reach teddy/gravitron. he won't turn it off
+Cliffhanger: Teddy won't turn it off. 
+Lucy is the one thing he has left. He can't lose her too.
+** E10 (SPECIAL #2) "Tetraminex: The Stand"
+*** game style: hot dog tycoon
+A "Lemonade Stand" mini-RPG game starring Teddy as a lower case "t".
+This story is about Teddy's drive to surpass his humble beginnings,
+and about his love for his sister, Lucy (an orange lowercase "L" 
+with a bow.)
+*** cutscene 1: lucy crying
+Teddy and Joe find Lucy crying.
+"I hate him! I hope the Son of Cyan gets him!"
+She tells him to go away until she sees Joe, then she straightens up.
+Lucy is totally in love with Joe.
+She's upset because she can't go to Science Camp.
+"WHAT?! I'm gonna go talk to him!"
+*** cutscene 2: nathan says no
+"You know she's smart. She could get out of this town."
+"I never went to science school. I turned out fine."
+"You're mean and selfish and a drunk!"
+"Watch your mouth, Teddy."
+"I'll raise the money myself. I'll show you!
+etc
+*** [purchasing 1: what can we buy? (weak lemonade, crummy hamburgers)]
+*** [round 1: try to buy stuff]
+*** cutscene 2: selma helps out
+Teddy and Joe: Nobody's buying our lemonade.
+Selma: won't give them any lemonade. HAHAHAHA!!
+Selma: but she'll back them, and get them a place in the park.
+*** [lemonade stand: sell in the park]
+*** cutscene 3: nathan
+"Give it up kid. There's nothing in this town except blocks."
+"You wait and see, Dad. Someday someone's going to figure out how to make a fortune selling blocks." 
+*** [lemonade stand: awesome burgers, hot dogs, lemonade]
+*** mini-scene: maybe we could start a restaraunt?
+*** end scene: we made the money!
+*** keep playing if you want. build it up into a diner.
+
+** E11 <ernie steps up. He will rescue her. into the gravitron!>
+Teddy has to keep the gate open.
+Introduce: laser gun, portals.
+Ernie starts narrating, so that he can tell them what he sees.
+Radio slowly stops working over he course of the episode.
+It has monsters but it's also got paint and blocks.
+area with no gravity: He has to swing with the grapppling hook.
+** E12 <slow disintigration of ernie's mind>
+Ernie has no outside contact. His world starts breaking up.
+The rooms get progressively more open and non-euclidian.
+His narration gets progressively stranger.
+Do something like ANSI Portal for this one.
+Maybe even switch to a 32x32 grid.
+He has to use robots to rearrange the world.
+Over a couple rooms, the orange robot turns into a blue robot.
+Then a mimiogeist.
+Finally: oblivion.
+** E13 <ernie's film noir hallucination>
+A film noir style murder mystery story.
+Maybe do some of that mad-lib style I saw at LD21, but with a mimeogeist.
+What if he sees something in the gravitron? That tells him about the future?
+The Consolas should make an appearance.
+He starts talking to lucy now.
+She guides him back to reality.
+** E14 film noir 2, until Lucy found. Then: I did it, Teddy. They're coming!
+Cliffhanger: she shows them proof. 
+"Tell them, Selda. You were there."
+** E15 (SPECIAL #3) "Tetraminex: The Legend of Selda"
+Style: Action platformer, playing as Joe.
+Lucy is passed out. Selda has to explain.
+Lucy fills in the gaps.
+Joe and Teddy are in high school. They already have a restaraunt.
+Joe's the all-american popular kid.
+You play as Griselda.
+Joe is finally starting to notice Lucy.
+Ending: Joe sacrifices himself to save Lucy and Selda from the Aliens
+His body is actually burried.
+The dentists got to Selda and wiped her memory.
+But lucy remembers.
+The ghosts are an alien device.
+The dentists are aliens, but not THOSE aliens.
+Joe is out there, Selda. He's alive!
+Cliffhanger: The army busts down the door.
+** E16 ernie's dull life at school
+Narrative superimposed over a time management game.
+Narrative becomes a conversation: between ernie and his girl.
+He's working at Joe and Teddy's diner.
+It switches back and forth between school and the diner.
+Time management game as a metaphor for his boring life.
+Trying to stay on track and become a lawyer.
+struggling with being bored at school, when he could do so much more
+he finally tells her what's bothering him.
+"You were at TETRAMINEX?!"
+"For one day."
+Eventually he admits he feels like a coward for abandoning them
+How did you get away?
+I had something. A teleporter.
+"Come on."
+I'll prove it.
+<cut>
+"This better not be just a way to ge me up to your dorm roo..."
+"What is it? What's wrong?"
+[Ivan looking out the window, back view].
+"Ivan! Ivan what are you doing here? How did you get out?"
+"Oh you're Ivan? Pleased to meet you. But I thought--"
+[Ie turns]
+"XXXX, Get back."
+"What's wrong?"
+"This isn't not Ivan"
+"No, young man. I am not your Ivan. My name is Cyan Cyanovich Punchko."
+"Oh my god! It's him, Ernie! You're him! You're the Son of Cyan!
+You killed all those people and then disappeared thirty years ago!
+I can't believe it's you. I'm a huge fan. I did a report on you in ninth grade!
+You look just like your mugshot! How do you stay so young!?"
+Cyan: "..."
+Ernie: "..."
+Girl: "Well then. Are you here to kill us?"
+[TO BE CONTINUED]
+** E17 (SPECIAL #4) "Life of Cyan"
+*** scene: Girl: "Well then. Are you here to kill us?"
+**** Nyet. I have done terrible things in my life, but I am not a killer.
+**** "I knew it! I always said you were innocent."
+**** Thank you, young miss.
+**** Where have you been for thirty years?
+**** Ernie: Why are you in my dorm room?
+**** What your name is, young man?
+**** Ernie Goldsmile, and I'm about to call the cops.
+**** Please, Ernie Goldsmile. Let me tell you story.
+**** I am innocent. I had family. I had my pride. I did not run from my accusers.
+Level: Ivan was in jail when the aliens came.
+The JellInvaders extracted everyone in the building.
+**** But how did you survive?
+*** level: time travel fighting.
+**** my father, cyan vladovitch found it in ukraine
+**** i was protector. i help people.
+**** the monsters, everywhere
+**** if i had known, that little girl's life might have been spared
+*** this why they came to me
+It lets him rewind time.
+"they say it was a meteor, but the people knew."
+*** his father taught him to fight
+> He fought the aliens.
+*** he became a vigilante
+*** but when the aliens came, he couldn't save them
+*** They have a device... I was lost in my own mind.
+*** But recently, I found my way out of the darkness.
+*** I felt the pull of a beacon.
+*** We came here but we couldn't get in.
+*** This is why I need your help. I must shut it down, or the monsters will return.
+"You mean you really have a teleporter?"
+*** Ernie: I thought you came for Ivan. Don't you even care about him?
+**** Who is this Ivan you keep mentioning?
+**** Ivan Punchko. He's your son!
+**** Oscar? My Oscar is here? I looked for him, but.
+Of course he would change his name. What boy would be known
+as the Son of The Son of Cyan?
+*** The army has him locked up somewhere. 
+*** Is only ONE place. The beacon.
+*** The Gravitron!
+*** Da. This. So you help me, Ernie Goldsmile? For my Oscar?
+*** I'll help.
+** E18 <stealth rescue (with blocks, rewind)> avoid the army, rescue everyone.
+Ending: they've been fine, leading the research problem.
+Cliffhanger: Lucy says "I knew you'd come!!! ... Thank you for bringing him,
+Ernie. Thank you for bringing my Joey."
+She shoots Ernie with some device, and Joey appears.
+** E19 The Ghost Franchise
+Somehow combine "hamburger tycoon" with a platformer?
+Maybe he zips around sectors of the galaxy, delivering burgers.
+He levels up along the way, reaching new species.
+Eventually he's able to get back home to his Lucy.
+I want you to have it, Teddy.
+Lucy and Teddy and Griselda are all overjoyed.
+Ivan's off to the side. Ernie goes to him.
+There's someone you need to meet.
+** E20 Letters from Home
+The last episode is correspondance between Ernie and Emily, where she
+fills him in on the news back home.
+
+Ernie sees the world as puzzles now. Tetraminex becomes a metaphor for
+his life, or the problems in the world as the aliens are integrated.
+
+Each puzzle is abstract, but somehow related to the fate of a character.
+Last one is about getting back to Emily.
+
+The final scene is their wedding.
+
+Then a fade to black, and:
+
+                              TETRAMINEX
+
+                              GAME OVER
+
+
+    THIS IS THE END OF TETRAMINEX, BUT NOT THE END OF OUR HEROES!
+
+ERNIE, TEDDY, AND THEIR FRIENDS WILL RETURN IN AN AN ALL NEW ADVENTURE:
+   
+                           ERNIE GOLDSMILE:
+                           ATTORNEY AT LAW
+
+                  COMING SOON TO A BROWSER NEAR YOU
+
+
