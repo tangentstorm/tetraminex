@@ -1,6 +1,6 @@
 package
 {
-	import com.tangentcode.flixelbits.TeleType;
+	import org.gamesketchlib.ui.GsTeleType;
 	import flash.utils.getQualifiedClassName;
 	import levels.*;
 	import org.flixel.*;
@@ -62,15 +62,15 @@ package
 			var shadow:FlxSprite = this.add(new FlxSprite(480, 0)) as FlxSprite;
 			shadow.makeGraphic(15, 480, 0xff444444);
 			
-			var txt:FlxText = this.add(new FlxText(510, 30, 640 - 480, 
+			var txt:FlxText = this.add(new FlxText(500, 30, 640 - 480, 
 				"TETRAMINEX:\nEpisode 00\n\n" +
 				"BY:\nMichal J Wallace\n\n" + 
 				"STARRING:\n" + 
 				"Ernie Goldsmile\n" + 
 				"Teddy Tetraminus\n\n" + 
 				"AND INTRODUCING:\n" +
-				"Oscar Cyanovich\n" + 
-				"as Ivan Barr\n"
+				"Ivan Cyanovich Punchko\n" + 
+				"AS HIMSELF\n"
 			)) as FlxText;
 			txt.font = Assets.talkFont;
 			txt.size = 14;
@@ -120,6 +120,7 @@ package
 				{
 					if (FlxG.keys.justPressed(kNumKeys[n]))
 					{
+						ScriptManager.instance.abort();
 						loadLevel(n);
 						return;
 					}

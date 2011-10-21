@@ -1,7 +1,7 @@
 package  
 {
-	import com.tangentcode.flixelbits.TeleType;
 	import org.flixel.*;
+	import org.gamesketchlib.ui.GsTeleType;
 
 	/**
 	 * This is the window that pops up when people are talking.
@@ -15,7 +15,7 @@ package
 		protected var mWindow:FlxSprite        = new FlxSprite(kX,       kY, Assets.ImgTalkWindow);
 		protected var mSpeakerSprite:FlxSprite = new FlxSprite(kX +  40, kY +  50);
 		protected var mNameText:FlxText        = new FlxText  (kX +  25, kY +  95, 60, "Speaker");
-		protected var mTeletype:TeleType       = new TeleType (kX + 110, kY +  50, 400);
+		protected var mTeletype:GsTeleType     = new GsTeleType (kX + 110, kY +  50, 400);
 		protected var mNextText:FlxText        = new FlxText  (kX + 315, kY + 195, 150, "[press enter]");
 		
 		public static const instance:TalkWindow = new TalkWindow();
