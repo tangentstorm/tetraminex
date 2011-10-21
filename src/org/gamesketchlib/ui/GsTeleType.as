@@ -1,8 +1,8 @@
-package com.tangentcode.flixelbits 
+package org.gamesketchlib.ui 
 {
 	import org.flixel.*;
 
-	public class TeleType extends FlxText 
+	public class GsTeleType extends FlxText 
 	{
 		
 		private var mFullText:String;
@@ -12,10 +12,10 @@ package com.tangentcode.flixelbits
 		private var mNextChar:Number = 0;
 		private var mTicker:Number = 0;
 		
-		public function TeleType(X:Number, Y:Number, Width:uint, Text:String=null, EmbeddedFont:Boolean=true) 
+		public function GsTeleType(x:Number, y:Number, w:uint, fullText:String="")
 		{
-			super(X, Y, Width, "", EmbeddedFont);
-			this.fullText = Text;
+			super(x, y, w, "", true);
+			this.fullText = fullText;
 		}
 		
 		override public function update():void 
