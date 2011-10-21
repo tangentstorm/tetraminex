@@ -15,8 +15,8 @@ package rooms
 				"Sometimes blocks are the wrong color, but it's\n" +
 				"nothing a little paint can't fix.\n\n" +
 				
-				"Drag these blocks through the paint squares to\n" +
-				"change their colors.\n\n"
+				"Drag these blocks through the white-edged tiles\n" +
+				"to repaint them.\n\n"
 			);
 		}
 		
