@@ -38,7 +38,7 @@ package com.tetraminex.e00.rooms
 				return;
 			}
 			
-			ScriptManager.instance.abort();
+			ScriptManager.abort();
 			
 			Script.begin
 			.ivan

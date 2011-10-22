@@ -8,7 +8,6 @@ package org.gamesketchlib.data
 		
 		public static const LOCKED:String = "LOCKED";
 		public static const UNPLAYED:String = "UNPLAYED";
-		private static const UNKNOWN:String = "UNKNOWN";
 		
 		private var mTag:String;
 		
@@ -34,25 +33,14 @@ package org.gamesketchlib.data
 		
 		public function getScore(levelNum:int):Object
 		{
-			var score:Object = GsStash.getItem(makeKey(levelNum), UNKNOWN);
-			if (score == GsLevelLocker.UNKNOWN)
-			{
-				return GsStash.putItem(makeKey(levelNum), GsLevelLocker.LOCKED);
-			}
-			else
-			{
-				return score;
-			}
+			return GsStash.getItem(makeKey(levelNum), GsLevelLocker.LOCKED);
 		}
 		
 		public function putScore(levelNum:int, score:Object):Object
 		{
 			GsStash.putItem(makeKey(levelNum), score);
 			var score:Object = GsStash.getItem(makeKey(levelNum));
-			if (score == GsLevelLocker.UNKNOWN)
-			{
-				return GsStash.putItem(makeKey(levelNum), GsLevelLocker.LOCKED);
-			}
+			return GsStash.putItem(makeKey(levelNum), score);
 		}
 		
 		/**
@@ -80,10 +68,10 @@ package org.gamesketchlib.data
 		 * but not yet played.
 		 * @param	levelNum
 		 */
-		public function unlock(levelNum:int)
+		public function unlock(levelNum:int):void
 		{
 			var score:Object= this.getScore(levelNum);
-			if (score == GsLevelLocker.LOCKED || score == GsLevelLocker.UNKNOWN)
+			if (score == GsLevelLocker.LOCKED)
 			{
 				this.putScore(levelNum, GsLevelLocker.UNPLAYED);
 			}
@@ -102,6 +90,13 @@ package org.gamesketchlib.data
 				this.unlock(i);
 			}
 			GsStash.endBatch();
+		}
+		
+		public function isLocked(levelNum:int):Boolean
+		{
+			var score:String = this.getScore(levelNum) as String;
+			trace("level " + levelNum + " is : " + this.getScore(levelNum) + ", isLocked=" + (score == GsLevelLocker.LOCKED));
+			return this.getScore(levelNum) == GsLevelLocker.LOCKED;
 		}
 		
 		

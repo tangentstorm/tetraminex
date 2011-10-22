@@ -28,6 +28,15 @@ SCHEDULED: <2011-09-28 Wed>
 ** DONE teleporter animation and end scene
 ** DONE ScriptManager (animations, etc)
 
+
+* GOAL GsLevelLocker
+** DONE Draw the Grid of Levels
+** DONE Unlock level 0 first time played
+** DONE Stash score on completing level
+** DONE Prevent opening locked level
+** DONE Show the level select grid
+
+
 * GOAL SpriteMapper Analytics and PlayTesting
 ** TODO Record with FlxReplay
 http://flixel.org/docs/org/flixel/system/FlxReplay.html

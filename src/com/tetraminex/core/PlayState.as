@@ -1,11 +1,11 @@
 package com.tetraminex.core
 {
 	import org.gamesketchlib.ui.GsTeleType;
+	import org.gamesketchlib.data.*;
 	import flash.utils.getQualifiedClassName;
 	import org.flixel.*;
 	import com.tetraminex.core.*;
 	import com.tetraminex.e00.rooms.*;
-//	import com.tetraminex.sprites.*;
 	import com.tetraminex.e00.*;
 	import com.tetraminex.e00.levels.*;
 	import com.tetraminex.core.sprites.*;
@@ -19,16 +19,23 @@ package com.tetraminex.core
 		private var mRoom:Room = new Room();
 		
 		public var overlayGroup:FlxGroup = new FlxGroup();
-		
-		private var mScriptManager:ScriptManager = ScriptManager.instance;
-		
+			
         private var mGrabKeys:Array = [false, false, false, false];
         private var mGrabLast:Array = [false, false, false, false];
 		
+		private var mLevelSelect:FlxGroup = new FlxGroup();
+		
 		public static var levelNum:int = 0;
+		public static var levelLocker:GsLevelLocker; // fill this in from each episodo's FlxGame
+		public static var curtain : FlxSprite;
+		
 		
 		override public function create():void
-		{
+		{	
+			PlayState.curtain = new FlxSprite(0, 0);
+			PlayState.curtain.makeGraphic(FlxG.width, FlxG.height, 0x00ffffff);
+			Script.begin.fadeIn(true);
+			
 			var level:SharedBaseLevel;
 			switch (levelNum)
 			{
@@ -79,17 +86,25 @@ package com.tetraminex.core
 			txt.size = 14;
 			
 			
+			addLevelButtons();
 			this.add(overlayGroup);
 			this.add(TalkWindow.instance);
-			
+			add(PlayState.curtain);
 		}
 		
 		
 		public function loadLevel(num:int):void
 		{
-			levelNum = num;
 			this.remove(TalkWindow.instance);
-			FlxG.resetState();
+			ScriptManager.abort();
+			Script.begin
+				.fadeOut(true)
+				.thunk(function():void
+				{
+					PlayState.levelNum = num;
+					PlayState.levelLocker.unlock(num);
+					FlxG.resetState();
+				});
 		}
 		
 		
@@ -106,11 +121,11 @@ package com.tetraminex.core
 			mHero.acceleration.x = 0;
 			mHero.acceleration.y = 0;
 			
-			mScriptManager.update();
+			ScriptManager.update();
 			
-			if (mScriptManager.isModal())
+			if (ScriptManager.isModal())
 			{
-				if (mScriptManager.atTick)
+				if (ScriptManager.atTick)
 					mRoom.tick();
 				return;
 			}
@@ -123,7 +138,6 @@ package com.tetraminex.core
 				{
 					if (FlxG.keys.justPressed(kNumKeys[n]))
 					{
-						ScriptManager.instance.abort();
 						loadLevel(n);
 						return;
 					}
@@ -174,7 +188,7 @@ package com.tetraminex.core
 			
 			if (! FlxG.keys.UP) { mJustJumped = false; }
 						
-			if (mScriptManager.atTick)
+			if (ScriptManager.atTick)
 			{
 				if (FlxG.keys.RIGHT)
 				{
@@ -303,6 +317,53 @@ package com.tetraminex.core
 				}
 				mGrabLast[dir] = mGrabKeys[dir];
 			}
+		}
+		
+		private function addLevelButtons():void 
+		{
+			var sx:int = 500;
+			var sy:int = 260;
+			const kButtonSize:int = 25;
+			
+			var txt:FlxText = new FlxText(sx, sy, 100, "Click to replay:");
+			mLevelSelect.add(txt);
+			
+			function mkButton(bx:int, by:int, lev:int, locked:Boolean):FlxButton
+			{
+				var b:FlxButton = new FlxButton(bx, by, "", function():void
+				{
+					if (! locked) { loadLevel(lev); }
+				});
+				var fgColor:uint = locked ? 0xFF333333 : 0xFF333333;
+				var bgColor:uint = locked ? 0xFF999999 : 0xFFFFFFFF;
+				b.makeGraphic(kButtonSize, kButtonSize, bgColor);
+				b.drawLine(0,  0, kButtonSize,  0, fgColor, 2);
+				b.drawLine(kButtonSize,  0, kButtonSize, kButtonSize, fgColor, 2);
+				b.drawLine(kButtonSize, kButtonSize,  0, kButtonSize, fgColor, 2);
+				b.drawLine(0, kButtonSize,  0,  0, fgColor, 2);
+				
+				// !! set the text in a second pass to force the FlxText to
+				//    update its width. otherwise, if the mouse is over the
+				//    button when the scene starts, it builds the highlighted
+				//    frame at the default width of 80, and the label offset
+				//    breaks.
+				b.label.text = locked ? "-" : lev.toString();
+				
+				return b;
+			}
+			for (var i:int = 0; i < 2; ++i)
+			{
+				for (var j:int=0; j < 5; ++j)
+				{
+					var lev:int = j * 2 + i;
+					var bx:int = sx + i * (kButtonSize + 5);
+					var by:int = sy + txt.height + 5 + j * (kButtonSize + 5);
+					mLevelSelect.add(mkButton(bx, by, lev,
+						PlayState.levelLocker.isLocked(lev)));
+				}
+			}
+			this.add(mLevelSelect);
+		
 		}
 		
 	}

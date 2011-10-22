@@ -36,7 +36,7 @@ package com.tetraminex.e00
 		override public function update():void
 		{
 			super.update();
-			ScriptManager.instance.update();
+			ScriptManager.update();
 			
 			if (canReplayYet)
 			{

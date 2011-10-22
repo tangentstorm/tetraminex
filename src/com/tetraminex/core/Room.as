@@ -6,10 +6,6 @@ package  com.tetraminex.core
 	import com.tetraminex.core.sprites.*;
 	import com.tetraminex.core.tiles.*;
 	
-	/**
-	 * ...
-	 * @author Michal J Wallace
-	 */
 	public class Room 
 	{
 		

@@ -49,7 +49,7 @@ package com.tetraminex.core.sprites
 				mTickCount = 0;
 			}
 			
-			if (held && ScriptManager.instance.atTick)
+			if (held && ScriptManager.atTick)
 			{
 				
 				if (++mTickCount % 24)

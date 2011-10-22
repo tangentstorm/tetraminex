@@ -43,15 +43,15 @@ package com.tetraminex.core.scripts
 			return this.wait(0.25);
 		}
 		
-		public function fadeOut():Script
+		public function fadeOut(fast:Boolean=false):Script
 		{
-			ScriptManager.push(new FadeToBlackScript(false));
+			ScriptManager.push(new FadeToBlackScript(false, fast));
 			return this;
 		}
 		
-		public function fadeIn():Script
+		public function fadeIn(fast:Boolean=false):Script
 		{
-			ScriptManager.push(new FadeToBlackScript(true));
+			ScriptManager.push(new FadeToBlackScript(true, fast));
 			return this;
 		}
 		

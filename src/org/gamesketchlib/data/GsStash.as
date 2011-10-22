@@ -12,15 +12,13 @@ package org.gamesketchlib.data
 	public class GsStash
 	{
 		
-		protected static var mShared:SharedObject = new SharedObject("GsStash");
+		protected static var mShared:SharedObject = SharedObject.getLocal("GsStash");
 		protected static var mInBatch:Boolean = false;
 		protected static var mChanged:Boolean = false;
 		
-		public static function getItem(key:String, defaultItem:Object=null)
+		public static function getItem(key:String, defaultItem:Object=null):Object
 		{
-			var res:Object = mShared[key];
-			if (res == undefined || res == null) return defaultItem;
-			return res;
+			return mShared.data[key] == undefined ? defaultItem : mShared.data[key];
 		}
 		
 		public static function putItem(key:String, value:Object):Object
@@ -34,17 +32,22 @@ package org.gamesketchlib.data
 		}
 		
 		// a probably-not-terribly important optimization:
-		public static function beginBatch()
+		public static function beginBatch():void
 		{
-			minBatch = true;
+			mInBatch = true;
 		}
-		public static function endBatch()
+		public static function endBatch():void
 		{
-			if (minBatch) { flush(); }
-			minBatch = false;
+			if (mInBatch) { flush(); }
+			mInBatch = false;
 		}
 		
-		protected static function flush()
+		public static function clear():void
+		{
+			mShared.clear();
+		}
+		
+		protected static function flush():void
 		{
 			mShared.flush();
 		}

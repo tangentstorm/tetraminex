@@ -6,52 +6,42 @@ package com.tetraminex.core.scripts
 	public class ScriptManager
 	{
 		
-		private var mQueue:Array = [];
-		private var mTalkWindow:TalkWindow;
-		private var mTimeSinceTick:Number = 0;
-		private var mCurrentScript:IScript = NullScript.instance;
+		private static var mQueue:Array = [];
+		private static var mTalkWindow:TalkWindow;
+		private static var mTimeSinceTick:Number = 0;
+		private static var mCurrentScript:IScript = NullScript.instance;
 		
-		public var locked:Boolean = false;
+		public static var locked:Boolean = false;
 		
-		public var tickInterval:Number = 0.10;
-		public var atTick:Boolean = false;		
+		public static var tickInterval:Number = 0.10;
+		public static var atTick:Boolean = false;		
 		
 		public static var instance:ScriptManager = new ScriptManager();
 		private static var instanceCount:int = 0;
 		
-		public function ScriptManager(talkWindow:TalkWindow = null) 
-		{
-			if (++instanceCount != 1)
-			{ 
-				throw new Error("ScriptManager is a singleton. Use ScriptManager.instance instead.");
-			}
-			mTalkWindow = (talkWindow != null) ? talkWindow : TalkWindow.instance;
-		}
-		
 		public static function push(script:IScript):void
 		{
-			instance.mQueue.push(script);
+			if (mTalkWindow == null) mTalkWindow = TalkWindow.instance;
+			mQueue.push(script);
 		}
 		
-		public function abort():void
+		public static function abort():void
 		{
 			mCurrentScript = NullScript.instance;
 			mQueue = [];
 		}
 		
-		
-		
-		public function update():void
+		public static function update():void
 		{			
 			mTimeSinceTick += FlxG.elapsed;
-			if (mTimeSinceTick < this.tickInterval)
+			if (mTimeSinceTick < tickInterval)
 			{
-				this.atTick = false;
+				atTick = false;
 			}
 			else
 			{
 				mTimeSinceTick = 0;
-				this.atTick = true;
+				atTick = true;
 				mCurrentScript.onTick();
 			}
 			mCurrentScript.onFrame();
@@ -63,9 +53,9 @@ package com.tetraminex.core.scripts
 			}
 		}
 		
-		public function isModal():Boolean
+		public static function isModal():Boolean
 		{
-			return this.locked || mTalkWindow.visible;
+			return locked || mTalkWindow.visible;
 		}		
 	}
 }
